@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-vue": "^8.6.0",
     "vue": "^3.5.40",
     "vue-router": "^5.2.0"
   },

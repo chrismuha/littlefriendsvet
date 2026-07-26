@@ -1,0 +1,279 @@
+<template>
+    <section>
+        <div class="bg-graphic"></div>
+        <div
+            class="slideshow-wrapper"
+            :style="{
+                '--zoom-duration': zoomDuration + 'ms'
+            }"
+        >
+            <div class="slideshow-image-container">
+
+                <img
+                    :key="currentIndex"
+                    :src="images[currentIndex]"
+                    class="slide current"
+                />
+
+                <img
+                    v-if="isTransitioning"
+                    :key="'prev-' + previousIndex"
+                    :src="images[previousIndex]"
+                    :class="['slide', 'previous', { 'previous-animate': previousReady }]"
+                    :style="{
+                        '--zoom-delay': previousZoomDelay + 'ms',
+                        transform: `scale(${previousStartScale})`
+                    }"
+                />
+
+                <div class="controls">
+                    <i class="bi bi-chevron-left" @click="prevSlide"></i>
+                    <i class="bi bi-chevron-right" @click="nextSlide"></i>
+                </div>
+
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="text">
+            We accept cash, credit/debit cards, pre-approved local checks and Care Credit for payment.
+        </div>
+    </section>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const imageModules = import.meta.glob(
+    "@/assets/images/slideshow/*.{jpg,jpeg,png,webp,avif}",
+    {
+        eager: true,
+        import: "default"
+    }
+);
+
+const images = Object.entries(imageModules)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([, src]) => src);
+
+const currentIndex = ref(0);
+const previousIndex = ref(0);
+const isTransitioning = ref(false);
+const previousReady = ref(false);
+
+const previousZoomDelay = ref(0);
+const previousStartScale = ref(1);
+
+let interval = null;
+let transitionTimeout = null;
+let slideStartTime = performance.now();
+
+const SLIDE_DURATION = 5000;
+const FADE_DURATION = 800;
+const ZOOM_BUFFER = 1000;
+
+const zoomDuration = SLIDE_DURATION + FADE_DURATION + ZOOM_BUFFER;
+
+function startSlideshow() {
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+        nextSlide(false);
+    }, SLIDE_DURATION);
+}
+
+function resetTimer() {
+    startSlideshow();
+}
+
+function changeSlide(newIndex, reset = true) {
+    clearTimeout(transitionTimeout);
+
+    const elapsed = Math.min(performance.now() - slideStartTime, zoomDuration);
+    previousZoomDelay.value = -elapsed;
+    previousStartScale.value = 1 + 0.2 * (elapsed / zoomDuration);
+
+    previousIndex.value = currentIndex.value;
+    currentIndex.value = newIndex;
+    slideStartTime = performance.now();
+
+    isTransitioning.value = true;
+    previousReady.value = false;
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            previousReady.value = true;
+        });
+    });
+
+    transitionTimeout = setTimeout(() => {
+        isTransitioning.value = false;
+    }, FADE_DURATION);
+
+    if (reset) {
+        resetTimer();
+    }
+}
+
+function nextSlide(reset = true) {
+    changeSlide(
+        (currentIndex.value + 1) % images.length,
+        reset
+    );
+}
+
+function prevSlide() {
+    changeSlide(
+        (currentIndex.value - 1 + images.length) % images.length,
+        true
+    );
+}
+
+onMounted(() => {
+    startSlideshow();
+});
+
+onUnmounted(() => {
+    clearInterval(interval);
+    clearTimeout(transitionTimeout);
+});
+</script>
+
+<style scoped>
+.bg-graphic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-teal);
+    top: 50px;
+    left: 0;
+    z-index: -1;
+}
+section {
+    position: relative;
+    margin-top: 70px;
+    padding: 0 100px;
+    overflow: hidden;
+}
+.slideshow-wrapper {
+    width: 100%;
+}
+
+.separator {
+    width: 100%;
+    height: 0.5px;
+    background: var(--secondary-white);
+    margin: 30px 0;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 960px) {
+    section {
+        padding: 0 30px;
+    }
+}
+
+.slideshow-image-container {
+    aspect-ratio: 21 / 9;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Images */
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.current {
+    z-index: 2;
+    animation:
+        fadeIn 0.8s ease,
+        zoom var(--zoom-duration) linear forwards;
+}
+
+.previous {
+    z-index: 1;
+    opacity: 1;
+}
+
+.previous-animate {
+    animation:
+        fadeOut 0.8s ease forwards,
+        zoom var(--zoom-duration) linear forwards;
+    animation-delay: 0s, var(--zoom-delay);
+}
+
+/* Controls */
+
+.controls {
+    display: flex;
+    position: absolute;
+    inset: 0;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.slideshow-image-container:hover .controls {
+    opacity: 1;
+}
+
+.controls i {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+</style>

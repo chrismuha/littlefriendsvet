@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+:root {
+    --primary-teal: #16a2a2;
+    --primary-orange: #ff5000;
+    --primary-gold: #ffeaa5;
+    --primary-white: #fff;
+
+    --secondary-teal: #138c8c;
+    --secondary-orange: #e64800;
+    --secondary-gold: #c9bb8c;
+    --secondary-white: #f8f8f8;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--primary-white);
+    font-family: 'Ubuntu', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #666;
+}
+
+.btn {
+    margin: 0;
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+
+    font-weight: 900;
+    text-transform: none;
+    border-radius: .2rem;
+    background-origin: border-box;
+
+    padding: 0 40px;
+    line-height: 53px;
+    font-size: 1.375rem;
+
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.btn-orange {
+    background: var(--primary-orange);
+}
+
+.btn-teal {
+    background: var(--primary-teal);
+}
+
+.btn-orange:hover {
+    background: var(--secondary-orange);
+}
+
+.btn-teal:hover {
+    background: var(--secondary-teal);
+}
+
+.header {
+    position: relative;
+    min-height: 200px;
+    padding: 70px 30px;
+    max-width: 800px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.header h1 {
+    font-family: 'Galada', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    color: #333;
+}
+.heading-line::before, .heading-line::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - (calc(.2px + .05em)/ 2));
+    width: 2000px;
+    border-bottom: calc(.2px + .05em) solid #e5e5e5;
+}
+.heading-line::before {
+    right: 100%;
+    margin-right: calc(5px + .3em);
+}
+.heading-line::after {
+    left: 100%;
+    margin-left: calc(5px + .3em);
+}
+
+.header-starburst {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100%;
+    opacity: 60%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
