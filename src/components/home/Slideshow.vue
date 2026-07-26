@@ -171,6 +171,7 @@ section {
     color: white;
     padding-bottom: 30px;
 }
+
 @media screen and (max-width: 960px) {
     section {
         padding: 0 30px;
