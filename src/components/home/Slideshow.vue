@@ -35,7 +35,7 @@
         </div>
         <div class="separator"></div>
         <div class="text">
-            We accept cash, credit/debit cards, pre-approved local checks and Care Credit for payment.
+            We accept cash, credit/debit cards, pre-approved local checks and Care Credit for payment
         </div>
     </section>
 </template>
