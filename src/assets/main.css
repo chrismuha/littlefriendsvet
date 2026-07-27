@@ -29,6 +29,25 @@ body {
     color: #666;
 }
 
+a {
+    color: var(--secondary-gold);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.orange-bg {
+    background: var(--primary-orange);
+    color: white;
+}
+
+.teal-bg {
+    background: var(--primary-teal);
+    color: white;
+}
+
 .btn {
     margin: 0;
 
@@ -72,7 +91,7 @@ body {
 .header {
     position: relative;
     min-height: 200px;
-    padding: 70px 30px;
+    padding: 70px 15px;
     max-width: 800px;
     overflow: hidden;
     margin: auto;
@@ -87,6 +106,38 @@ body {
     position: relative;
     margin: auto;
     color: #333;
+}
+.header-v2 h1 {
+    font-size: 4rem;
+    font-family: 'Ubuntu';
+    width: 100%;
+    padding-bottom: 0.2rem;
+}
+@media screen and (max-width: 1200px) {
+    .header-v2 h1 {
+        font-size: 56px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .header-v2 h1 {
+        font-size: 46.2px;
+    }
+}
+.header-v3 h1 {
+    font-size: 96px;
+    font-family: 'Ubuntu';
+    width: 100%;
+    padding-bottom: 0.2rem;
+}
+@media screen and (max-width: 1200px) {
+    .header-v3 h1 {
+        font-size: 64px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .header-v3 h1 {
+        font-size: 54.4px;
+    }
 }
 .heading-line::before, .heading-line::after {
     content: "";
@@ -111,6 +162,7 @@ body {
     align-items: center;
     justify-content: center;
     top: 0;
+    left: 0;
     height: 100%;
     opacity: 60%;
 }

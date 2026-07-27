@@ -144,7 +144,7 @@ onUnmounted(() => {
     width: 100%;
     height: 100%;
     background: var(--primary-teal);
-    top: 50px;
+    top: 20%;
     left: 0;
     z-index: -1;
 }
@@ -162,14 +162,15 @@ section {
     width: 100%;
     height: 0.5px;
     background: var(--secondary-white);
-    margin: 30px 0;
+    margin: 40px 0;
+    opacity: 60%;
 }
 
 .text {
     text-align: center;
     font-size: 20px;
     color: white;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 @media screen and (max-width: 960px) {

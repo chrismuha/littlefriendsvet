@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="orange-bg">
         <div class="text-wrapper">
             <p>
             It is with deep regret that Little Friends will be closing as of December 30, 2025.
@@ -44,8 +44,6 @@
 </template>
 <style scoped>
 section {
-    background: var(--primary-orange);
-    color: white;
     height: fit-content;
     width: 100%;
     text-align: center;
