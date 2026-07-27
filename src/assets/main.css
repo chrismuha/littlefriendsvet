@@ -18,6 +18,8 @@
     --secondary-orange: #e64800;
     --secondary-gold: #c9bb8c;
     --secondary-white: #f8f8f8;
+
+    --golden-bg: rgba(201, 187, 140, 0.78);
 }
 
 body {
@@ -34,6 +36,10 @@ a {
     text-decoration: none;
 }
 
+ol,ul {
+    padding-left: 30px;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -46,6 +52,13 @@ a:hover {
 .teal-bg {
     background: var(--primary-teal);
     color: white;
+}
+
+.fixed-bg {
+    background-position: center top;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .btn {

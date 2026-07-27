@@ -1,5 +1,7 @@
 <script setup>
 import Cover from '@/components/home/Cover.vue';
+import FelineBehaviorServices from '@/components/home/FelineBehaviorServices.vue';
+import FelineBoarding from '@/components/home/FelineBoarding.vue';
 import ForYou from '@/components/home/ForYou.vue';
 import ForYouButtons from '@/components/home/ForYouButtons.vue';
 import Information from '@/components/home/Information.vue';
@@ -19,4 +21,6 @@ import WhoWeAre from '@/components/home/WhoWeAre.vue';
     <Information />
     <WhoWeAre />
     <OurServices />
+    <FelineBoarding />
+    <FelineBehaviorServices />
 </template>
