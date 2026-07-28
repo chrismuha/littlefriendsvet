@@ -126,7 +126,7 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                         </p>
                     </div>
                 </div>
-                <div class="section-item new-client-section">
+                <div id="new-client" class="section-item new-client-section">
                     <h1>New Client?</h1>
                     <div class="text-wrapper">
                         <p>
@@ -162,8 +162,8 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
             </div>
             <div class="right-section">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/exam_area_LFVS-e02b910a.jpg">
-                    <img src="@/assets/images/IMG_7720.jpg">
+                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp">
+                    <img src="@/assets/images/IMG_7720.webp">
                     <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="Starbrust Group Right" class="starburst2">
                 </div>
             </div>

@@ -16,7 +16,7 @@ import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
 
 <template>
     <Cover />
-    <Notice />
+    <!-- <Notice /> -->
     <ForYouButtons />
     <ForYou />
     <Slideshow />

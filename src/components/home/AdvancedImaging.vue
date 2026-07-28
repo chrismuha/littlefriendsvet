@@ -11,7 +11,7 @@
                 </p>
                 <div class="image-row row">
                     <img src="@/assets/images/IMG_5138.jpg">
-                    <img src="@/assets/images/ultraImaging.jpg">
+                    <img src="@/assets/images/ultraImaging.webp">
                 </div>
                 <p>
                     <b>

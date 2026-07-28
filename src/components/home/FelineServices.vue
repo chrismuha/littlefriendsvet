@@ -22,7 +22,7 @@
             <div class="content-wrapper">
                 <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="Starbrust Group Right" class="starburst">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/IMG_7444.jpg">
+                    <img src="@/assets/images/IMG_7444.webp">
                 </div>
                 <div class="text-wrapper">
                     <h1>Little Friends and Purina Vet Direct are teaming up for you...</h1>
@@ -90,7 +90,7 @@ section {
 }
 
 .fbc-container {
-    background-image: url("@/assets/images/catphoto_left.jpg");
+    background-image: url("@/assets/images/catphoto_left.webp");
 }
 .fbc-container h1 {
     width: fit-content;
@@ -109,7 +109,7 @@ section {
     background: var(--primary-orange);
 }
 .panks-container {
-    background-image: url("@/assets/images/catphoto_right.jpg");
+    background-image: url("@/assets/images/catphoto_right.webp");
 }
 .panks-container h1 {
     color: #075f5f;

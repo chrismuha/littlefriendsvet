@@ -73,6 +73,21 @@ const [emblaRef] = emblaCarouselVue(
         </a>
       </div>
     </div>
+
+    <nav class="mobile-actions" aria-label="Quick contact actions">
+      <a href="tel:+13153486389">
+        <i class="bi bi-telephone" aria-hidden="true"></i>
+        Call
+      </a>
+      <a href="sms:+18555534416">
+        <i class="bi bi-chat-dots" aria-hidden="true"></i>
+        Text
+      </a>
+      <a href="#contact-info">
+        <i class="bi bi-calendar-check" aria-hidden="true"></i>
+        Book
+      </a>
+    </nav>
   </section>
 </template>
 
@@ -93,6 +108,7 @@ const [emblaRef] = emblaCarouselVue(
 }
 
 section {
+  position: relative;
   background: var(--primary-teal);
   height: 100vh;
   width: 100%;
@@ -175,9 +191,42 @@ section {
   line-height: 1.2;
 }
 
+.mobile-actions {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
   .cover-items {
     padding: 0 15px;
+  }
+
+  .cover-button {
+    display: none;
+  }
+
+  .mobile-actions {
+    position: absolute;
+    right: 15px;
+    bottom: 16px;
+    left: 15px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .mobile-actions a {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 2px solid white;
+    border-radius: .25rem;
+    background: var(--primary-orange);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
   }
 }
 </style>
