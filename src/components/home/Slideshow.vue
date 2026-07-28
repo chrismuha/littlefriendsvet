@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="gallery">
         <div class="bg-graphic"></div>
         <div
             class="slideshow-wrapper"

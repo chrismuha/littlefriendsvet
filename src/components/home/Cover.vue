@@ -24,13 +24,15 @@ const [emblaRef] = emblaCarouselVue(
   <section>
     <div class="cover-bg">
       <video
-        src="@/assets/videos/stars-bg.mp4"
         autoplay
         playsinline
         loop
         muted
         preload="auto"
-      ></video>
+      >
+        <source src="@/assets/videos/stars-bg.webm" type="video/webm">
+        <source src="@/assets/videos/stars-bg.mp4" type="video/mp4">
+      </video>
     </div>
 
     <div class="cover-items">

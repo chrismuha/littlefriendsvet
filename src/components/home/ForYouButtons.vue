@@ -1,11 +1,12 @@
 <template>
     <section>
         <div class="buttons-wrapper">
-            <a href="" class="btn btn-orange">Meet Dr. Liane</a>
-            <a href="" class="btn btn-orange">New Client?</a>
+            <a href="#meet-dr-liane" class="btn btn-orange">Meet Dr. Liane</a>
+            <a href="#contact-info" class="btn btn-orange">New Client?</a>
             <a href="https://littlefriendsvetservices.securevetsource.com/index.pml" class="btn btn-orange">Shop!</a>
-            <a href="" class="btn btn-orange">Gallery</a>
+            <a href="#gallery" class="btn btn-orange">Gallery</a>
             <a href="#contact-info" class="btn btn-orange">Contact Us</a>
+            <a href="mailto:info@littlefriendsvet.com?subject=Medical%20Records%20Request" class="btn btn-orange">Request Medical Records</a>
         </div>
     </section>
 </template>
