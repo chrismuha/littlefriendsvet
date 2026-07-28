@@ -1,0 +1,31 @@
+{
+  "name": "Little Friends Veterinary Services",
+  "short_name": "Little Friends Vet",
+  "description": "Little Friends Veterinary Services in Lyons Falls, New York",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#16a2a2",
+  "theme_color": "#16a2a2",
+  "icons": [
+    {
+      "src": "./app-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./app-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./app-icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 <script setup>
+import { onUnmounted } from 'vue'
 import emblaCarouselVue from 'embla-carousel-vue'
 import Autoplay from 'embla-carousel-autoplay'
 
-const [emblaRef] = emblaCarouselVue(
+const [emblaRef, emblaApi] = emblaCarouselVue(
     {
         loop: true,
         align: 'start',
@@ -18,6 +19,29 @@ const [emblaRef] = emblaCarouselVue(
         })
     ]
 )
+
+let wheelLocked = false
+let wheelUnlockTimer = null
+
+const handleCarouselWheel = (event) => {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 12) return
+
+    event.preventDefault()
+    if (wheelLocked) return
+
+    wheelLocked = true
+    if (event.deltaX > 0) emblaApi.value?.scrollNext()
+    else emblaApi.value?.scrollPrev()
+
+    clearTimeout(wheelUnlockTimer)
+    wheelUnlockTimer = setTimeout(() => {
+        wheelLocked = false
+    }, 450)
+}
+
+onUnmounted(() => {
+    clearTimeout(wheelUnlockTimer)
+})
 </script>
 
 <template>
@@ -43,7 +67,7 @@ const [emblaRef] = emblaCarouselVue(
         >
       </div>
 
-      <div class="embla" ref="emblaRef">
+      <div class="embla" ref="emblaRef" @wheel="handleCarouselWheel">
         <div class="embla__container">
           <div class="embla__slide">
             <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">

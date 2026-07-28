@@ -7,7 +7,7 @@
                 '--zoom-duration': zoomDuration + 'ms'
             }"
         >
-            <div class="slideshow-image-container">
+            <div class="slideshow-image-container" @wheel="handleWheel">
 
                 <img
                     :key="currentIndex"
@@ -69,6 +69,8 @@ const previousStartScale = ref(1);
 
 let interval = null;
 let transitionTimeout = null;
+let wheelUnlockTimeout = null;
+let wheelLocked = false;
 let slideStartTime = performance.now();
 
 const SLIDE_DURATION = 5000;
@@ -132,6 +134,22 @@ function prevSlide() {
     );
 }
 
+function handleWheel(event) {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 12) return;
+
+    event.preventDefault();
+    if (wheelLocked) return;
+
+    wheelLocked = true;
+    if (event.deltaX > 0) nextSlide();
+    else prevSlide();
+
+    clearTimeout(wheelUnlockTimeout);
+    wheelUnlockTimeout = setTimeout(() => {
+        wheelLocked = false;
+    }, 450);
+}
+
 onMounted(() => {
     startSlideshow();
 });
@@ -139,6 +157,7 @@ onMounted(() => {
 onUnmounted(() => {
     clearInterval(interval);
     clearTimeout(transitionTimeout);
+    clearTimeout(wheelUnlockTimeout);
 });
 </script>
 

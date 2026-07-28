@@ -1,3 +1,7 @@
+<script setup>
+import InstallAppButton from '@/components/InstallAppButton.vue'
+</script>
+
 <template>
     <section>
         <div class="buttons-wrapper">
@@ -7,6 +11,7 @@
             <a href="#gallery" class="btn btn-orange">Gallery</a>
             <a href="#contact-info" class="btn btn-orange">Contact Us</a>
             <a href="mailto:info@littlefriendsvet.com?subject=Medical%20Records%20Request" class="btn btn-orange">Request Medical Records</a>
+            <InstallAppButton />
         </div>
     </section>
 </template>
