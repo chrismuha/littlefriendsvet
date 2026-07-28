@@ -79,6 +79,7 @@ img {
         max-width: 100%;
     }
     .image-row img:nth-child(2) {
+        max-width: unset;
         width: 100%;
         object-fit: cover;
     }
