@@ -1,3 +1,8 @@
+<script setup>
+import newClientForm from '@/assets/forms/LFVS-NewClient-Form.pdf'
+import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
+</script>
+
 <template>
     <section>
         <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left" class="starburst">
@@ -121,6 +126,39 @@
                         </p>
                     </div>
                 </div>
+                <div class="section-item new-client-section">
+                    <h1>New Client?</h1>
+                    <div class="text-wrapper">
+                        <p>
+                            Complete our online form,<br>
+                            or download and fill out both PDFs below.
+                        </p>
+                        <div class="new-client-buttons">
+                            <span class="new-client-button primary">
+                                <i class="bi bi-laptop" aria-hidden="true"></i>
+                                Complete the Online Form
+                            </span>
+                            <a
+                                :href="newClientForm"
+                                class="new-client-button"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                                Download Client Info
+                            </a>
+                            <a
+                                :href="newPetInformationForm"
+                                class="new-client-button"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                                Download Pet Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="right-section">
                 <div class="image-wrapper">
@@ -170,6 +208,51 @@ section {
 .section-item li {
     line-height: 1.75;
 }
+.new-client-section {
+    margin-top: 45px;
+    text-align: center;
+}
+.new-client-section h1 {
+    font-family: inherit;
+    font-size: 42px;
+    font-weight: 400;
+}
+.new-client-section .text-wrapper {
+    align-items: center;
+}
+.new-client-buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+.new-client-button {
+    display: flex;
+    min-height: 56px;
+    padding: 11px 16px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: .2rem;
+    background: #5a5a5a;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-decoration: none;
+}
+.new-client-button.primary {
+    background: var(--primary-orange);
+}
+.new-client-button i {
+    flex-shrink: 0;
+    font-size: 19px;
+}
+.new-client-buttons a:hover {
+    background: #444;
+    color: white;
+    text-decoration: none;
+}
 .emergency-services a {
     color: #075f5f;
     font-weight: 700;
@@ -209,6 +292,9 @@ section {
     }
     .right-section {
         width: 100%;
+    }
+    .new-client-buttons {
+        grid-template-columns: 1fr;
     }
 }
 </style>

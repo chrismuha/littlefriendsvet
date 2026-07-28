@@ -34,16 +34,12 @@
     max-width: 1000px;
 }
 .row.orange-bg a {
-    padding: 24px 30px;
-    border-radius: .2rem;
-    background: var(--primary-gold);
-    color: #075f5f;
-    transition: .1s ease-in-out;
+    color: white;
 }
 .row.orange-bg a:hover {
-    background: var(--primary-teal);
-    color: white;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
 }
 .image-wrapper {
     height: 300px;

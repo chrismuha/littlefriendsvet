@@ -5,18 +5,17 @@ import catImage from '@/assets/images/Cat02-70x102.png'
 const show = ref(false)
 const running = ref(false)
 const goingDown = ref(false)
+let scrollStopTimer = null
 
 const handleScroll = () => {
-  if (window.scrollY >= 200) {
-    show.value = true
-    goingDown.value = true
-  } else {
-    show.value = false
+  show.value = false
+  goingDown.value = window.scrollY >= 200
 
-    setTimeout(() => {
-      goingDown.value = false
-    }, 300)
-  }
+  clearTimeout(scrollStopTimer)
+  scrollStopTimer = setTimeout(() => {
+    show.value = window.scrollY >= 200
+    goingDown.value = show.value
+  }, 250)
 }
 
 const scrollToTop = () => {
@@ -38,6 +37,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  clearTimeout(scrollStopTimer)
 })
 </script>
 
