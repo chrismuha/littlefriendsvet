@@ -114,6 +114,7 @@ section {
 
 .logo-image {
   margin: auto;
+  transform: translateY(60px);
 }
 
 .logo-image img {

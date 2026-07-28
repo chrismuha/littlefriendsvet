@@ -89,20 +89,14 @@ a:hover {
     text-decoration: none;
 }
 
-.btn-orange {
+.btn-orange,
+.btn-teal {
     background: var(--primary-orange);
 }
 
-.btn-teal {
-    background: var(--primary-teal);
-}
-
-.btn-orange:hover {
-    background: var(--secondary-orange);
-}
-
+.btn-orange:hover,
 .btn-teal:hover {
-    background: var(--secondary-teal);
+    background: var(--primary-teal);
 }
 
 .header {

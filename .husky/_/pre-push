@@ -1,4 +1,2 @@
 #!/usr/bin/env sh
-
-npm run build
-npm run deploy
+. "$(dirname "$0")/h"

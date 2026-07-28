@@ -3,7 +3,7 @@
         <div class="buttons-wrapper">
             <a href="" class="btn btn-orange">Meet Dr. Liane</a>
             <a href="" class="btn btn-orange">New Client?</a>
-            <a href="" class="btn btn-teal">Shop!</a>
+            <a href="https://littlefriendsvetservices.securevetsource.com/index.pml" class="btn btn-orange">Shop!</a>
             <a href="" class="btn btn-orange">Gallery</a>
             <a href="" class="btn btn-orange">Contact Us</a>
         </div>

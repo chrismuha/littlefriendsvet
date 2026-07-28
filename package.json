@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
+    "dev:full": "npm run dev",
+    "dev:vite": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "deploy": "gh-pages -d dist",
     "prepare": "husky"
   },
