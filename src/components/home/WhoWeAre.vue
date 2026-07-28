@@ -53,6 +53,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #3f3f3f;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
 }
 .image-item {
     flex: 0;

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="row-wrapper">
+        <div id="contact-info" class="row-wrapper contact-location">
             <div class="row">
                 <div class="row-item">
                     <div class="title">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="row-wrapper orange-bg">
+        <div class="row-wrapper orange-bg office-hours">
             <div class="row">
                 <div class="row-item">
                     <div class="title">
@@ -32,9 +32,9 @@
                         <p>Office Hours</p>
                     </div>
                     <div class="details">
-                        <p>Monday, Tuesday, Thursday & Friday</p>
-                        <p>9am to 4pm</p>
-                        <p>Closed on Wednesdays</p>
+                        <p class="days">Monday, Tuesday, Thursday & Friday</p>
+                        <p class="time">9am to 4pm</p>
+                        <p class="closed">Closed on Wednesdays</p>
                     </div>
                 </div>
                 <div class="row-item notice">
@@ -50,6 +50,26 @@
 section {
     font-size: 16px;
     color: black;
+}
+.contact-location {
+    background: var(--primary-gold);
+    color: #2f2f2f;
+}
+.contact-location .title {
+    color: #075f5f;
+    font-weight: 700;
+}
+.contact-location .title i {
+    color: var(--primary-orange);
+}
+.contact-location a {
+    color: #075f5f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.contact-location a:hover {
+    color: var(--secondary-orange);
 }
 .title {
     font-size: 24px;
@@ -77,6 +97,51 @@ section {
 .notice {
     display: flex;
     align-items: center;
+}
+.office-hours .row {
+    max-width: 850px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+}
+.office-hours .row-item {
+    padding: 24px 30px;
+}
+.office-hours .title {
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+.office-hours .title i {
+    width: auto;
+    margin-right: 14px;
+}
+.office-hours .details {
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.office-hours .details .days {
+    font-size: 22px;
+    font-weight: 700;
+}
+.office-hours .details .time {
+    margin: 4px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+.office-hours .details .closed {
+    font-weight: 700;
+}
+.office-hours .notice {
+    justify-content: center;
+    width: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .55);
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
 }
 @media screen and (max-width: 800px) {
     .title {

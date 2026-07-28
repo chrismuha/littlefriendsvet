@@ -45,7 +45,7 @@
                 </div>
                 <div class="text-wrapper">
                     <h1>Panks says HEY!</h1>
-                    <p>
+                    <p class="program-intro">
                         Remember at Little Friends we offer our Community Spay and Neuter program for cats all the time and there is no need to qualify - it's for everyone!
                     </p>
                     <p class="notice">
@@ -54,8 +54,8 @@
                     <p class="notice">
                         Cost is just $195 for male cats and $315 for female cats
                     </p>
-                    <p>
-                        <strong>Call today for an appointment!</strong> 315-348-6389
+                    <p class="appointment-call">
+                        <strong>Call today for an appointment!</strong> <a href="tel:+13153486389">315-348-6389</a>
                     </p>
                 </div>
             </div>
@@ -65,6 +65,15 @@
 <style scoped>
 a b {
     font-weight: 500;
+}
+.orange-container a {
+    color: #075f5f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.orange-container a:hover {
+    color: var(--secondary-orange);
 }
 b, strong {
     font-weight: 900;
@@ -83,8 +92,28 @@ section {
 .fbc-container {
     background-image: url("@/assets/images/catphoto_left.jpg");
 }
+.fbc-container h1 {
+    width: fit-content;
+    font-family: 'Galada';
+    font-weight: 400;
+    line-height: 1.2;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .85);
+}
+.fbc-container h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 999px;
+    background: var(--primary-orange);
+}
 .panks-container {
     background-image: url("@/assets/images/catphoto_right.jpg");
+}
+.panks-container h1 {
+    color: #075f5f;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, .7);
 }
 
 .fixed-bg {
@@ -163,12 +192,40 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+.fbc-container li {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
 }
 .fixed-bg .text-wrapper h1 {
     font-size: 64px;
 }
 .fixed-bg .text-wrapper p.notice {
-    font-size: 16px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+}
+.panks-container .program-intro {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+}
+.panks-container .appointment-call {
+    color: #075f5f;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, .8);
+}
+.panks-container .appointment-call a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .fixed-bg .image-wrapper {
     height: 300px;

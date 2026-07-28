@@ -27,8 +27,12 @@
                 />
 
                 <div class="controls">
-                    <i class="bi bi-chevron-left" @click="prevSlide"></i>
-                    <i class="bi bi-chevron-right" @click="nextSlide"></i>
+                    <button type="button" aria-label="Previous photo" @click="prevSlide">
+                        <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" aria-label="Next photo" @click="nextSlide">
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                    </button>
                 </div>
 
             </div>
@@ -229,22 +233,34 @@ section {
 
     padding: 0 15px;
 
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
+    pointer-events: none;
     z-index: 10;
 }
 
-.slideshow-image-container:hover .controls {
-    opacity: 1;
+.controls button {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, .9);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .58);
+    color: white;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background .15s ease, transform .15s ease;
+}
+
+.controls button:hover,
+.controls button:focus-visible {
+    background: var(--primary-teal);
+    transform: scale(1.06);
 }
 
 .controls i {
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    line-height: 1;
 }
 
 /* Animations */

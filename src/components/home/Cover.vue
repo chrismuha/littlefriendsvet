@@ -66,11 +66,8 @@ const [emblaRef] = emblaCarouselVue(
       </div>
 
       <div class="cover-button">
-        <a href="#foryou">
-          <img
-            src="@/assets/images/Arrow-Down_03.gif"
-            alt="for you button"
-          >
+        <a href="#foryou" aria-label="Continue to the next section">
+          <i class="bi bi-chevron-down" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -155,15 +152,25 @@ section {
 }
 
 .cover-button {
-  width: 30%;
+  width: fit-content;
   margin: auto;
+  flex-shrink: 0;
+  transform: translateY(-36px);
 }
 
-.cover-button img {
-  width: 100%;
-  height: auto;
-  max-height: 100px;
-  object-fit: contain;
+.cover-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.cover-button i {
+  display: block;
+  font-size: 56px;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 640px) {

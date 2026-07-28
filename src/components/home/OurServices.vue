@@ -29,12 +29,21 @@
     justify-content: center;
 }
 .row.orange-bg h1 {
-    color: white;
+    color: inherit;
     font-size: 42px;
     max-width: 1000px;
 }
 .row.orange-bg a {
+    padding: 24px 30px;
+    border-radius: .2rem;
+    background: var(--primary-gold);
+    color: #075f5f;
+    transition: .1s ease-in-out;
+}
+.row.orange-bg a:hover {
+    background: var(--primary-teal);
     color: white;
+    text-decoration: none;
 }
 .image-wrapper {
     height: 300px;

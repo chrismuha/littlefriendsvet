@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="foryou">
         <div class="header">
             <div class="header-starburst">
                 <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left">
@@ -12,7 +12,7 @@
                     <img src="@/assets/images/individual.jpg" alt="individual">
                 </div>
                 <div class="text-wrapper">
-                    Welcome to Little Friends Veterinary Services! We are your local, small town, family owned and operated veterinary hospital in beautiful Lyons Falls, NY. We are happy to continue caring for pets and families in a safe, comforting environment.  We ARE accepting new clients and patients!  We are open for all appointments including wellness visits, immunizations, illness and emergencies, puppy and kitten visits and feline surgical services including our community spay and neuter program and feline dentistry, as well as limited canine surgical services. Our appointments are filling quickly, so be sure to call ahead. Contact us by phone, email or text and please be sure to leave a message if you call - we may be busy with another patient and we will do our very best to call you back as soon as we can.  We are also very excited to offer text messaging services!  Text us at 855-553-4416.  We will do our best to respond to text messages as quickly as possible.
+                    Welcome to Little Friends Veterinary Services! We are your local, small town, family owned and operated veterinary hospital in beautiful Lyons Falls, NY. We are happy to continue caring for pets and families in a safe, comforting environment.  We ARE accepting new clients and patients!  We are open for all appointments including wellness visits, immunizations, illness and emergencies, puppy and kitten visits and feline surgical services including our community spay and neuter program and feline dentistry, as well as limited canine surgical services. Our appointments are filling quickly, so be sure to call ahead. Contact us by phone, email or text and please be sure to leave a message if you call - we may be busy with another patient and we will do our very best to call you back as soon as we can.  We are also very excited to offer text messaging services!  Text us at <a href="sms:+18555534416">855-553-4416</a>.  We will do our best to respond to text messages as quickly as possible.
                 </div>
             </div>
             <div class="text-wrapper">
@@ -28,10 +28,18 @@
 <style scoped>
 section {
     background: var(--secondary-white);
-    padding: 70px 30px;
+    padding: 10px 30px 70px;
+}
+.header {
+    min-height: 130px;
+    padding: 35px 15px;
+}
+.header-starburst img {
+    width: 100px;
+    height: auto;
 }
 .body-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -63,9 +71,19 @@ section {
 }
 .text-wrapper {
     flex: 1;
+    color: #3f3f3f;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+.text-wrapper a {
+    color: #075f5f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .ending-image {
-    height: 100px;
+    height: 65px;
 }
 .ending-image img {
     height: 100%;

@@ -1,11 +1,7 @@
 <template>
     <section>
         <div class="text-content">
-            <h1>
-                <ul>
-                    <li>Feline Boarding</li>
-                </ul>
-            </h1>
+            <h1>Feline Boarding</h1>
             <p>
                 We now offer boarding for kitties! Your feline friend can stay in a luxury kitty condo with us while you are away. Kitty condos are super comfy with a separate area for the litter pan, soft bedding and a choice of perching shelves. Each kitty has his or her own condo. Your kitty will be in a quiet, warm, safe space with soft music and NO dogs anywhere. Safety is our utmost priority and since we are a veterinary facility, your kitty will be closely monitored. Call us today to book your kitty's luxury stay with Little Friends!
             </p>
@@ -23,13 +19,31 @@ section {
     padding: 70px 40px;
 }
 .text-content h1 {
-    color: black;
-    font-size: 42px;
-    font-weight: 300;
+    color: #075f5f;
+    font-family: 'Galada';
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+.text-content h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 3px auto 0;
+    border-radius: 999px;
+    background: var(--primary-orange);
 }
 .text-content p {
     font-size: 24px;
     margin-top: 20px;
+}
+.text-content {
+    max-width: 1100px;
+    margin: auto;
 }
 
 .gallery {

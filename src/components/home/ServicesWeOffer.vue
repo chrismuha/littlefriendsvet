@@ -72,7 +72,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="section-item">
+                <div class="section-item emergency-services">
                     <h1>Emergency Services</h1>
                     <div class="text-wrapper">
                         <p>
@@ -84,17 +84,17 @@
                                 <a href="https://www.vmccny.com" target="_blank" rel="noopener noreferrer">
                                     www.vmccny.com
                                 </a>
-                                (315) 446-7933 – available 24 hours a day, 7 days a week
+                                <a href="tel:+13154467933">(315) 446-7933</a> – available 24 hours a day, 7 days a week
                             </li>
 
                             <li>
                                 Waterville Veterinary Clinic – for clients to the south –
-                                (315) 841-4021 – nights and weekends
+                                <a href="tel:+13158414021">(315) 841-4021</a> – nights and weekends
                             </li>
 
                             <li>
                                 Northcountry Animal Hospital – for clients to the north –
-                                (315) 785-9505 – nights and weekends
+                                <a href="tel:+13157859505">(315) 785-9505</a> – nights and weekends
                             </li>
 
                             <li>
@@ -102,7 +102,7 @@
                                 <a href="https://www.urgentcare.vet" target="_blank" rel="noopener noreferrer">
                                     www.urgentcare.vet
                                 </a>;
-                                315-515-3047. Services and hours limited, please check their website or call them.
+                                <a href="tel:+13155153047">315-515-3047</a>. Services and hours limited, please check their website or call them.
                             </li>
                         </ul>
                         <p>
@@ -136,6 +136,9 @@
 section {
     position: relative;
     padding: 70px 40px;
+    color: #2f2f2f;
+    font-size: 18px;
+    font-weight: 400;
 }
 .content-container {
     max-width: 1400px;
@@ -160,8 +163,21 @@ section {
 .section-item h1 {
     font-family: 'Galada';
     font-size: 2rem;
-    color: #333;
+    color: #075f5f;
     font-weight: 400;
+}
+.section-item p,
+.section-item li {
+    line-height: 1.75;
+}
+.emergency-services a {
+    color: #075f5f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.emergency-services a:hover {
+    color: var(--secondary-orange);
 }
 .section-item, .left-section, .text-wrapper {
     display: flex;

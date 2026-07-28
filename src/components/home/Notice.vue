@@ -1,7 +1,7 @@
 <template>
     <section class="orange-bg">
         <div class="text-wrapper">
-            <p>
+            <p class="opening">
             It is with deep regret that Little Friends will be closing as of December 30, 2025.
             It has been our absolute pleasure to serve our community and care for your pets over the last decade.
             This has been an extremely difficult decision for me; however, I have reached a point in life where a new path has opened up.
@@ -32,11 +32,11 @@
             your pet’s medical records or with other questions that we may help you with.
             </p>
 
-            <p>
+            <p class="gratitude">
             With immense gratitude,
             </p>
 
-            <p>
+            <p class="signature">
             <strong>Liane Underwood, DVM</strong>
             </p>
         </div>
@@ -49,22 +49,39 @@ section {
     text-align: center;
 }
 .text-wrapper {
-    max-width: 1400px;
+    max-width: 1150px;
     margin: auto;
     padding: 70px 30px;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    font-weight: 300;
-    line-height: 1.5rem;
+    gap: 14px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: left;
+}
+.opening {
+    font-size: inherit;
+    font-weight: inherit;
 }
 .text-wrapper a {
-    text-decoration: none;
     color: white;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .text-wrapper a:hover {
-    text-decoration: underline;
+    color: var(--primary-gold);
+}
+.gratitude {
+    margin-top: 10px;
+    font-style: italic;
+}
+.signature {
+    font-size: 22px;
+    letter-spacing: .01em;
 }
 
 @media screen and (max-width: 640px) {
