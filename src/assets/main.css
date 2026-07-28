@@ -85,6 +85,10 @@ a:hover {
     border: 1px solid transparent;
 }
 
+.btn:hover {
+    text-decoration: none;
+}
+
 .btn-orange {
     background: var(--primary-orange);
 }
