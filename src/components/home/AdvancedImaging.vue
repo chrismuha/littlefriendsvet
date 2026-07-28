@@ -58,12 +58,14 @@ img {
 
 .image-row {
     gap: 20px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .image-row img {
     flex: 1;
     min-width: 0;
-    object-fit: contain;
+    max-width: 450px;
 }
 
 @media screen and (max-width: 960px) {
@@ -75,9 +77,6 @@ img {
     }
     .left-image {
         max-width: 100%;
-    }
-    .image-row img {
-        max-width: 400px;
     }
     .image-row img:nth-child(2) {
         width: 100%;
