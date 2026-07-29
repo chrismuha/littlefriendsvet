@@ -13,6 +13,7 @@ import AdvancedImaging from '@/components/home/AdvancedImaging.vue';
 import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
 import PhotoGrid1 from '@/components/home/PhotoGrid1.vue';
 import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
+import Parasite from '@/components/home/Parasite.vue';
 
 </script>
 
@@ -30,5 +31,6 @@ import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
     <AdvancedImaging />
     <ServicesWeOffer />
     <PhotoGrid1 />
+    <Parasite />
     <PhotoGrid2 />
 </template>
