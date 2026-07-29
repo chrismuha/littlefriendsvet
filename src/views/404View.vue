@@ -57,5 +57,5 @@ const logoUrl = `${import.meta.env.BASE_URL}404images/MCRwhiteNred.png`
     </div>
 </template>
 <style scoped>
-@import url('./404.css');
+@import url('@/assets/css/404.css');
 </style>

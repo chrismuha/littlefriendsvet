@@ -49,6 +49,7 @@ section {
     min-height: 500px;
     padding: 70px 30px;
     font-size: 13px;
+    align-items: stretch;
 }
 .header {
     padding: 0px;
@@ -76,7 +77,7 @@ input:focus, textarea:focus {
 }
 .separator {
     width: 2px;
-    height: 100;
+    align-self: stretch;
     background: #e5e5e5;
 }
 .left-section, .right-section {
@@ -141,6 +142,10 @@ input:focus, textarea:focus {
     section {
         flex-direction: column;
         padding: 40px 15px;
+    }
+    .separator {
+        width: 100%;
+        height: 2px;
     }
 }
 @media screen and (max-width: 590px) {
