@@ -7,7 +7,17 @@
                 '--zoom-duration': zoomDuration + 'ms'
             }"
         >
-            <div class="slideshow-image-container" @wheel="handleWheel">
+            <div
+                class="slideshow-image-container"
+                role="region"
+                aria-label="Little Friends photo slideshow"
+                tabindex="0"
+                @wheel="handleWheel"
+                @keydown="handleKeydown"
+                @pointerdown="handlePointerDown"
+                @pointerup="handlePointerUp"
+                @pointercancel="resetPointer"
+            >
 
                 <img
                     :key="currentIndex"
@@ -71,6 +81,11 @@ let interval = null;
 let transitionTimeout = null;
 let wheelUnlockTimeout = null;
 let wheelLocked = false;
+let wheelDelta = 0;
+let pointerStartX = null;
+let pointerStartY = null;
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+let reducedMotion = motionPreference.matches;
 let slideStartTime = performance.now();
 
 const SLIDE_DURATION = 5000;
@@ -81,6 +96,9 @@ const zoomDuration = SLIDE_DURATION + FADE_DURATION + ZOOM_BUFFER;
 
 function startSlideshow() {
     clearInterval(interval);
+    interval = null;
+
+    if (reducedMotion) return;
 
     interval = setInterval(() => {
         nextSlide(false);
@@ -135,29 +153,84 @@ function prevSlide() {
 }
 
 function handleWheel(event) {
-    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 12) return;
+    const horizontalDelta = event.deltaX;
+    const isHorizontalGesture = Math.abs(horizontalDelta) >= 2
+        && Math.abs(horizontalDelta) >= Math.abs(event.deltaY) * .5;
+
+    if (!isHorizontalGesture) return;
 
     event.preventDefault();
-    if (wheelLocked) return;
-
-    wheelLocked = true;
-    if (event.deltaX > 0) nextSlide();
-    else prevSlide();
 
     clearTimeout(wheelUnlockTimeout);
     wheelUnlockTimeout = setTimeout(() => {
         wheelLocked = false;
-    }, 450);
+        wheelDelta = 0;
+    }, 180);
+
+    if (wheelLocked) return;
+
+    wheelDelta += horizontalDelta;
+    if (Math.abs(wheelDelta) < 12) return;
+
+    wheelLocked = true;
+    if (wheelDelta > 0) nextSlide();
+    else prevSlide();
+}
+
+function handleKeydown(event) {
+    if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        prevSlide();
+    }
+    if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        nextSlide();
+    }
+}
+
+function handlePointerDown(event) {
+    if (event.pointerType === 'mouse') return;
+    pointerStartX = event.clientX;
+    pointerStartY = event.clientY;
+}
+
+function resetPointer() {
+    pointerStartX = null;
+    pointerStartY = null;
+}
+
+function handlePointerUp(event) {
+    if (pointerStartX === null || pointerStartY === null) return;
+
+    const deltaX = event.clientX - pointerStartX;
+    const deltaY = event.clientY - pointerStartY;
+    resetPointer();
+
+    if (Math.abs(deltaX) < 45 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+    if (deltaX < 0) nextSlide();
+    else prevSlide();
+}
+
+function handleMotionPreference(event) {
+    reducedMotion = event.matches;
+    if (reducedMotion) {
+        clearInterval(interval);
+        interval = null;
+    } else {
+        startSlideshow();
+    }
 }
 
 onMounted(() => {
     startSlideshow();
+    motionPreference.addEventListener('change', handleMotionPreference);
 });
 
 onUnmounted(() => {
     clearInterval(interval);
     clearTimeout(transitionTimeout);
     clearTimeout(wheelUnlockTimeout);
+    motionPreference.removeEventListener('change', handleMotionPreference);
 });
 </script>
 
@@ -207,6 +280,12 @@ section {
     width: 100%;
     position: relative;
     overflow: hidden;
+    touch-action: pan-y;
+}
+
+.slideshow-image-container:focus-visible {
+    outline: 4px solid var(--primary-orange);
+    outline-offset: 5px;
 }
 
 /* Images */
@@ -277,6 +356,11 @@ section {
     transform: scale(1.06);
 }
 
+.controls button:focus-visible {
+    outline: 3px solid var(--primary-gold);
+    outline-offset: 3px;
+}
+
 .controls i {
     font-size: 2rem;
     line-height: 1;
@@ -311,6 +395,20 @@ section {
 
     to {
         transform: scale(1.2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .current {
+        animation: fadeIn .15s ease;
+    }
+
+    .previous-animate {
+        animation: fadeOut .15s ease forwards;
+    }
+
+    .controls button {
+        transition: none;
     }
 }
 </style>

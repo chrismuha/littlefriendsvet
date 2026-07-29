@@ -1,7 +1,15 @@
 <script setup>
-import { onUnmounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import emblaCarouselVue from 'embla-carousel-vue'
 import Autoplay from 'embla-carousel-autoplay'
+
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
+const autoplayPlugin = Autoplay({
+    delay: 3000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+    playOnInit: !motionPreference.matches
+})
 
 const [emblaRef, emblaApi] = emblaCarouselVue(
     {
@@ -11,36 +19,61 @@ const [emblaRef, emblaApi] = emblaCarouselVue(
         skipSnaps: false,
         duration: 40,
     },
-    [
-        Autoplay({
-            delay: 3000,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true
-        })
-    ]
+    [autoplayPlugin]
 )
 
 let wheelLocked = false
 let wheelUnlockTimer = null
+let wheelDelta = 0
 
 const handleCarouselWheel = (event) => {
-    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 12) return
+    const horizontalDelta = event.deltaX
+    const isHorizontalGesture = Math.abs(horizontalDelta) >= 2
+        && Math.abs(horizontalDelta) >= Math.abs(event.deltaY) * .5
+
+    if (!isHorizontalGesture) return
 
     event.preventDefault()
-    if (wheelLocked) return
-
-    wheelLocked = true
-    if (event.deltaX > 0) emblaApi.value?.scrollNext()
-    else emblaApi.value?.scrollPrev()
 
     clearTimeout(wheelUnlockTimer)
     wheelUnlockTimer = setTimeout(() => {
         wheelLocked = false
-    }, 450)
+        wheelDelta = 0
+    }, 180)
+
+    if (wheelLocked) return
+
+    wheelDelta += horizontalDelta
+    if (Math.abs(wheelDelta) < 12) return
+
+    wheelLocked = true
+    if (wheelDelta > 0) emblaApi.value?.scrollNext()
+    else emblaApi.value?.scrollPrev()
 }
+
+const handleCarouselKeydown = (event) => {
+    if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        emblaApi.value?.scrollPrev()
+    }
+    if (event.key === 'ArrowRight') {
+        event.preventDefault()
+        emblaApi.value?.scrollNext()
+    }
+}
+
+const handleMotionPreference = (event) => {
+    if (event.matches) autoplayPlugin.stop()
+    else autoplayPlugin.play()
+}
+
+onMounted(() => {
+    motionPreference.addEventListener('change', handleMotionPreference)
+})
 
 onUnmounted(() => {
     clearTimeout(wheelUnlockTimer)
+    motionPreference.removeEventListener('change', handleMotionPreference)
 })
 </script>
 
@@ -62,31 +95,39 @@ onUnmounted(() => {
     <div class="cover-items">
       <div class="logo-image">
         <img
-          src="@/assets/images/LittleFriendsLogo_10.png"
-          alt="LittleFriendsLogo"
+          src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp"
+          alt="Little Friends on Wheels — Mobile Veterinary Services"
         >
       </div>
 
-      <div class="embla" ref="emblaRef" @wheel="handleCarouselWheel">
+      <div
+        class="embla"
+        ref="emblaRef"
+        role="region"
+        aria-label="Little Friends logo slider"
+        tabindex="0"
+        @wheel="handleCarouselWheel"
+        @keydown="handleCarouselKeydown"
+      >
         <div class="embla__container">
           <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
           </div>
 
           <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
           </div>
 
           <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
           </div>
 
           <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
           </div>
 
           <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsLogo_10.png" alt="">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
           </div>
         </div>
       </div>
@@ -152,14 +193,16 @@ section {
 }
 
 .logo-image {
-  margin: auto;
-  transform: translateY(60px);
+  width: min(92vw, 900px);
+  margin: 0 auto 12px;
+  transform: translateY(30px);
 }
 
 .logo-image img {
+  display: block;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-height: 43vh;
+  object-fit: contain;
 }
 
 .embla {
@@ -173,6 +216,11 @@ section {
 
 .embla:active {
   cursor: grabbing;
+}
+
+.embla:focus-visible {
+  outline: 4px solid var(--primary-orange);
+  outline-offset: 5px;
 }
 
 .embla__container {
@@ -226,6 +274,16 @@ section {
 
   .cover-button {
     display: none;
+  }
+
+  .logo-image {
+    width: min(96vw, 720px);
+    margin-bottom: 5px;
+    transform: translateY(18px);
+  }
+
+  .logo-image img {
+    max-height: 36vh;
   }
 
   .mobile-actions {
