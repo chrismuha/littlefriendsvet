@@ -14,6 +14,7 @@ import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
 import PhotoGrid1 from '@/components/home/PhotoGrid1.vue';
 import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
 import Parasite from '@/components/home/Parasite.vue';
+import ContactUs from '@/components/home/ContactUs.vue';
 
 </script>
 
@@ -33,4 +34,5 @@ import Parasite from '@/components/home/Parasite.vue';
     <PhotoGrid1 />
     <Parasite />
     <PhotoGrid2 />
+    <ContactUs />
 </template>
