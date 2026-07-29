@@ -150,6 +150,21 @@ a:hover {
         font-size: 54.4px;
     }
 }
+.header-v4 h1 {
+    font-size: 42px;
+    font-family: 'Ubuntu';
+    width: 100%;
+    padding-bottom: 0.2rem;
+}
+.header-v4 {
+    max-width: 1400px;
+    padding: 80px 30px;
+}
+@media screen and (max-width: 960px) {
+    .header-v4 h1 {
+        font-size: 35.7px;
+    }
+}
 .heading-line::before, .heading-line::after {
     content: "";
     position: absolute;

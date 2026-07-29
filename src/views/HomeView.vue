@@ -11,6 +11,8 @@ import Slideshow from '@/components/home/Slideshow.vue';
 import WhoWeAre from '@/components/home/WhoWeAre.vue';
 import AdvancedImaging from '@/components/home/AdvancedImaging.vue';
 import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
+import PhotoGrid1 from '@/components/home/PhotoGrid1.vue';
+import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
 
 </script>
 
@@ -27,4 +29,6 @@ import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
     <FelineServices />
     <AdvancedImaging />
     <ServicesWeOffer />
+    <PhotoGrid1 />
+    <PhotoGrid2 />
 </template>

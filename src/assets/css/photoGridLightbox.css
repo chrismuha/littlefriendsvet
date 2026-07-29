@@ -1,0 +1,137 @@
+.photo-grid {
+    padding: 30px;
+}
+
+.photo-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    overflow: hidden;
+}
+
+.photo-grid-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-grid-item {
+    display: block;
+    overflow: hidden;
+}
+
+.photo-grid-item img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.photo-grid-item img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 960px) {
+    .photo-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.photo-grid-wrapper img {
+    cursor: pointer;
+}
+
+.photo-grid-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+}
+
+.photo-grid-lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.photo-grid-lightbox-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Full viewport width, height scales naturally with the image
+   so the whole image is visible without cropping */
+.photo-grid-lightbox-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-grid-lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: opacity 0.2s ease;
+}
+
+.photo-grid-lightbox-close:hover {
+    opacity: 0.7;
+}
+
+.photo-grid-lightbox-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: opacity 0.2s ease;
+}
+
+.photo-grid-lightbox-arrow:hover {
+    opacity: 0.7;
+}
+
+.photo-grid-lightbox-prev {
+    left: 10px;
+}
+
+.photo-grid-lightbox-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .photo-grid-lightbox-close {
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .photo-grid-lightbox-arrow {
+        font-size: 1.75rem;
+        padding: 4px 10px;
+    }
+}
