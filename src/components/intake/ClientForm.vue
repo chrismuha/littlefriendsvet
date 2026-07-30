@@ -1,6 +1,8 @@
 <script setup>
 import { reactive } from 'vue'
 
+const emit = defineEmits(['next'])
+
 const form = reactive({
     fullName: '',
     email: '',
@@ -92,8 +94,7 @@ function handleNext() {
         return
     }
 
-    console.log('Success')
-    console.log(form)
+    emit('next', JSON.parse(JSON.stringify(form)))
 }
 </script>
 
