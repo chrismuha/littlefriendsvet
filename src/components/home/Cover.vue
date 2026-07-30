@@ -159,7 +159,6 @@ onUnmounted(() => {
 <style scoped>
 .cover-bg video {
   position: absolute;
-
   top: 0;
   left: 0;
   width: 100%;
@@ -175,9 +174,9 @@ onUnmounted(() => {
 section {
   position: relative;
   background: var(--primary-teal);
-  height: 100vh;
+  min-height: 100svh;
   width: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
@@ -190,12 +189,13 @@ section {
   flex-direction: column;
   padding: 0 30px;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo-image {
   width: min(92vw, 900px);
   margin: 0 auto 12px;
-  transform: translateY(30px);
 }
 
 .logo-image img {
@@ -206,10 +206,11 @@ section {
 }
 
 .embla {
-  overflow: hidden;
+  width: 100%;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
 
+  overflow: hidden;
   cursor: grab;
   user-select: none;
 }
@@ -225,6 +226,7 @@ section {
 
 .embla__container {
   display: flex;
+  align-items: center;
 }
 
 .embla__slide {
@@ -237,7 +239,6 @@ section {
   height: 100%;
   width: auto;
   display: block;
-
   pointer-events: none;
 }
 
@@ -245,7 +246,6 @@ section {
   width: fit-content;
   margin: auto;
   flex-shrink: 0;
-  transform: translateY(-36px);
 }
 
 .cover-button a {
@@ -267,23 +267,58 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 640px) {
+@media (max-width: 960px) {
+  .cover-items {
+    width: 100%;
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .logo-image {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 0;
+  }
+
+  .logo-image img {
+    max-height: 32vh;
+  }
+
+  .embla {
+    max-width: none;
+    width: 100%;
+  }
+
+  .embla__slide {
+    flex: 0 0 30%;
+    height: 140px;
+    margin-right: 12px;
+  }
+
+  .embla__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 640px) {
   .cover-items {
     padding: 0 15px;
   }
 
+  .logo-image img {
+    max-height: 28vh;
+  }
+
+  .embla__slide {
+    flex: 0 0 48%;
+    height: 110px;
+    margin-right: 10px;
+  }
+
   .cover-button {
     display: none;
-  }
-
-  .logo-image {
-    width: min(96vw, 720px);
-    margin-bottom: 5px;
-    transform: translateY(18px);
-  }
-
-  .logo-image img {
-    max-height: 36vh;
   }
 
   .mobile-actions {
@@ -291,6 +326,7 @@ section {
     right: 15px;
     bottom: 16px;
     left: 15px;
+
     z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -300,15 +336,45 @@ section {
   .mobile-actions a {
     display: flex;
     min-height: 48px;
+
     align-items: center;
     justify-content: center;
     gap: 6px;
+
     border: 2px solid white;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
+
     background: var(--primary-orange);
     color: white;
+
     font-weight: 700;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-image img {
+    max-height: 24vh;
+  }
+
+  .embla__slide {
+    height: 90px;
+  }
+
+  .mobile-actions a {
+    min-height: 44px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .embla__slide {
+    flex: 0 0 70%;
+    height: 75px;
+  }
+
+  .mobile-actions {
+    grid-template-columns: 1fr;
   }
 }
 </style>
