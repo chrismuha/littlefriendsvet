@@ -64,17 +64,7 @@ section {
     flex-direction: column;
     gap: 20px;
 }
-input, textarea {
-    font-weight: 900;
-    color: #999999a0;
-    outline: 1px solid #999999a0;
-}
-input::placeholder, textarea::placeholder {
-    color: #999999a0;
-}
-input:focus, textarea:focus {
-    outline: 2px solid #983049;
-}
+
 .separator {
     width: 2px;
     align-self: stretch;
@@ -99,34 +89,7 @@ input:focus, textarea:focus {
     color: #333;
     font-size: 2rem;
 }
-.input-field {
-    position: relative;
-}
-.input-field i {
-    position: absolute;
-    top: 50%;
-    left: 14px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #999999a0;
-}
-.message-box {
-    flex-grow: 1;
-}
-.message-box i {
-    top: 26px;
-}
-.input-field input, .input-field textarea {
-    padding: 14px;
-    padding-left: 54px;
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-}
-.input-field textarea {
-    resize: vertical;
-    min-height: 100%;
-}
+
 
 .btn-orange {
     color: white;

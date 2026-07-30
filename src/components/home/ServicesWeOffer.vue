@@ -134,10 +134,10 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                             or download and fill out both PDFs below.
                         </p>
                         <div class="new-client-buttons">
-                            <span class="new-client-button primary">
+                            <RouterLink to="/intake" class="new-client-button primary">
                                 <i class="bi bi-laptop" aria-hidden="true"></i>
                                 Complete the Online Form
-                            </span>
+                            </RouterLink>
                             <a
                                 :href="newClientForm"
                                 class="new-client-button"

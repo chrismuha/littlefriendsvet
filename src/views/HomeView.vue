@@ -14,8 +14,8 @@ import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
 import PhotoGrid1 from '@/components/home/PhotoGrid1.vue';
 import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
 import Parasite from '@/components/home/Parasite.vue';
-import ContactUs from '@/components/home/ContactUs.vue';
-import Footer from '@/components/Footer.vue';
+import ContactUs from '@/components/ContactUs.vue';
+import FooterSection from '@/components/FooterSection.vue';
 
 </script>
 
@@ -36,5 +36,5 @@ import Footer from '@/components/Footer.vue';
     <Parasite />
     <PhotoGrid2 />
     <ContactUs />
-    <Footer />
+    <FooterSection />
 </template>
