@@ -233,15 +233,17 @@ section {
 }
 
 .embla__slide {
-  flex: 0 0 300px;
-  height: 400px;
-  margin-right: 40px;
+  flex: 0 0 clamp(180px, 15vw, 300px);
+  aspect-ratio: 3 / 4;
+  height: auto;
+  margin-right: clamp(16px, 2vw, 40px);
 }
 
 .embla__slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  image-rendering: auto;
   display: block;
   pointer-events: none;
 }
