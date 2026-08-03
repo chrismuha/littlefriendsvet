@@ -210,7 +210,7 @@ section {
 
 .embla {
   width: 100%;
-  max-width: 800px;
+  max-width: 1440px;
   margin: 0 auto;
 
   overflow: hidden;
@@ -233,14 +233,15 @@ section {
 }
 
 .embla__slide {
-  flex: 0 0 auto;
-  height: 200px;
-  margin-right: 20px;
+  flex: 0 0 300px;
+  height: 400px;
+  margin-right: 40px;
 }
 
 .embla__slide img {
+  width: 100%;
   height: 100%;
-  width: auto;
+  object-fit: contain;
   display: block;
   pointer-events: none;
 }
