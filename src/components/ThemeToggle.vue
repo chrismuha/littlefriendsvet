@@ -2,22 +2,24 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
 
+const STORAGE_KEY = 'little-friends-theme'
 const isDark = ref(false)
 const show = ref(true)
 let scrollStopTimer = null
 
 const label = computed(() => isDark.value ? 'Use light mode' : 'Use dark mode')
 
-const applyTheme = (theme) => {
+const applyTheme = (theme, persist = false) => {
   isDark.value = theme === 'dark'
   document.documentElement.dataset.theme = theme
   document.querySelector('meta[name="theme-color"]')
     ?.setAttribute('content', isDark.value ? '#075f5f' : '#16a2a2')
 
+  if (persist) localStorage.setItem(STORAGE_KEY, theme)
 }
 
 const toggleTheme = () => {
-  applyTheme(isDark.value ? 'light' : 'dark')
+  applyTheme(isDark.value ? 'light' : 'dark', true)
 }
 
 const handleScroll = () => {
@@ -29,7 +31,7 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  applyTheme('light')
+  applyTheme(localStorage.getItem(STORAGE_KEY) || 'light')
   window.addEventListener('scroll', handleScroll, { passive: true })
 })
 

@@ -177,7 +177,8 @@ a:hover {
     background: var(--button-teal);
 }
 
-.btn-orange:hover {
+.btn-orange:hover,
+.btn-orange:focus-visible {
     background: var(--button-teal);
 }
 

@@ -99,10 +99,6 @@ section {
     cursor: pointer;
     font-size: 16px;
 }
-.btn-orange:hover,
-.btn-orange:focus-visible {
-    background: var(--button-orange);
-}
 .row > div {
     flex: 1;
 }

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "dev:full": "npm run dev",
     "dev:vite": "vite",
     "build": "vite build",
