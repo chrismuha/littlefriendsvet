@@ -202,7 +202,7 @@ onUnmounted(() => {
 
 section {
   position: relative;
-  background: var(--hero-teal);
+  background: var(--bright-teal);
   min-height: 100svh;
   width: 100%;
   overflow: hidden;
@@ -249,7 +249,7 @@ section {
 }
 
 .embla:focus-visible {
-  outline: 4px solid var(--primary-orange);
+  outline: 4px solid var(--button-orange);
   outline-offset: 5px;
 }
 
@@ -390,7 +390,7 @@ section {
     border: 2px solid white;
     border-radius: 0.25rem;
 
-    background: var(--primary-orange);
+    background: var(--button-orange);
     color: white;
 
     font-weight: 700;

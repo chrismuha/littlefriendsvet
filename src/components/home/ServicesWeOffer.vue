@@ -242,7 +242,7 @@ section {
     text-decoration: none;
 }
 .new-client-button.primary {
-    background: var(--primary-orange);
+    background: var(--button-orange);
 }
 .new-client-button i {
     flex-shrink: 0;

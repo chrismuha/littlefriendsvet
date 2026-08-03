@@ -161,7 +161,7 @@ onUnmounted(() => {
   min-height: 46px;
   padding: 10px 28px;
   border-radius: .25rem;
-  background: var(--primary-orange);
+  background: var(--button-orange);
   color: white;
   cursor: pointer;
   font: inherit;

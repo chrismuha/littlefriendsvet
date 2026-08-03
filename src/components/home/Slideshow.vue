@@ -358,7 +358,7 @@ section {
 
 .controls button:hover,
 .controls button:focus-visible {
-    background: var(--primary-teal);
+    background: var(--button-teal);
     transform: scale(1.06);
 }
 

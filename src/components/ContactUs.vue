@@ -78,6 +78,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: var(--bright-teal);
 }
 .left-section img {
     width: 100%;

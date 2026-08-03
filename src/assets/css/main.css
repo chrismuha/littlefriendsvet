@@ -22,7 +22,9 @@
 :root {
     --primary-teal: #075f5f;
     --primary-orange: #c63e00;
-    --hero-teal: #16a2a2;
+    --bright-teal: #16a2a2;
+    --button-teal: #16a2a2;
+    --button-orange: #ff5000;
     --primary-gold: #ffeaa5;
     --primary-white: #fff;
     --primary-red: #983049;
@@ -120,15 +122,15 @@ a:hover {
 }
 
 .btn-orange {
-    background: var(--primary-orange);
+    background: var(--button-orange);
 }
 
 .btn-teal {
-    background: var(--primary-teal);
+    background: var(--button-teal);
 }
 
 .btn-orange:hover {
-    background: var(--primary-teal);
+    background: var(--button-teal);
 }
 
 .btn-red {
