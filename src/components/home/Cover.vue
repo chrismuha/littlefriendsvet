@@ -202,7 +202,7 @@ onUnmounted(() => {
 
 section {
   position: relative;
-  background: var(--primary-teal);
+  background: var(--hero-teal);
   min-height: 100svh;
   width: 100%;
   overflow: hidden;
