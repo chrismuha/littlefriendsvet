@@ -68,7 +68,7 @@ section {
 .separator {
     width: 2px;
     align-self: stretch;
-    background: #e5e5e5;
+    background: var(--separator-color);
 }
 .left-section, .right-section {
     width: 100%;

@@ -27,7 +27,7 @@
 
 <style scoped>
 section {
-    background: var(--surface-background);
+    background: var(--section-background);
     padding: 10px 30px 70px;
 }
 .header {
@@ -65,7 +65,7 @@ section {
     line-height: 1.65;
 }
 .text-wrapper a {
-    color: #075f5f;
+    color: var(--content-teal);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;

@@ -137,7 +137,7 @@ onUnmounted(() => {
 
 .install-dialog h2 {
   margin: 12px 0;
-  color: #075f5f;
+  color: var(--content-teal);
 }
 
 .install-dialog p {

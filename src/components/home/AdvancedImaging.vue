@@ -22,7 +22,7 @@
 </template>
 <style scoped>
 section {
-    background: var(--surface-background);
+    background: var(--section-background);
     padding: 70px 30px;
     color: var(--page-text);
 }

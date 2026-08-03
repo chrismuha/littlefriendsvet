@@ -40,6 +40,10 @@
     --page-text: #666;
     --heading-text: #333;
     --surface-background: #fff;
+    --section-background: #f8f8f8;
+    --separator-color: #e5e5e5;
+    --content-teal: #075f5f;
+    --content-text: #2f2f2f;
 }
 
 :root[data-theme="dark"] {
@@ -51,7 +55,11 @@
     --page-background: #102626;
     --page-text: #eef6f6;
     --heading-text: #fff;
-    --surface-background: #173535;
+    --surface-background: #1b3e3e;
+    --section-background: #173535;
+    --separator-color: #466b6b;
+    --content-teal: #7bded7;
+    --content-text: #eef6f6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,7 +72,11 @@
         --page-background: #102626;
         --page-text: #eef6f6;
         --heading-text: #fff;
-        --surface-background: #173535;
+        --surface-background: #1b3e3e;
+        --section-background: #173535;
+        --separator-color: #466b6b;
+        --content-teal: #7bded7;
+        --content-text: #eef6f6;
     }
 }
 
@@ -108,7 +120,7 @@ ol,ul {
 }
 
 ul > li::marker {
-    color: #075f5f;
+    color: var(--content-teal);
 }
 
 ul ul > li::marker {
@@ -258,7 +270,7 @@ a:hover {
     position: absolute;
     top: calc(50% - (calc(.2px + .05em)/ 2));
     width: 2000px;
-    border-bottom: calc(.2px + .05em) solid #e5e5e5;
+    border-bottom: calc(.2px + .05em) solid var(--separator-color);
 }
 .heading-line::before {
     right: 100%;

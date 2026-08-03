@@ -329,7 +329,7 @@ h1 {
     width: 22px;
     height: 22px;
     border-radius: 999px;
-    background: #e5e5e5;
+    background: var(--separator-color);
     border: 2px solid transparent;
     transition: 0.2s;
 }

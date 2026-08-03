@@ -19,7 +19,7 @@ section {
     padding: 70px 40px;
 }
 .text-content h1 {
-    color: #075f5f;
+    color: var(--content-teal);
     font-family: 'Galada';
     font-size: 52px;
     font-weight: 400;

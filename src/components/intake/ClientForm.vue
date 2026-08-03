@@ -406,7 +406,7 @@ h1 {
 .checkbox-field .square {
     width: 30px;
     height: 30px;
-    background: #e5e5e5;
+    background: var(--separator-color);
     border-radius: 0.2rem;
     display: flex;
     align-items: center;

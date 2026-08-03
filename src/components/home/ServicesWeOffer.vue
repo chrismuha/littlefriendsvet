@@ -174,7 +174,7 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
 section {
     position: relative;
     padding: 70px 40px;
-    color: #2f2f2f;
+    color: var(--content-text);
     font-size: 18px;
     font-weight: 400;
 }
@@ -201,7 +201,7 @@ section {
 .section-item h1 {
     font-family: 'Galada';
     font-size: 2rem;
-    color: #075f5f;
+    color: var(--content-teal);
     font-weight: 400;
 }
 .section-item p,
@@ -254,7 +254,7 @@ section {
     text-decoration: none;
 }
 .emergency-services a {
-    color: #075f5f;
+    color: var(--content-teal);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
