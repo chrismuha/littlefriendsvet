@@ -130,13 +130,13 @@ section {
     padding: 70px 40px;
     min-height: unset;
     height: auto;
-    color: #333;
+    color: var(--heading-text);
 }
 .orange-container h1 {
     font-size: 52px;
 }
 .orange-container .content-wrapper {
-    background: white;
+    background: var(--surface-background);
     position: relative;
     align-items: stretch;
     justify-content: start;

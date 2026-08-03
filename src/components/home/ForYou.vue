@@ -27,7 +27,7 @@
 
 <style scoped>
 section {
-    background: var(--secondary-white);
+    background: var(--surface-background);
     padding: 10px 30px 70px;
 }
 .header {
@@ -59,7 +59,7 @@ section {
 }
 .text-wrapper {
     flex: 1;
-    color: #3f3f3f;
+    color: var(--page-text);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.65;

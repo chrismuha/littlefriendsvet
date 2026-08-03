@@ -20,8 +20,9 @@
 }
 
 :root {
-    --primary-teal: #075f5f;
-    --primary-orange: #c63e00;
+    color-scheme: light;
+    --primary-teal: #16a2a2;
+    --primary-orange: #ff5000;
     --bright-teal: #16a2a2;
     --button-teal: #16a2a2;
     --button-orange: #ff5000;
@@ -29,21 +30,72 @@
     --primary-white: #fff;
     --primary-red: #983049;
 
-    --secondary-teal: #064f4f;
-    --secondary-orange: #a93400;
+    --secondary-teal: #138c8c;
+    --secondary-orange: #e64800;
     --secondary-gold: #c9bb8c;
     --secondary-white: #f8f8f8;
 
     --golden-bg: rgba(201, 187, 140, 0.78);
+    --page-background: #fff;
+    --page-text: #666;
+    --heading-text: #333;
+    --surface-background: #fff;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary-teal: #075f5f;
+    --primary-orange: #c63e00;
+    --secondary-teal: #064f4f;
+    --secondary-orange: #a93400;
+    --page-background: #102626;
+    --page-text: #eef6f6;
+    --heading-text: #fff;
+    --surface-background: #173535;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        color-scheme: dark;
+        --primary-teal: #075f5f;
+        --primary-orange: #c63e00;
+        --secondary-teal: #064f4f;
+        --secondary-orange: #a93400;
+        --page-background: #102626;
+        --page-text: #eef6f6;
+        --heading-text: #fff;
+        --surface-background: #173535;
+    }
 }
 
 body, input, textarea {
     overflow-x: hidden;
-    background: var(--primary-white);
+    background: var(--page-background);
     font-family: 'Ubuntu', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.5;
     font-weight: 300;
-    color: #666;
+    color: var(--page-text);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+    color: var(--heading-text);
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea {
+    border-color: #769696;
+    background: var(--surface-background);
+    color: var(--page-text);
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: #cadada;
 }
 
 a {
@@ -152,7 +204,7 @@ a:hover {
     font-size: 2.5rem;
     text-align: center;
     margin: auto;
-    color: #333;
+    color: var(--heading-text);
 }
 .header-v2 h1 {
     font-size: 4rem;

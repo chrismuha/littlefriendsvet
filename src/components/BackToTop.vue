@@ -72,7 +72,7 @@ onUnmounted(() => {
 .gatop-label {
   display: block;
   margin-top: 0;
-  color: #000;
+  color: var(--heading-text);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;

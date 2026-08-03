@@ -22,9 +22,9 @@
 </template>
 <style scoped>
 section {
-    background: var(--secondary-white);
+    background: var(--surface-background);
     padding: 70px 30px;
-    color: #333;
+    color: var(--page-text);
 }
 h1 {
     font-size: 42px;

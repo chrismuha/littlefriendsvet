@@ -87,7 +87,7 @@ section {
     text-align: center;
     margin: auto;
     font-weight: 300;
-    color: #333;
+    color: var(--heading-text);
     font-size: 2rem;
 }
 
