@@ -112,7 +112,7 @@ section {
     background-image: url("@/assets/images/catphoto_right.webp");
 }
 .panks-container h1 {
-    color: var(--content-teal);
+    color: #075f5f;
     text-shadow: 0 1px 2px rgba(255, 255, 255, .7);
 }
 
@@ -217,7 +217,7 @@ section {
     text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
 }
 .panks-container .appointment-call {
-    color: var(--content-teal);
+    color: #075f5f;
     font-size: 22px;
     font-weight: 700;
     text-shadow: 0 1px 2px rgba(255, 255, 255, .8);
