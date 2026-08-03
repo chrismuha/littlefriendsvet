@@ -41,6 +41,14 @@ ol,ul {
     padding-left: 30px;
 }
 
+ul > li::marker {
+    color: #075f5f;
+}
+
+ul ul > li::marker {
+    color: var(--primary-orange);
+}
+
 h1 {
     position: relative;
     width: fit-content;

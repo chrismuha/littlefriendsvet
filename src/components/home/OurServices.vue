@@ -36,15 +36,19 @@
 .row.orange-bg a {
     color: white;
 }
+.row.orange-bg a:hover,
+.row.orange-bg a:focus-visible {
+    text-decoration: none;
+}
 .cta-lead {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     text-underline-offset: 6px;
 }
 .row.orange-bg a:hover h1,
 .row.orange-bg a:focus-visible h1 {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     text-underline-offset: 6px;
 }
 .row.orange-bg a:hover .cta-lead,
