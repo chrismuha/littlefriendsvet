@@ -25,7 +25,7 @@ const scrollToTop = () => {
 </script>
 <style scoped>
 footer {
-    background: #333;
+    background: var(--primary-teal);
     color: white;
 }
 .footer-container {
