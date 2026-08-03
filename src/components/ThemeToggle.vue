@@ -2,30 +2,22 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
 
-const STORAGE_KEY = 'little-friends-theme'
 const isDark = ref(false)
 const show = ref(true)
 let scrollStopTimer = null
-let systemPreference = null
 
 const label = computed(() => isDark.value ? 'Use light mode' : 'Use dark mode')
 
-const applyTheme = (theme, persist = false) => {
+const applyTheme = (theme) => {
   isDark.value = theme === 'dark'
   document.documentElement.dataset.theme = theme
   document.querySelector('meta[name="theme-color"]')
     ?.setAttribute('content', isDark.value ? '#075f5f' : '#16a2a2')
 
-  if (persist) localStorage.setItem(STORAGE_KEY, theme)
-}
-
-const handleSystemChange = (event) => {
-  if (localStorage.getItem(STORAGE_KEY)) return
-  applyTheme(event.matches ? 'dark' : 'light')
 }
 
 const toggleTheme = () => {
-  applyTheme(isDark.value ? 'light' : 'dark', true)
+  applyTheme(isDark.value ? 'light' : 'dark')
 }
 
 const handleScroll = () => {
@@ -37,16 +29,11 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  systemPreference = window.matchMedia('(prefers-color-scheme: dark)')
-  const savedTheme = localStorage.getItem(STORAGE_KEY)
-  applyTheme(savedTheme || (systemPreference.matches ? 'dark' : 'light'))
-
-  systemPreference.addEventListener('change', handleSystemChange)
+  applyTheme('light')
   window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
 onUnmounted(() => {
-  systemPreference?.removeEventListener('change', handleSystemChange)
   window.removeEventListener('scroll', handleScroll)
   clearTimeout(scrollStopTimer)
 })
