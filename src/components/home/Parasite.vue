@@ -32,6 +32,8 @@ section {
 }
 .text-wrapper {
     font-size: 24px;
+    font-weight: 400;
+    line-height: 1.55;
 }
 @media screen and (max-width:960px) {
     .content-container {

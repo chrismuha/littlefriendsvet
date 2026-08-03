@@ -55,9 +55,7 @@ onUnmounted(() => {
       <img :src="catImage" alt="Back to top" />
     </span>
 
-    <span
-      style="margin-top: 0px; font-size: 12px; color: #000000;"
-    >
+    <span class="gatop-label">
       Back to top
     </span>
   </div>
@@ -70,6 +68,15 @@ onUnmounted(() => {
 .gatop-top.gatop-down { -webkit-transition: 1.0s; -ms-transition: 1.0s; -o-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .gatop-top:before, .gatop-top:after { content: ""; position: absolute; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; -moz-transition: 0.2s; transition: 0.2s; opacity: 0; }
 .gatop-top:hover:before, .gatop-top:hover:after, .gatop-top.gatop-run:before, .gatop-top.gatop-run:after { opacity: 1; }
+
+.gatop-label {
+  display: block;
+  margin-top: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
 
 .gatop-top:before, .gatop-top.gatop-run:before { margin-left: 0 !important; top: -1px; left: 0px; width: 85px; height: 89px;}
 </style>

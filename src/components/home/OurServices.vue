@@ -38,13 +38,13 @@
 }
 .cta-lead {
     text-decoration: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 6px;
 }
 .row.orange-bg a:hover h1,
 .row.orange-bg a:focus-visible h1 {
     text-decoration: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 6px;
 }
 .row.orange-bg a:hover .cta-lead,
