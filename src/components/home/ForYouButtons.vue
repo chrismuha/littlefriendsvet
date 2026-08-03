@@ -21,7 +21,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary-gold)
+    background: var(--navigation-background)
 }
 .buttons-wrapper {
     display: flex;

@@ -44,6 +44,7 @@
     --separator-color: #e5e5e5;
     --content-teal: #075f5f;
     --content-text: #2f2f2f;
+    --navigation-background: #ffeaa5;
 }
 
 :root[data-theme="dark"] {
@@ -60,6 +61,7 @@
     --separator-color: #466b6b;
     --content-teal: #7bded7;
     --content-text: #eef6f6;
+    --navigation-background: #3b3928;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,6 +79,7 @@
         --separator-color: #466b6b;
         --content-teal: #7bded7;
         --content-text: #eef6f6;
+        --navigation-background: #3b3928;
     }
 }
 
