@@ -93,10 +93,15 @@ section {
 
 
 .btn-orange {
+    background: var(--button-orange);
     color: white;
     margin-top: 50px;
     cursor: pointer;
     font-size: 16px;
+}
+.btn-orange:hover,
+.btn-orange:focus-visible {
+    background: var(--button-orange);
 }
 .row > div {
     flex: 1;
