@@ -57,18 +57,6 @@ section {
     width: 100%;
     position: relative;
 }
-.individual-image::after {
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    border-radius: 100%;
-    background: #444;
-    filter: blur(20px);
-    will-change: filter;
-}
 .text-wrapper {
     flex: 1;
     color: #3f3f3f;
