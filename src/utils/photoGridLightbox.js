@@ -35,6 +35,7 @@ function createOverlay() {
 
     overlayImg = document.createElement('img');
     overlayImg.className = 'photo-grid-lightbox-image';
+    overlayImg.alt = '';
 
     content.appendChild(overlayImg);
 

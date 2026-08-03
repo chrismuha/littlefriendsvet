@@ -2,7 +2,7 @@
     <section id="foryou">
         <div class="header">
             <div class="header-starburst">
-                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left">
+                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
             </div>
             <h1 class="heading-line">Little Friends Vet is here for you!</h1>
         </div>
@@ -19,7 +19,7 @@
                 At Little Friends, you will always have the same doctor and friendly, caring staff for your pets. For your pet's visit, you will receive a FULL HALF-HOUR with the doctor, not just 15 or 20 minutes! We strive to provide a safe and calm environment with a focus on what is best for your pets and family. We have the safest and most effective parasite preventatives, free home delivery of Purina diets with Royal Canin diets available at our office and the most accurate, up to date information regarding your pet’s health and welfare. Contact us today!
             </div>
             <div class="ending-image">
-                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starburst Group Left">
+                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
             </div>
         </div>
     </section>

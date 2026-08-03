@@ -11,7 +11,9 @@ onMounted(() => initPhotoGridLightbox());
 </script>
 
 <template>
-  <router-view />
+  <main>
+    <router-view />
+  </main>
 
   <BackToTop v-if="route.name !== 'not-found'" />
 </template>

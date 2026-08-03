@@ -5,7 +5,7 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
 
 <template>
     <section>
-        <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left" class="starburst">
+        <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="" class="starburst">
         <div class="content-container">
             <div class="left-section">
                 <div class="section-item">
@@ -122,7 +122,7 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                             Dr. Underwood partners with <b>Spay Neuter Now</b> to offer low cost spay and neuter services for cats to income qualified families. For cats only, we offer this service for qualified families right at our office. For dogs, Town and Country Veterinary Clinic in Massena offers this service to qualified families. The application must be submitted to Spay Neuter Now and qualified families will be contacted to schedule their pets. Click on the link for more information and to print or submit the application.
                         </p>
                         <p>
-                            <a href="http://www.spayneuternow.org/" class="btn btn-orange">Learn More</a>
+                            <a href="https://www.spayneuternow.org/" class="btn btn-orange">Learn More About Spay Neuter Now</a>
                         </p>
                     </div>
                 </div>
@@ -162,9 +162,9 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
             </div>
             <div class="right-section">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp">
-                    <img src="@/assets/images/IMG_7720.webp">
-                    <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="Starbrust Group Right" class="starburst2">
+                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp" alt="Little Friends veterinary surgical suite">
+                    <img src="@/assets/images/IMG_7720.webp" alt="Veterinarian holding a black cat">
+                    <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst2">
                 </div>
             </div>
         </div>

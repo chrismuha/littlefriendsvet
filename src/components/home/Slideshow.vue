@@ -22,6 +22,7 @@
                 <img
                     :key="currentIndex"
                     :src="images[currentIndex]"
+                    :alt="`Little Friends Veterinary Services business logo slide ${currentIndex + 1} of ${images.length}`"
                     class="slide current"
                 />
 
@@ -29,6 +30,7 @@
                     v-if="isTransitioning"
                     :key="'prev-' + previousIndex"
                     :src="images[previousIndex]"
+                    alt=""
                     :class="['slide', 'previous', { 'previous-animate': previousReady }]"
                     :style="{
                         '--zoom-delay': previousZoomDelay + 'ms',
@@ -58,7 +60,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const imageModules = import.meta.glob(
-    "@/assets/images/slideshow/*.{jpg,jpeg,png,webp,avif}",
+    "@/assets/images/homeslide/*.{jpg,jpeg,png,webp,avif}",
     {
         eager: true,
         import: "default"
@@ -66,7 +68,7 @@ const imageModules = import.meta.glob(
 );
 
 const images = Object.entries(imageModules)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
     .map(([, src]) => src);
 
 const currentIndex = ref(0);

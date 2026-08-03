@@ -2,7 +2,7 @@
     <section id="meet-dr-liane">
         <div class="header header-v2">
             <div class="header-starburst">
-                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left">
+                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
             </div>
             <h1>Dr. Liane Underwood</h1>
         </div>

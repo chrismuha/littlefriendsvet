@@ -2,21 +2,19 @@
     <section>
         <div class="content-container">
             <div class="left-image">
-                <img src="@/assets/images/IMG_5080.jpg">
+                <img src="@/assets/images/IMG_5080.jpg" alt="Dog wearing protective goggles during laser therapy">
             </div>
             <div class="right-section">
                 <h1>Advanced Imaging, Diagnostic and Therapeutic Services</h1>
                 <p>
-                    .....for your pet with digital ultrasound, therapeutic laser therapy and digital ECG. 
+                    Advanced imaging services for your pet include digital ultrasound, therapeutic laser therapy and digital ECG.
                 </p>
                 <div class="image-row row">
-                    <img src="@/assets/images/IMG_5138.jpg">
-                    <img src="@/assets/images/ultraImaging.webp">
+                    <img src="@/assets/images/IMG_5138.jpg" alt="Black cat receiving a digital ultrasound examination">
+                    <img src="@/assets/images/ultraImaging.webp" alt="Veterinary team performing an ultrasound on a dog">
                 </div>
                 <p>
-                    <b>
-                        Our top of the line digital ultrasound will allow us to check your pet's heart, or check for pregnancy, and much much more!
-                    </b>
+                    Our top of the line digital ultrasound will allow us to check your pet's heart, or check for pregnancy, and much much more!
                 </p>
             </div>
         </div>
@@ -27,9 +25,6 @@ section {
     background: var(--secondary-white);
     padding: 70px 30px;
     color: #333;
-}
-b {
-    font-weight: 900;
 }
 h1 {
     font-size: 42px;

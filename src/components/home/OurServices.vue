@@ -3,7 +3,7 @@
         <div class="teal-bg">
             <div class="header header-v3">
                 <div class="header-starburst">
-                    <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="Starbrust Group Left">
+                    <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
                 </div>
                 <h1>Our Services</h1>
             </div>

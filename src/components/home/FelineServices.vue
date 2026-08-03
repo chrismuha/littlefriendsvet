@@ -20,9 +20,9 @@
         </div>
         <div class="content-container orange-bg orange-container">
             <div class="content-wrapper">
-                <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="Starbrust Group Right" class="starburst">
+                <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/IMG_7444.webp">
+                    <img src="@/assets/images/IMG_7444.webp" alt="Dog greeting the veterinary team at an examination table">
                 </div>
                 <div class="text-wrapper">
                     <h1>Little Friends and Purina Vet Direct are teaming up for you...</h1>
@@ -30,7 +30,7 @@
                         Order the very best food recommended by Dr. Liane for your little friend - both prescription and healthy pet diets - with convenient free delivery directly to your home!
                     </p>
                     <p>
-                        <a href="https://www.proplanvetdirect.com/"><b>Click Here</b></a> and enter enter Clinic ID: <b>5NE5D</b> when you sign up.
+                        <a href="https://www.proplanvetdirect.com/"><b>Click Here</b><span class="sr-only"> to order Purina veterinary diets online</span></a> and enter enter Clinic ID: <b>5NE5D</b> when you sign up.
                     </p>
                     <p>
                         <i>It could not be any easier!</i>
