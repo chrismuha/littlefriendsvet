@@ -9,7 +9,7 @@
         <div class="body-content">
             <div class="row">
                 <div class="individual-image">
-                    <img src="@/assets/images/Individual.jpg" alt="individual">
+                    <img src="@/assets/images/Individual.jpg" alt="Veterinary care tailored to an individual pet" loading="lazy" decoding="async">
                 </div>
                 <div class="text-wrapper">
                     Welcome to Little Friends Veterinary Services! We are your local, small town, family owned and operated veterinary hospital in beautiful Lyons Falls, NY. We are happy to continue caring for pets and families in a safe, comforting environment.  We ARE accepting new clients and patients!  We are open for all appointments including wellness visits, immunizations, illness and emergencies, puppy and kitten visits and feline surgical services including our community spay and neuter program and feline dentistry, as well as limited canine surgical services. Our appointments are filling quickly, so be sure to call ahead. Contact us by phone, email or text and please be sure to leave a message if you call - we may be busy with another patient and we will do our very best to call you back as soon as we can.  We are also very excited to offer text messaging services!  Text us at <a href="sms:+18555534416">855-553-4416</a>.  We will do our best to respond to text messages as quickly as possible.

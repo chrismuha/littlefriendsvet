@@ -21,7 +21,7 @@
                 </div>
                 <div class="row-item image-item">
                     <div class="image-wrapper">
-                        <img src="@/assets/images/Liane_and_Patrick_01.jpg" alt="Liane and Patrick">
+                        <img src="@/assets/images/Liane_and_Patrick_01.jpg" alt="Liane and Patrick" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="row-item">

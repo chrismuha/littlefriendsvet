@@ -11,7 +11,7 @@
         <div class="row orange-bg">
             <a href="https://littlefriendsvetservices.securevetsource.com/index.pml"><h1><span class="cta-lead">Click here</span> for our online store <br>home delivery of your pet's medications AND food!</h1></a>
             <div class="image-wrapper">
-                <img src="@/assets/images/Businesscard.image4-f1df1fbc.jpg" alt="Businesscard Image">
+                <img src="@/assets/images/Businesscard.image4-f1df1fbc.jpg" alt="Little Friends Veterinary Services contact card" loading="lazy" decoding="async">
             </div>
         </div>
     </section>

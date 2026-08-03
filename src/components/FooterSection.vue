@@ -11,7 +11,7 @@
                 role="button"
                 tabindex="0"
             ></i>
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels" loading="lazy" decoding="async">
         </div>
     </footer>
 </template>
@@ -38,7 +38,8 @@ footer {
     gap: 30px;
 }
 .footer-container img {
-    width: 300px;
+    width: 250px;
+    max-width: 100%;
 }
 .footer-container i {
     cursor: pointer;
@@ -53,6 +54,7 @@ footer {
     }
     .footer-container img {
         order: 3;
+        width: 220px;
     }
     .footer-container p {
         order: 2;

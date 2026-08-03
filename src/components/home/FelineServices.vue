@@ -14,7 +14,7 @@
                     </ul>
                 </div>
                 <div class="image-wrapper">
-                    <img src="@/assets/images/Mousie_claws.jpg" alt="Mousie Claws">
+                    <img src="@/assets/images/Mousie_claws.jpg" alt="Mousie Claws" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="content-wrapper">
                 <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/IMG_7444.webp" alt="Dog greeting the veterinary team at an examination table">
+                    <img src="@/assets/images/IMG_7444.webp" alt="Dog greeting the veterinary team at an examination table" loading="lazy" decoding="async">
                 </div>
                 <div class="text-wrapper">
                     <h1>Little Friends and Purina Vet Direct are teaming up for you...</h1>
@@ -41,7 +41,7 @@
         <div class="content-container fixed-bg panks-container">
             <div class="content-wrapper">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/panks-says-hey.jpg" alt="Panks Says Hey">
+                    <img src="@/assets/images/panks-says-hey.jpg" alt="Panks Says Hey" loading="lazy" decoding="async">
                 </div>
                 <div class="text-wrapper">
                     <h1>Panks says HEY!</h1>

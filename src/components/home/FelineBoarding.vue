@@ -7,10 +7,10 @@
             </p>
         </div>
        <div class="gallery">
-            <img src="@/assets/images/Gallery_1.jpg" alt="Climate-controlled feline boarding condos">
-            <img src="@/assets/images/Gallery_2.jpg" alt="Interior of a feline boarding condo with shelves and bedding">
-            <img src="@/assets/images/Gallery_3.jpg" alt="Cat relaxing inside a feline boarding condo">
-            <img src="@/assets/images/Gallery_4.jpg" alt="Separate litter area inside a feline boarding condo">
+            <img src="@/assets/images/Gallery_1.jpg" alt="Climate-controlled feline boarding condos" loading="lazy" decoding="async">
+            <img src="@/assets/images/Gallery_2.jpg" alt="Interior of a feline boarding condo with shelves and bedding" loading="lazy" decoding="async">
+            <img src="@/assets/images/Gallery_3.jpg" alt="Cat relaxing inside a feline boarding condo" loading="lazy" decoding="async">
+            <img src="@/assets/images/Gallery_4.jpg" alt="Separate litter area inside a feline boarding condo" loading="lazy" decoding="async">
         </div>
     </section>
 </template>

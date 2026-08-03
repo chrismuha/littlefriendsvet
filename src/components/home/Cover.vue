@@ -15,6 +15,33 @@ const logoImages = Object.entries(logoModules)
     .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
     .map(([, src]) => src)
 
+const slideDescriptions = [
+    'Veterinary team member holding a black kitten',
+    'Brown dog wearing bunny ears',
+    'Five Little Friends Veterinary Services team members together',
+    'Small cream-colored dog standing on an examination table',
+    'Gray-and-white tabby cat looking toward the camera',
+    'Woman holding a small puppy',
+    'Group of kittens resting together',
+    'Golden retriever sitting beside a black cat',
+    'Black-and-white long-haired cat resting indoors',
+    'Small brown puppy wearing a pink collar',
+    'Close-up of a black cat with white whiskers',
+    'Veterinary team member holding two tabby kittens',
+    'Small brown dog wearing a rainbow collar outdoors',
+    'Black-and-white cat sitting in front of a stone wall',
+    'Two cats resting together in a cat enclosure',
+    'White kitten resting in a hammock',
+    'Orange tabby cat wearing a rainbow collar outside a window',
+    'Little Friends Veterinary Services community event display',
+    'Veterinary team member holding a black-and-white cat',
+    'Black-and-white cat relaxing on a kitchen counter',
+    'Four Little Friends Veterinary Services team members outdoors',
+    'Little Friends Veterinary Services clinic in Lyons Falls',
+    'Three team members gathered around a dining table',
+    'Black kittens cuddled together on a cat tree'
+]
+
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
 const autoplayPlugin = Autoplay({
     delay: 3000,
@@ -97,9 +124,8 @@ onUnmounted(() => {
         playsinline
         loop
         muted
-        preload="auto"
+        preload="metadata"
       >
-        <source src="@/assets/videos/stars-bg.webm" type="video/webm">
         <source src="@/assets/videos/stars-bg.mp4" type="video/mp4">
       </video>
     </div>
@@ -116,7 +142,7 @@ onUnmounted(() => {
         class="embla"
         ref="emblaRef"
         role="region"
-        aria-label="Little Friends logo slider"
+        aria-label="Little Friends community photo slider"
         tabindex="0"
         @wheel="handleCarouselWheel"
         @keydown="handleCarouselKeydown"
@@ -129,7 +155,7 @@ onUnmounted(() => {
           >
             <img
               :src="image"
-              :alt="`Business logo ${index + 1} of ${logoImages.length}`"
+              :alt="slideDescriptions[index]"
             >
           </div>
         </div>
@@ -305,6 +331,20 @@ section {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+@media (min-width: 961px) and (max-height: 850px) {
+  .cover-items {
+    margin-bottom: 0;
+  }
+
+  .logo-image img {
+    max-height: 32vh;
+  }
+
+  .embla__slide {
+    flex-basis: clamp(150px, 12vw, 240px);
   }
 }
 

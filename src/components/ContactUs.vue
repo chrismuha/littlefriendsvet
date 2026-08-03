@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="left-section teal-bg">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels" loading="lazy" decoding="async">
         </div>
         <div class="separator"></div>
         <div class="right-section">

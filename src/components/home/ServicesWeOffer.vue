@@ -162,8 +162,8 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
             </div>
             <div class="right-section">
                 <div class="image-wrapper">
-                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp" alt="Little Friends veterinary surgical suite">
-                    <img src="@/assets/images/IMG_7720.webp" alt="Veterinarian holding a black cat">
+                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp" alt="Little Friends veterinary surgical suite" loading="lazy" decoding="async">
+                    <img src="@/assets/images/IMG_7720.webp" alt="Veterinarian holding a black cat" loading="lazy" decoding="async">
                     <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst2">
                 </div>
             </div>
