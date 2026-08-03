@@ -22,7 +22,7 @@
                 <img
                     :key="currentIndex"
                     :src="images[currentIndex]"
-                    :alt="`Little Friends Veterinary Services business logo slide ${currentIndex + 1} of ${images.length}`"
+                    :alt="`Little Friends veterinary clinic slideshow photo ${currentIndex + 1}`"
                     class="slide current"
                 />
 
@@ -60,7 +60,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const imageModules = import.meta.glob(
-    "@/assets/images/homeslide/*.{jpg,jpeg,png,webp,avif}",
+    "@/assets/images/slideshow/*.{jpg,jpeg,png,webp,avif}",
     {
         eager: true,
         import: "default"

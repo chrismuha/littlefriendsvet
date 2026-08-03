@@ -3,6 +3,18 @@ import { onMounted, onUnmounted } from 'vue'
 import emblaCarouselVue from 'embla-carousel-vue'
 import Autoplay from 'embla-carousel-autoplay'
 
+const logoModules = import.meta.glob(
+    '@/assets/images/homeslide/*.{jpg,jpeg,png,webp,avif}',
+    {
+        eager: true,
+        import: 'default'
+    }
+)
+
+const logoImages = Object.entries(logoModules)
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(([, src]) => src)
+
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
 const autoplayPlugin = Autoplay({
     delay: 3000,
@@ -110,24 +122,15 @@ onUnmounted(() => {
         @keydown="handleCarouselKeydown"
       >
         <div class="embla__container">
-          <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
-          </div>
-
-          <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
-          </div>
-
-          <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
-          </div>
-
-          <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
-          </div>
-
-          <div class="embla__slide">
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels">
+          <div
+            v-for="(image, index) in logoImages"
+            :key="image"
+            class="embla__slide"
+          >
+            <img
+              :src="image"
+              :alt="`Business logo ${index + 1} of ${logoImages.length}`"
+            >
           </div>
         </div>
       </div>
