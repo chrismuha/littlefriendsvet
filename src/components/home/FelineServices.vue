@@ -131,6 +131,7 @@ section {
     min-height: unset;
     height: auto;
     color: var(--heading-text);
+    background: var(--surface-background);
 }
 .orange-container h1 {
     font-size: 52px;
@@ -252,6 +253,12 @@ section {
     .content-container {
         min-height: unset;
         height: auto;
+    }
+    .orange-container {
+        padding: 70px 30px;
+    }
+    .orange-container .text-wrapper {
+        padding: 30px 0px;
     }
     .image-wrapper {
         align-self: flex-start;

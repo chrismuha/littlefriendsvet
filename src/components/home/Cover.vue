@@ -351,6 +351,7 @@ section {
 @media (max-width: 640px) {
   .cover-items {
     padding: 0 15px;
+    align-self: flex-start;
   }
 
   .logo-image img {
@@ -358,7 +359,7 @@ section {
   }
 
   .embla__slide {
-    flex: 0 0 48%;
+    flex: 0 0 30%;
     height: 110px;
     margin-right: 10px;
   }
