@@ -124,7 +124,7 @@ a {
     gap: 20px;
 }
 @media (max-width: 960px) {
-    section {
+    .body-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -154,6 +154,7 @@ a {
         width: 100%;
         max-width: 500px;
         text-align: center;
+        padding: 40px 15px;
     }
 }
 </style>
