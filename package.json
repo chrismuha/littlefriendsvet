@@ -9,7 +9,6 @@
     "dev:vite": "vite",
     "build": "vite build",
     "preview": "vite preview --host",
-    "deploy": "gh-pages -d dist",
     "prepare": "husky"
   },
   "dependencies": {
@@ -24,7 +23,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
-    "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "vite": "^8.2.0",
     "vite-plugin-vue-devtools": "^8.1.5"

@@ -16,7 +16,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     {
-      name: 'github-pages-404',
+      name: 'spa-404-fallback',
       closeBundle() {
         copyFileSync('dist/index.html', 'dist/404.html')
       },
