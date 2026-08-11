@@ -19,7 +19,7 @@
             Please contact us via email at
             <a href="mailto:info@littlefriendsvet.com">info@littlefriendsvet.com</a>,
             phone at
-            <a href="tel:+13154467933">(315) 446-7933</a>,
+            <a href="tel:+13157960907">(315) 796-0907</a>,
             or text message at
             <a href="sms:+18555534416">(855) 553-4416</a>.
             We will also be happy to provide your pet’s medical records either digitally or as a hard copy.

@@ -169,7 +169,7 @@ onUnmounted(() => {
     </div>
 
     <nav class="mobile-actions" aria-label="Quick contact actions">
-      <a href="tel:+13154467933">
+      <a href="tel:+13157960907">
         <i class="bi bi-telephone" aria-hidden="true"></i>
         Call
       </a>

@@ -40,11 +40,11 @@
                 </div>
 
                 <address class="contact-actions">
-                    <a class="contact-action" href="tel:+13154467933">
+                    <a class="contact-action" href="tel:+13157960907">
                         <i class="bi bi-telephone-fill" aria-hidden="true"></i>
                         <span>
                             <small>Call</small>
-                            315-446-7933
+                            315-796-0907
                         </span>
                     </a>
                     <a class="contact-action" href="sms:+18555534416">

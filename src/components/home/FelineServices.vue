@@ -55,7 +55,7 @@
                         Cost is just $195 for male cats and $315 for female cats
                     </p>
                     <p class="appointment-call">
-                        <strong>Call today for an appointment!</strong> <a href="tel:+13154467933">315-446-7933</a>
+                        <strong>Call today for an appointment!</strong> <a href="tel:+13157960907">315-796-0907</a>
                     </p>
                 </div>
             </div>
