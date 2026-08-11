@@ -16,6 +16,8 @@ import PhotoGrid2 from '@/components/home/PhotoGrid2.vue';
 import Parasite from '@/components/home/Parasite.vue';
 import ContactUs from '@/components/ContactUs.vue';
 import FooterSection from '@/components/FooterSection.vue';
+import ServicesOffered from '@/components/home/ServicesOffered.vue';
+import AreasServed from '@/components/home/AreasServed.vue';
 
 </script>
 
@@ -24,6 +26,8 @@ import FooterSection from '@/components/FooterSection.vue';
     <!-- <Notice /> -->
     <ForYouButtons />
     <ForYou />
+    <ServicesOffered />
+    <AreasServed />
     <Slideshow />
     <Information />
     <WhoWeAre />

@@ -6,6 +6,7 @@ import './assets/css/main.css'
 import './assets/css/photoGridLightbox.css';
 
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import '@tabler/icons-webfont/dist/tabler-icons.min.css'
 
 const app = createApp(App)
 

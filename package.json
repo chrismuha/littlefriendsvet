@@ -13,6 +13,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
+    "@tabler/icons-vue": "^3.46.0",
+    "@tabler/icons-webfont": "^3.46.0",
     "bootstrap-icons": "^1.13.1",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-vue": "^8.6.0",
