@@ -177,10 +177,6 @@ onUnmounted(() => {
         <i class="bi bi-chat-dots" aria-hidden="true"></i>
         Text
       </a>
-      <a href="#contact-info">
-        <i class="bi bi-calendar-check" aria-hidden="true"></i>
-        Book
-      </a>
     </nav>
   </section>
 </template>
@@ -376,7 +372,7 @@ section {
 
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
