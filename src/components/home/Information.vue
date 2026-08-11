@@ -8,7 +8,7 @@
                         <p>Contact Information</p>
                     </div>
                     <div class="details">
-                        <p>Give us a Call: <a href="tel:3153486389">315-348-6389</a></p>
+                        <p>Give us a Call: <a href="tel:+13154467933">315-446-7933</a></p>
                         <p>Send us a Text: <a href="sms:+18555534416">855-553-4416</a></p>
                     </div>
                 </div>

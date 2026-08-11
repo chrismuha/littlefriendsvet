@@ -1,24 +1,34 @@
 <template>
-    <section>
-        <div class="header">
-            <div class="header-starburst">
-                <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
+    <section class="services-section" aria-labelledby="our-services-title">
+        <div class="teal-bg services-banner">
+            <div class="header header-v3">
+                <div class="header-starburst">
+                    <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
+                </div>
+                <h1 id="our-services-title">Our Services</h1>
             </div>
-            <h1 class="heading-line">Services Offered</h1>
         </div>
 
-        <div class="services">
-            <button
-                v-for="(service, index) in services"
-                :key="service.title"
-                type="button"
-                class="service-item"
-                :aria-haspopup="'dialog'"
-                @click="openService(index, $event)"
-            >
-                <i :class="service.icon" aria-hidden="true"></i>
-                <span>{{ service.title }}</span>
-            </button>
+        <div class="services-content">
+            <header class="services-intro">
+                <p class="services-eyebrow">Compassionate care at every stage</p>
+                <h2>Services Offered</h2>
+                <p>Select a service to learn more.</p>
+            </header>
+
+            <div class="services">
+                <button
+                    v-for="(service, index) in services"
+                    :key="service.title"
+                    type="button"
+                    class="service-item"
+                    :aria-haspopup="'dialog'"
+                    @click="openService(index, $event)"
+                >
+                    <i :class="service.icon" aria-hidden="true"></i>
+                    <span>{{ service.title }}</span>
+                </button>
+            </div>
         </div>
 
         <Teleport to="body">
@@ -139,23 +149,57 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-section {
-    padding: 10px 30px 70px;
+.services-section {
+    padding: 0;
 }
 
-.header {
-    min-height: 130px;
-    padding: 35px 15px;
+.services-banner .header {
+    margin-bottom: 0;
 }
 
-.header-starburst img {
-    width: 100px;
-    height: auto;
+.services-banner .header h1 {
+    color: white;
+}
+
+.services-content {
+    padding: clamp(64px, 8vw, 96px) 30px;
+}
+
+.services-intro {
+    max-width: 720px;
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+.services-eyebrow {
+    margin: 0 0 9px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.services-eyebrow {
+    color: var(--content-teal);
+}
+
+.services-intro h2 {
+    margin: 0;
+    color: var(--heading-text);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.services-intro > p:last-child {
+    margin: 12px 0 0;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 .services {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -311,6 +355,11 @@ section {
 }
 
 @media (max-width: 600px) {
+    .services-content {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
     .service-backdrop {
         align-items: center;
         padding: 16px;

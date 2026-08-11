@@ -6,7 +6,6 @@ import ForYou from '@/components/home/ForYou.vue';
 import ForYouButtons from '@/components/home/ForYouButtons.vue';
 import Information from '@/components/home/Information.vue';
 import Notice from '@/components/home/Notice.vue';
-import OurServices from '@/components/home/OurServices.vue';
 import Slideshow from '@/components/home/Slideshow.vue';
 import WhoWeAre from '@/components/home/WhoWeAre.vue';
 import AdvancedImaging from '@/components/home/AdvancedImaging.vue';
@@ -18,6 +17,7 @@ import ContactUs from '@/components/ContactUs.vue';
 import FooterSection from '@/components/FooterSection.vue';
 import ServicesOffered from '@/components/home/ServicesOffered.vue';
 import AreasServed from '@/components/home/AreasServed.vue';
+import OnlineStore from '@/components/home/OnlineStore.vue';
 
 </script>
 
@@ -26,16 +26,16 @@ import AreasServed from '@/components/home/AreasServed.vue';
     <!-- <Notice /> -->
     <ForYouButtons />
     <ForYou />
-    <ServicesOffered />
     <AreasServed />
+    <ServicesOffered />
+    <ServicesWeOffer />
+    <OnlineStore />
     <Slideshow />
     <Information />
     <WhoWeAre />
-    <OurServices />
     <FelineBoarding />
     <FelineServices />
     <AdvancedImaging />
-    <ServicesWeOffer />
     <PhotoGrid1 />
     <Parasite />
     <PhotoGrid2 />

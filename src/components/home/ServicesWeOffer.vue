@@ -110,9 +110,6 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                                 <a href="tel:+13155153047">315-515-3047</a>. Services and hours limited, please check their website or call them.
                             </li>
                         </ul>
-                        <p>
-                            Our current clients may contact us through Facebook Messenger after hours and we will do our best to respond when we are available.
-                        </p>
                     </div>
                 </div>
                 <div class="section-item">
@@ -173,17 +170,17 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
 <style scoped>
 section {
     position: relative;
-    padding: 70px 40px;
+    padding: clamp(70px, 8vw, 110px) 40px;
     color: var(--content-text);
     font-size: 18px;
     font-weight: 400;
 }
 .content-container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: auto;
     line-height: 1.6;
     display: flex;
-    gap: 30px;
+    gap: clamp(40px, 5vw, 76px);
 }
 .starburst {
     position: absolute;
@@ -206,7 +203,40 @@ section {
 }
 .section-item p,
 .section-item li {
-    line-height: 1.75;
+    line-height: 1.65;
+}
+.left-section {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 42px;
+}
+.left-section > .section-item:not(:last-child) {
+    padding-bottom: 38px;
+    border-bottom: 1px solid var(--separator-color);
+}
+.text-wrapper > ul {
+    display: grid;
+    gap: 14px;
+    padding-left: 1.35rem;
+}
+.text-wrapper > ul > li {
+    padding-left: 0.35rem;
+}
+.text-wrapper > ul > li::marker {
+    color: var(--primary-orange);
+    font-size: 1.15em;
+}
+.text-wrapper li > ul {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 18px 22px 18px 42px;
+    border-left: 4px solid var(--primary-teal);
+    border-radius: 0 0.7rem 0.7rem 0;
+    background: color-mix(in srgb, var(--primary-teal) 8%, transparent);
+}
+.text-wrapper li > ul li::marker {
+    color: var(--content-teal);
 }
 .new-client-section {
     margin-top: 45px;
@@ -269,7 +299,8 @@ section {
 }
 
 .right-section {
-    width: 32%;
+    width: 26%;
+    max-width: 360px;
     flex-shrink: 0;
 
 }
@@ -292,6 +323,7 @@ section {
     }
     .right-section {
         width: 100%;
+        max-width: none;
     }
     .new-client-buttons {
         grid-template-columns: 1fr;

@@ -40,11 +40,11 @@
                 </div>
 
                 <address class="contact-actions">
-                    <a class="contact-action" href="tel:+13157960907">
+                    <a class="contact-action" href="tel:+13154467933">
                         <i class="bi bi-telephone-fill" aria-hidden="true"></i>
                         <span>
                             <small>Call</small>
-                            315-796-0907
+                            315-446-7933
                         </span>
                     </a>
                     <a class="contact-action" href="sms:+18555534416">
@@ -256,6 +256,8 @@ const locations = [
 
 .contact-copy > p:last-child {
     margin: 14px 0 0;
+    color: var(--content-text);
+    font-weight: 600;
     line-height: 1.6;
 }
 
@@ -286,7 +288,7 @@ const locations = [
 }
 
 .contact-action:hover {
-    background: var(--content-teal);
+    background: var(--button-orange);
     color: white;
     transform: translateY(-2px);
 }
@@ -310,7 +312,7 @@ const locations = [
 .contact-action small {
     display: block;
     margin-bottom: 3px;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.08em;
