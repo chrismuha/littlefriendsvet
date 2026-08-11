@@ -17,24 +17,42 @@
             </header>
 
             <div class="services">
-                <button
+                <div
                     v-for="(service, index) in services"
                     :key="service.title"
-                    type="button"
-                    class="service-item"
-                    :aria-haspopup="'dialog'"
-                    @click="openService(index, $event)"
+                    class="service-card"
                 >
-                    <i :class="service.icon" aria-hidden="true"></i>
-                    <span>{{ service.title }}</span>
-                </button>
+                    <button
+                        type="button"
+                        class="service-item"
+                        :aria-haspopup="isMobile ? 'dialog' : undefined"
+                        :aria-expanded="activeIndex === index"
+                        :aria-controls="!isMobile ? `service-details-${index}` : undefined"
+                        @click="toggleService(index, $event)"
+                    >
+                        <i :class="service.icon" aria-hidden="true"></i>
+                        <span>{{ service.title }}</span>
+                    </button>
+
+                    <Transition name="service-popover">
+                        <div
+                            v-if="!isMobile && activeIndex === index"
+                            :id="`service-details-${index}`"
+                            class="service-popover"
+                            role="region"
+                            :aria-label="`${service.title} details`"
+                        >
+                            {{ service.description }}
+                        </div>
+                    </Transition>
+                </div>
             </div>
         </div>
 
         <Teleport to="body">
             <Transition name="service-modal">
                 <div
-                    v-if="activeService"
+                    v-if="isMobile && activeService"
                     class="service-backdrop"
                     @click.self="closeService"
                 >
@@ -72,7 +90,7 @@
 </template>
 
 <script setup>
-import { computed, nextTick, onBeforeUnmount, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 
 const services = [
     {
@@ -114,7 +132,9 @@ const services = [
 
 const activeIndex = ref(null)
 const closeButton = ref(null)
+const isMobile = ref(false)
 let triggerElement = null
+let mobileQuery = null
 
 const activeService = computed(() => (
     activeIndex.value === null ? null : services[activeIndex.value]
@@ -124,27 +144,53 @@ function handleKeydown(event) {
     if (event.key === 'Escape') closeService()
 }
 
-async function openService(index, event) {
+function handleOutsideClick(event) {
+    if (!isMobile.value && !event.target.closest('.service-card')) closeService(false)
+}
+
+function handleViewportChange(event) {
+    isMobile.value = event.matches
+    closeService(false)
+}
+
+async function toggleService(index, event) {
+    if (activeIndex.value === index) {
+        closeService()
+        return
+    }
+
     activeIndex.value = index
     triggerElement = event.currentTarget
-    document.body.classList.add('service-modal-open')
     document.addEventListener('keydown', handleKeydown)
+
+    if (!isMobile.value) return
+
+    document.body.classList.add('service-modal-open')
     await nextTick()
     closeButton.value?.focus()
 }
 
-function closeService() {
+function closeService(restoreFocus = true) {
     if (activeIndex.value === null) return
 
     activeIndex.value = null
     document.body.classList.remove('service-modal-open')
     document.removeEventListener('keydown', handleKeydown)
-    nextTick(() => triggerElement?.focus())
+    if (restoreFocus) nextTick(() => triggerElement?.focus())
 }
+
+onMounted(() => {
+    mobileQuery = window.matchMedia('(max-width: 767px)')
+    isMobile.value = mobileQuery.matches
+    mobileQuery.addEventListener('change', handleViewportChange)
+    document.addEventListener('click', handleOutsideClick)
+})
 
 onBeforeUnmount(() => {
     document.body.classList.remove('service-modal-open')
     document.removeEventListener('keydown', handleKeydown)
+    document.removeEventListener('click', handleOutsideClick)
+    mobileQuery?.removeEventListener('change', handleViewportChange)
 })
 </script>
 
@@ -204,10 +250,16 @@ onBeforeUnmount(() => {
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.service-card {
+    position: relative;
+    width: 260px;
 }
 
 .service-item {
-    width: 260px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,6 +305,46 @@ onBeforeUnmount(() => {
 
 .service-item span {
     font-size: 18px;
+}
+
+.service-popover {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    z-index: 20;
+    width: 300px;
+    padding: 20px 22px;
+    border-radius: 0.8rem;
+    background: var(--primary-teal);
+    color: white;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.55;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.service-popover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 0 11px 13px;
+    border-style: solid;
+    border-color: transparent transparent var(--primary-teal);
+    transform: translateX(-50%);
+}
+
+.service-popover-enter-active,
+.service-popover-leave-active {
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.service-popover-enter-from,
+.service-popover-leave-to {
+    opacity: 0;
+    transform: translate(-50%, -6px);
 }
 
 .service-backdrop {
@@ -382,6 +474,8 @@ onBeforeUnmount(() => {
 
 @media (prefers-reduced-motion: reduce) {
     .service-item,
+    .service-popover-enter-active,
+    .service-popover-leave-active,
     .service-close,
     .service-modal-enter-active,
     .service-modal-leave-active,
