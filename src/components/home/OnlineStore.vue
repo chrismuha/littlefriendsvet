@@ -15,7 +15,7 @@
             <img
                 src="@/assets/images/Businesscard.image4-f1df1fbc.jpg"
                 alt="Little Friends Veterinary Services contact card"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
             >
         </div>

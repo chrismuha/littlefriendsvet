@@ -23,7 +23,7 @@
                     :key="currentIndex"
                     :src="images[currentIndex]"
                     :alt="`Little Friends veterinary clinic slideshow photo ${currentIndex + 1}`"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                     class="slide current"
                 />
@@ -33,7 +33,7 @@
                     :key="'prev-' + previousIndex"
                     :src="images[previousIndex]"
                     alt=""
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                     :class="['slide', 'previous', { 'previous-animate': previousReady }]"
                     :style="{

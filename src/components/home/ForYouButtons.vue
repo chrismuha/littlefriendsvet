@@ -35,17 +35,17 @@ section {
 }
 .actions-layout {
     display: grid;
-    grid-template-columns: minmax(260px, 390px) minmax(300px, 620px);
+    grid-template-columns: minmax(320px, 470px) minmax(300px, 520px);
     align-items: center;
     justify-content: center;
-    gap: clamp(40px, 7vw, 100px);
+    gap: clamp(36px, 6vw, 82px);
     max-width: 1200px;
     margin: auto;
 }
 .service-flyer {
     display: block;
     width: 100%;
-    max-height: 620px;
+    max-height: 740px;
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 16px 45px rgb(0 0 0 / 18%);
@@ -57,9 +57,14 @@ section {
     font-weight: 400;
     text-align: center;
 }
+.actions-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .buttons-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 .buttons-wrapper :deep(.btn) {
@@ -79,14 +84,9 @@ section {
         gap: 36px;
     }
     .service-flyer {
-        width: min(100%, 360px);
+        width: min(100%, 420px);
         max-height: none;
         margin: auto;
-    }
-}
-@media screen and (max-width: 480px) {
-    .buttons-wrapper {
-        grid-template-columns: 1fr;
     }
 }
 </style>

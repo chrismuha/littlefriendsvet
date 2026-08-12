@@ -71,7 +71,7 @@
 section {
   position: relative;
   background: var(--bright-teal);
-  min-height: clamp(300px, 40svh, 440px);
+  min-height: clamp(220px, 30svh, 320px);
   width: 100%;
   overflow: hidden;
 
@@ -100,7 +100,7 @@ section {
 .logo-image img {
   display: block;
   width: 100%;
-  max-height: 30vh;
+  max-height: 22vh;
   object-fit: contain;
 }
 
@@ -153,7 +153,7 @@ section {
   }
 
   .logo-image img {
-    max-height: 28vh;
+    max-height: 21vh;
   }
 
 }
@@ -164,14 +164,14 @@ section {
   }
 
   .logo-image img {
-    max-height: 28vh;
+    max-height: 22vh;
   }
 
 }
 
 @media (max-width: 640px) {
   section {
-    min-height: 360px;
+    min-height: 300px;
   }
 
   .cover-items {
@@ -180,7 +180,7 @@ section {
   }
 
   .logo-image img {
-    max-height: 25vh;
+    max-height: 20vh;
   }
 
   .cover-button {

@@ -11,7 +11,7 @@
                 role="button"
                 tabindex="0"
             ></i>
-            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels" loading="lazy" decoding="async">
+            <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels" loading="eager" decoding="async">
         </div>
     </footer>
 </template>

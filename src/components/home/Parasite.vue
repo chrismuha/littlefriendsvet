@@ -2,7 +2,7 @@
     <section class="teal-bg">
         <div class="content-container">
             <div class="image-section">
-                <img src="@/assets/images/Ixodus_ricinus.jpg" alt="Close-up view of a tick" loading="lazy" decoding="async">
+                <img src="@/assets/images/Ixodus_ricinus.jpg" alt="Close-up view of a tick" loading="eager" decoding="async">
             </div>
             <div class="text-wrapper">
                 Remember year-round parasite prevention to keep your pet comfortable and your family safe! Ticks are active in winter and fleas can be present indoors. There are even new, invasive species of ticks that are large and aggressive - protect your pets and family today. Little Friends has safe and effective products for every budget!
