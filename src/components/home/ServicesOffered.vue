@@ -98,10 +98,10 @@
 
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
-import boardingImage1 from '@/assets/images/Gallery_1.jpg'
-import boardingImage2 from '@/assets/images/Gallery_2.jpg'
-import boardingImage3 from '@/assets/images/Gallery_3.jpg'
-import boardingImage4 from '@/assets/images/Gallery_4.jpg'
+// import boardingImage1 from '@/assets/images/Gallery_1.jpg'
+// import boardingImage2 from '@/assets/images/Gallery_2.jpg'
+// import boardingImage3 from '@/assets/images/Gallery_3.jpg'
+// import boardingImage4 from '@/assets/images/Gallery_4.jpg'
 import felineBehaviorImage from '@/assets/images/Mousie_claws.jpg'
 
 const services = [
@@ -142,12 +142,12 @@ const services = [
         title: 'Nutrition consultations',
         description: 'Nutrition counseling for your pet based on science and evidence-based nutritional recommendations.',
     },
-    {
-        icon: 'bi bi-house-heart',
-        title: 'Feline boarding',
-        description: 'Your cat can stay in a private luxury kitty condo with a separate litter area, soft bedding, and perching shelves. Our quiet, warm boarding area has soft music, no dogs, and close monitoring by our veterinary team. Call to reserve your kitty\'s stay.',
-        images: [boardingImage1, boardingImage2, boardingImage3, boardingImage4],
-    },
+    // {
+    //     icon: 'bi bi-house-heart',
+    //     title: 'Feline boarding',
+    //     description: 'Your cat can stay in a private luxury kitty condo with a separate litter area, soft bedding, and perching shelves. Our quiet, warm boarding area has soft music, no dogs, and close monitoring by our veterinary team. Call to reserve your kitty\'s stay.',
+    //     images: [boardingImage1, boardingImage2, boardingImage3, boardingImage4],
+    // },
 ]
 
 const activeIndex = ref(null)
