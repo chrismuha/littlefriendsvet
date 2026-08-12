@@ -1,4 +1,4 @@
-const CACHE_NAME = 'little-friends-vet-v2'
+const CACHE_NAME = 'little-friends-vet-v3'
 const APP_HOME = new URL('./', self.registration.scope).href
 
 self.addEventListener('install', (event) => {
@@ -40,15 +40,14 @@ self.addEventListener('fetch', (event) => {
   if (requestUrl.origin !== self.location.origin) return
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const fresh = fetch(event.request).then((response) => {
+    fetch(event.request)
+      .then((response) => {
         if (response.ok) {
           const copy = response.clone()
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy))
         }
         return response
       })
-      return cached || fresh
-    })
+      .catch(() => caches.match(event.request))
   )
 })

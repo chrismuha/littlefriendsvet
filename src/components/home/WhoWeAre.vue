@@ -24,14 +24,14 @@
                         <img src="@/assets/images/Liane_and_Patrick_01.jpg" alt="Liane and Patrick" loading="lazy" decoding="async">
                     </div>
                 </div>
-                <div class="row-item">
+                <!-- <div class="row-item">
                     <h1>What Makes Us Different</h1>
                     <div class="text-wrapper">
                         <p>
                             We offer the very best care for your pet in a stress-free environment. We have a small, quiet office and take one appointment at a time so you and your pet can focus on your visit, not worry about other animals or people in a crowded waiting area. Dr. Underwood devotes a FULL HALF-HOUR to you and your pet - not 15 or 20 minutes like many other veterinary offices! We focus on what is best for you and your pet – offering options for all budgets. You will always have the same doctor to care for your pet so we always know what’s going on and we do our best to get to know the families who come to us. We give you the time you and your pet deserve, one-on-one, with knowledge and care in a pleasant environment. We support our community with donations to school and community causes – we love our baseball and softball teams! – and we enjoy taking part in community events. Little Friends is YOUR small-town veterinarian!
                         </p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

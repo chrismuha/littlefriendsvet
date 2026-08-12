@@ -71,7 +71,7 @@
 section {
   position: relative;
   background: var(--bright-teal);
-  min-height: clamp(440px, 58svh, 650px);
+  min-height: clamp(300px, 40svh, 440px);
   width: 100%;
   overflow: hidden;
 
@@ -89,7 +89,7 @@ section {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  gap: clamp(24px, 4vh, 46px);
+  gap: clamp(12px, 2vh, 24px);
 }
 
 .logo-image {
@@ -100,7 +100,7 @@ section {
 .logo-image img {
   display: block;
   width: 100%;
-  max-height: 48vh;
+  max-height: 30vh;
   object-fit: contain;
 }
 
@@ -153,7 +153,7 @@ section {
   }
 
   .logo-image img {
-    max-height: 36vh;
+    max-height: 28vh;
   }
 
 }
@@ -164,19 +164,23 @@ section {
   }
 
   .logo-image img {
-    max-height: 38vh;
+    max-height: 28vh;
   }
 
 }
 
 @media (max-width: 640px) {
+  section {
+    min-height: 360px;
+  }
+
   .cover-items {
     padding: 0 15px;
     align-self: flex-start;
   }
 
   .logo-image img {
-    max-height: 34vh;
+    max-height: 25vh;
   }
 
   .cover-button {

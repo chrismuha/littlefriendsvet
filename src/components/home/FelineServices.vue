@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-container fixed-bg panks-container">
+        <!-- <div class="content-container fixed-bg panks-container">
             <div class="content-wrapper">
                 <div class="image-wrapper">
                     <img src="@/assets/images/panks-says-hey.jpg" alt="Panks Says Hey" loading="lazy" decoding="async">
@@ -59,7 +59,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 <style scoped>
