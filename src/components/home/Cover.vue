@@ -50,6 +50,15 @@
       </a>
     </nav>
   </section>
+
+  <section class="flyer-section" aria-label="Little Friends on Wheels service flyer">
+    <img
+      src="@/assets/images/flyer.png"
+      alt="Little Friends on Wheels mobile veterinary services flyer with services, service areas, contact information, and appointment request QR code"
+      loading="eager"
+      decoding="async"
+    >
+  </section>
 </template>
 
 <style scoped>
@@ -70,7 +79,7 @@
 section {
   position: relative;
   background: var(--bright-teal);
-  min-height: 100svh;
+  min-height: clamp(440px, 58svh, 650px);
   width: 100%;
   overflow: hidden;
 
@@ -92,15 +101,30 @@ section {
 }
 
 .logo-image {
-  width: min(92vw, 900px);
+  width: min(96vw, 1180px);
   margin: 0 auto 12px;
 }
 
 .logo-image img {
   display: block;
   width: 100%;
-  max-height: 43vh;
+  max-height: 48vh;
   object-fit: contain;
+}
+
+.flyer-section {
+  min-height: 0;
+  padding: clamp(44px, 7vw, 88px) 24px;
+  background: var(--surface-background);
+}
+
+.flyer-section img {
+  display: block;
+  width: min(100%, 880px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgb(0 0 0 / 16%);
 }
 
 .business-address {
@@ -147,12 +171,12 @@ section {
 
   .logo-image {
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     margin-bottom: 0;
   }
 
   .logo-image img {
-    max-height: 32vh;
+    max-height: 36vh;
   }
 
 }
@@ -163,7 +187,7 @@ section {
   }
 
   .logo-image img {
-    max-height: 32vh;
+    max-height: 38vh;
   }
 
 }
@@ -175,7 +199,7 @@ section {
   }
 
   .logo-image img {
-    max-height: 28vh;
+    max-height: 34vh;
   }
 
   .cover-button {
