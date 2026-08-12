@@ -3,13 +3,23 @@
         <div class="store-copy">
             <p class="store-eyebrow">Convenient home delivery</p>
             <h2 id="online-store-title">Pet medications and food, delivered to your door.</h2>
-            <a
-                class="store-link"
-                href="https://littlefriendsvetservices.securevetsource.com/index.pml"
-            >
-                Shop our online store
-                <i class="bi bi-arrow-right" aria-hidden="true"></i>
-            </a>
+            <p class="store-description">
+                Shop our online pharmacy, or order prescription and healthy pet diets through
+                Purina Vet Direct with free delivery. Use Clinic ID <strong>5NE5D</strong> when signing up.
+            </p>
+            <div class="store-links">
+                <a
+                    class="store-link"
+                    href="https://littlefriendsvetservices.securevetsource.com/index.pml"
+                >
+                    Online pharmacy
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a class="store-link" href="https://www.proplanvetdirect.com/">
+                    Purina Vet Direct
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
         <div class="store-image">
             <img
@@ -25,19 +35,19 @@
 <style scoped>
 .online-store {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    grid-template-columns: minmax(0, 1fr) minmax(190px, 240px);
     align-items: center;
-    gap: clamp(36px, 6vw, 80px);
-    padding: clamp(54px, 8vw, 86px) max(30px, calc((100vw - 1200px) / 2));
+    gap: clamp(20px, 3vw, 34px);
+    padding: clamp(22px, 3vw, 34px) max(24px, calc((100vw - 960px) / 2));
     color: white;
 }
 
 .store-copy {
-    max-width: 720px;
+    max-width: 540px;
 }
 
 .store-eyebrow {
-    margin: 0 0 9px;
+    margin: 0 0 5px;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.82rem;
     font-weight: 800;
@@ -48,18 +58,30 @@
 .store-copy h2 {
     margin: 0;
     color: white;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
     font-weight: 500;
     line-height: 1.12;
+}
+
+.store-description {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.store-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
 }
 
 .store-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    min-height: 50px;
-    margin-top: 28px;
-    padding: 12px 20px;
+    min-height: 42px;
+    margin-top: 0;
+    padding: 8px 16px;
     border: 2px solid white;
     border-radius: 0.45rem;
     color: white;

@@ -18,7 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="content-container orange-bg orange-container">
+        <!-- Purina Vet Direct content is now combined with OnlineStore.vue. -->
+        <!-- <div class="content-container orange-bg orange-container">
             <div class="content-wrapper">
                 <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst">
                 <div class="image-wrapper">
@@ -37,7 +38,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="content-container fixed-bg panks-container">
             <div class="content-wrapper">
                 <div class="image-wrapper">

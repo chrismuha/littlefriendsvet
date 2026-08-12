@@ -22,17 +22,13 @@
                         <p>Lyons Falls, NY 13368</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row-wrapper orange-bg office-hours">
-            <div class="row">
-                <div class="row-item">
+                <div class="row-item office-hours">
                     <div class="title">
                         <i class="bi bi-clock"></i>
                         <p>Office Hours</p>
                     </div>
                     <div class="details">
-                        <p class="time">By appointment only</p>
+                        <p class="time">By reservation only</p>
                     </div>
                 </div>
             </div>
@@ -65,76 +61,39 @@ section {
     color: var(--secondary-orange);
 }
 .title {
-    font-size: 24px;
+    font-size: 19px;
     display: flex;
     align-items: center;
 }
 .title i {
-    width: 70px;
-    font-size: 40px;
+    width: 42px;
+    font-size: 28px;
 }
 .details {
-    margin-left: 70px;
-    padding: 10px 0;
+    margin-left: 42px;
+    padding: 6px 0 0;
 }
 .row {
-    gap: 30px;
-    padding: 20px 40px;
-    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding: 22px 30px;
+    max-width: 1100px;
     margin: auto;
 }
 .row-item {
     width: 100%;
-    padding: 30px;
-}
-.notice {
-    display: flex;
-    align-items: center;
-}
-.office-hours .row {
-    max-width: 850px;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    text-align: center;
-}
-.office-hours .row-item {
-    padding: 24px 30px;
-}
-.office-hours .title {
-    justify-content: center;
-    font-size: 28px;
-    font-weight: 700;
-}
-.office-hours .title i {
-    width: auto;
-    margin-right: 14px;
+    padding: 18px;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.42);
 }
 .office-hours .details {
-    margin-left: 0;
-    font-size: 18px;
-    font-weight: 400;
-}
-.office-hours .details .days {
-    font-size: 22px;
-    font-weight: 700;
+    margin-left: 42px;
 }
 .office-hours .details .time {
-    margin: 4px 0;
-    font-size: 24px;
+    margin: 0;
+    font-size: 17px;
     font-weight: 700;
-}
-.office-hours .details .closed {
-    font-weight: 700;
-}
-.office-hours .notice {
-    justify-content: center;
-    width: auto;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, .55);
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.5;
 }
 @media screen and (max-width: 800px) {
     .title {
@@ -145,16 +104,7 @@ section {
         margin: 0;
     }
     .row {
-        flex-wrap: wrap;
-    }
-    .orange-bg {
-        gap: 10px;
-    }
-    .orange-bg .row-item:not(.notice) {
-        padding-bottom: 0;
-    }
-    .notice {
-        padding-top: 0;
+        grid-template-columns: 1fr;
     }
 }
 </style>

@@ -21,6 +21,7 @@
       </div>
 
       <address class="business-address">
+        <strong>Mailing Address</strong><br>
         PO Box 437<br>
         Lyons Falls, NY 13368
       </address>
@@ -39,7 +40,7 @@
       </div> -->
     </div>
 
-    <nav class="mobile-actions" aria-label="Quick contact actions">
+    <nav class="quick-actions" aria-label="Quick contact actions">
       <a href="tel:+13157960907">
         <i class="bi bi-telephone" aria-hidden="true"></i>
         Call
@@ -47,6 +48,10 @@
       <a href="sms:+18555534416">
         <i class="bi bi-chat-dots" aria-hidden="true"></i>
         Text
+      </a>
+      <a href="mailto:info@littlefriendsvet.com">
+        <i class="bi bi-envelope" aria-hidden="true"></i>
+        Email
       </a>
     </nav>
   </section>
@@ -71,7 +76,7 @@
 section {
   position: relative;
   background: var(--bright-teal);
-  min-height: clamp(170px, 23svh, 240px);
+  min-height: clamp(230px, 29svh, 300px);
   width: 100%;
   overflow: hidden;
 
@@ -84,34 +89,51 @@ section {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 30px;
-  margin-bottom: 20px;
+  padding: 0;
+  margin-bottom: 0;
   width: 100%;
+  margin-right: 0;
   box-sizing: border-box;
   align-items: center;
   gap: 4px;
 }
 
 .logo-image {
-  width: min(98vw, 1380px);
-  margin: 0 auto;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: min(118vw, 1700px);
+  margin: 0;
+  transform: translateX(-50%);
+  transform-origin: center;
 }
 
 .logo-image img {
   display: block;
   width: 100%;
-  max-height: 22vh;
+  max-height: 46vh;
   object-fit: contain;
 }
 
 .business-address {
+  position: absolute;
+  top: 50%;
+  right: clamp(16px, 3vw, 44px);
+  left: auto;
+  width: clamp(215px, 20vw, 285px);
+  transform: translateY(-50%);
   color: white;
   font-size: clamp(1.05rem, 2vw, 1.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 1.45;
   text-align: center;
+  white-space: nowrap;
   text-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+}
+
+.business-address strong {
+  color: var(--primary-gold);
 }
 
 .cover-button {
@@ -135,25 +157,52 @@ section {
   line-height: 1.2;
 }
 
-.mobile-actions {
-  display: none;
+.quick-actions {
+  position: absolute;
+  right: auto;
+  bottom: 34px;
+  left: 50%;
+  top: auto;
+  z-index: 3;
+  display: grid;
+  width: min(560px, calc(100% - 40px));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  transform: translateX(-50%);
+}
+
+.quick-actions a {
+  display: flex;
+  min-height: 38px;
+  padding: 6px 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 2px solid white;
+  border-radius: 0.3rem;
+  background: var(--button-orange);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 @media (max-width: 960px) {
   .cover-items {
     width: 100%;
-    padding: 0 20px;
+    margin-right: 0;
+    padding: 0;
     gap: 10px;
   }
 
   .logo-image {
-    width: 100%;
-    max-width: 1100px;
+    width: min(128vw, 1550px);
+    max-width: none;
     margin-bottom: 0;
   }
 
   .logo-image img {
-    max-height: 21vh;
+    max-height: 44vh;
   }
 
 }
@@ -164,44 +213,61 @@ section {
   }
 
   .logo-image img {
-    max-height: 22vh;
+    max-height: 45vh;
   }
 
 }
 
 @media (max-width: 640px) {
   section {
-    min-height: 260px;
+    min-height: 320px;
   }
 
   .cover-items {
-    padding: 0 15px;
+    padding: 0;
     align-self: flex-start;
   }
 
+  .logo-image {
+    top: -4px;
+  }
+
+  .business-address {
+    top: auto;
+    right: auto;
+    bottom: 72px;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
   .logo-image img {
-    max-height: 20vh;
+    max-height: 38vh;
   }
 
   .cover-button {
     display: none;
   }
 
-  .mobile-actions {
+  .quick-actions {
     position: absolute;
     right: 15px;
     bottom: 16px;
     left: 15px;
+    top: auto;
 
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    transform: none;
   }
 
-  .mobile-actions a {
+  .quick-actions a {
     display: flex;
-    min-height: 48px;
+    min-height: 42px;
 
     align-items: center;
     justify-content: center;
@@ -220,17 +286,17 @@ section {
 
 @media (max-width: 400px) {
   .logo-image img {
-    max-height: 24vh;
+    max-height: 36vh;
   }
 
-  .mobile-actions a {
-    min-height: 44px;
-    font-size: 0.85rem;
+  .quick-actions a {
+    min-height: 38px;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 300px) {
-  .mobile-actions {
+  .quick-actions {
     grid-template-columns: 1fr;
   }
 }

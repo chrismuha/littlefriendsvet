@@ -1,20 +1,11 @@
 <template>
-    <section class="services-section" aria-labelledby="our-services-title">
-        <div class="teal-bg services-banner">
-            <div class="header header-v3">
-                <div class="header-starburst">
-                    <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
-                </div>
-                <h1 id="our-services-title">Our Services</h1>
-            </div>
-        </div>
-
+    <section class="services-section" aria-label="Our Services">
         <div class="services-content">
-            <header class="services-intro">
+            <!-- <header class="services-intro">
                 <p class="services-eyebrow">Compassionate care at every stage</p>
-                <h2>Services Offered</h2>
+                <h2 id="our-services-title">Our Services</h2>
                 <p>Select a service to learn more.</p>
-            </header>
+            </header> -->
 
             <div class="services">
                 <div
@@ -128,6 +119,11 @@ const services = [
         title: 'Nutrition consultations',
         description: 'Nutrition counseling for your pet based on science and evidence-based nutritional recommendations.',
     },
+    {
+        icon: 'bi bi-house-heart',
+        title: 'Feline boarding',
+        description: 'Your cat can stay in a private luxury kitty condo with a separate litter area, soft bedding, and perching shelves. Our quiet, warm boarding area has soft music, no dogs, and close monitoring by our veterinary team. Call to reserve your kitty\'s stay.',
+    },
 ]
 
 const activeIndex = ref(null)
@@ -199,16 +195,8 @@ onBeforeUnmount(() => {
     padding: 0;
 }
 
-.services-banner .header {
-    margin-bottom: 0;
-}
-
-.services-banner .header h1 {
-    color: white;
-}
-
 .services-content {
-    padding: clamp(64px, 8vw, 96px) 30px;
+    padding: clamp(52px, 7vw, 82px) 30px;
 }
 
 .services-intro {
@@ -246,10 +234,10 @@ onBeforeUnmount(() => {
 .services {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
     gap: 30px;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -469,6 +457,18 @@ onBeforeUnmount(() => {
 
     .service-description {
         padding: 24px;
+    }
+}
+
+@media (max-width: 920px) {
+    .services {
+        grid-template-columns: repeat(2, 260px);
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: minmax(0, 260px);
     }
 }
 
