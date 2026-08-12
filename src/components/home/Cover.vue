@@ -300,4 +300,90 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Stable header layout: logo, address, and actions occupy separate grid areas. */
+section {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(420px, 900px) minmax(190px, 1fr);
+  grid-template-areas:
+    ". logo address"
+    ". actions .";
+  min-height: 300px;
+  padding: 12px 24px;
+  gap: 8px 20px;
+}
+
+.cover-items {
+  display: contents;
+}
+
+.logo-image {
+  position: static;
+  grid-area: logo;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  transform: none;
+}
+
+.logo-image img {
+  max-height: 190px;
+}
+
+.business-address {
+  position: static;
+  grid-area: address;
+  width: 100%;
+  transform: none;
+}
+
+.quick-actions {
+  position: static;
+  grid-area: actions;
+  width: min(560px, 100%);
+  margin: 0 auto;
+  transform: none;
+}
+
+@media (max-width: 960px) {
+  section {
+    grid-template-columns: minmax(0, 1fr) 210px;
+    grid-template-areas:
+      "logo address"
+      "actions actions";
+    padding: 12px 18px;
+  }
+
+  .logo-image,
+  .logo-image img {
+    width: 100%;
+    max-height: 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "address"
+      "actions";
+    min-height: 390px;
+    padding: 12px 15px;
+  }
+
+  .logo-image img {
+    max-height: 185px;
+  }
+
+  .business-address {
+    width: auto;
+  }
+
+  .quick-actions {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+}
 </style>

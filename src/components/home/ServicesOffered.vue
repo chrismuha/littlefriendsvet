@@ -33,7 +33,15 @@
                             role="region"
                             :aria-label="`${service.title} details`"
                         >
-                            {{ service.description }}
+                            <p>{{ service.description }}</p>
+                            <div v-if="service.images" class="boarding-preview">
+                                <img
+                                    v-for="(image, imageIndex) in service.images"
+                                    :key="image"
+                                    :src="image"
+                                    :alt="`Feline boarding accommodation ${imageIndex + 1}`"
+                                >
+                            </div>
                         </div>
                     </Transition>
                 </div>
@@ -71,7 +79,15 @@
                         </div>
 
                         <div class="service-description">
-                            {{ activeService.description }}
+                            <p>{{ activeService.description }}</p>
+                            <div v-if="activeService.images" class="boarding-preview">
+                                <img
+                                    v-for="(image, imageIndex) in activeService.images"
+                                    :key="image"
+                                    :src="image"
+                                    :alt="`Feline boarding accommodation ${imageIndex + 1}`"
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,6 +98,10 @@
 
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import boardingImage1 from '@/assets/images/Gallery_1.jpg'
+import boardingImage2 from '@/assets/images/Gallery_2.jpg'
+import boardingImage3 from '@/assets/images/Gallery_3.jpg'
+import boardingImage4 from '@/assets/images/Gallery_4.jpg'
 
 const services = [
     {
@@ -123,6 +143,7 @@ const services = [
         icon: 'bi bi-house-heart',
         title: 'Feline boarding',
         description: 'Your cat can stay in a private luxury kitty condo with a separate litter area, soft bedding, and perching shelves. Our quiet, warm boarding area has soft music, no dogs, and close monitoring by our veterinary team. Call to reserve your kitty\'s stay.',
+        images: [boardingImage1, boardingImage2, boardingImage3, boardingImage4],
     },
 ]
 
@@ -311,6 +332,25 @@ onBeforeUnmount(() => {
     line-height: 1.55;
     text-align: center;
     transform: translateX(-50%);
+}
+
+.service-card:last-child .service-popover {
+    width: min(480px, 90vw);
+}
+
+.boarding-preview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.boarding-preview img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 0.45rem;
+    object-fit: cover;
 }
 
 .service-popover::before {
