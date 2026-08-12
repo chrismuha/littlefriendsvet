@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-import ContactUs from '@/components/ContactUs.vue'
+// import ContactUs from '@/components/ContactUs.vue'
 import FooterSection from '@/components/FooterSection.vue'
 import ClientForm from '@/components/intake/ClientForm.vue'
 import ClientFormStep2 from '@/components/intake/ClientFormStep2.vue'
@@ -89,7 +89,7 @@ function submitIntakeForm(data) {
         @submit="submitIntakeForm"
     />
 
-    <ContactUs />
+    <!-- <ContactUs /> -->
 
     <FooterSection />
 </template>

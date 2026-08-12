@@ -15,11 +15,11 @@
                 <div class="row-item">
                     <div class="title">
                         <i class="bi bi-geo-alt"></i>
-                        <p>Location</p>
+                        <p>Mailing Address</p>
                     </div>
                     <div class="details">
-                        <p><a href="https://www.google.com/maps/place/6793+McAlpine+St,+Lyons+Falls,+NY+13368/@43.618744,-75.3682801,19z/data=!3m1!4b1!4m5!3m4!1s0x89d8e86c596b1b69:0x69aa35c7c2b6d304!8m2!3d43.618743!4d-75.3677329" target="_blank" rel="noopener">6793B McAlpine St</a></p>
-                        <p><a href="https://www.google.com/maps/place/6793+McAlpine+St,+Lyons+Falls,+NY+13368/@43.618744,-75.3682801,19z/data=!3m1!4b1!4m5!3m4!1s0x89d8e86c596b1b69:0x69aa35c7c2b6d304!8m2!3d43.618743!4d-75.3677329" target="_blank" rel="noopener">Lyons Falls, NY 13368</a></p>
+                        <p>PO Box 437</p>
+                        <p>Lyons Falls, NY 13368</p>
                     </div>
                 </div>
             </div>
@@ -32,14 +32,7 @@
                         <p>Office Hours</p>
                     </div>
                     <div class="details">
-                        <p class="days">Monday, Tuesday, Thursday & Friday</p>
-                        <p class="time">9am to 4pm</p>
-                        <p class="closed">Closed on Wednesdays</p>
-                    </div>
-                </div>
-                <div class="row-item notice">
-                    <div>
-                        <b>Hours are subject to change at any time.</b>
+                        <p class="time">By appointment only</p>
                     </div>
                 </div>
             </div>

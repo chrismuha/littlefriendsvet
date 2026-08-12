@@ -1,121 +1,3 @@
-<script setup>
-import { onMounted, onUnmounted } from 'vue'
-import emblaCarouselVue from 'embla-carousel-vue'
-import Autoplay from 'embla-carousel-autoplay'
-
-const logoModules = import.meta.glob(
-    '@/assets/images/homeslide/*.{jpg,jpeg,png,webp,avif}',
-    {
-        eager: true,
-        import: 'default'
-    }
-)
-
-const logoImages = Object.entries(logoModules)
-    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
-    .map(([, src]) => src)
-
-const slideDescriptions = [
-    'Veterinary team member holding a black kitten',
-    'Brown dog wearing bunny ears',
-    'Five Little Friends Veterinary Services team members together',
-    'Small cream-colored dog standing on an examination table',
-    'Gray-and-white tabby cat looking toward the camera',
-    'Woman holding a small puppy',
-    'Group of kittens resting together',
-    'Golden retriever sitting beside a black cat',
-    'Black-and-white long-haired cat resting indoors',
-    'Small brown puppy wearing a pink collar',
-    'Close-up of a black cat with white whiskers',
-    'Veterinary team member holding two tabby kittens',
-    'Small brown dog wearing a rainbow collar outdoors',
-    'Black-and-white cat sitting in front of a stone wall',
-    'Two cats resting together in a cat enclosure',
-    'White kitten resting in a hammock',
-    'Orange tabby cat wearing a rainbow collar outside a window',
-    'Little Friends Veterinary Services community event display',
-    'Veterinary team member holding a black-and-white cat',
-    'Black-and-white cat relaxing on a kitchen counter',
-    'Four Little Friends Veterinary Services team members outdoors',
-    'Little Friends Veterinary Services clinic in Lyons Falls',
-    'Three team members gathered around a dining table',
-    'Black kittens cuddled together on a cat tree'
-]
-
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
-const autoplayPlugin = Autoplay({
-    delay: 3000,
-    stopOnInteraction: false,
-    stopOnMouseEnter: true,
-    playOnInit: !motionPreference.matches
-})
-
-const [emblaRef, emblaApi] = emblaCarouselVue(
-    {
-        loop: true,
-        align: 'start',
-        dragFree: false,
-        skipSnaps: false,
-        duration: 40,
-    },
-    [autoplayPlugin]
-)
-
-let wheelLocked = false
-let wheelUnlockTimer = null
-let wheelDelta = 0
-
-const handleCarouselWheel = (event) => {
-    const horizontalDelta = event.deltaX
-    const isHorizontalGesture = Math.abs(horizontalDelta) >= 2
-        && Math.abs(horizontalDelta) >= Math.abs(event.deltaY) * .5
-
-    if (!isHorizontalGesture) return
-
-    event.preventDefault()
-
-    clearTimeout(wheelUnlockTimer)
-    wheelUnlockTimer = setTimeout(() => {
-        wheelLocked = false
-        wheelDelta = 0
-    }, 180)
-
-    if (wheelLocked) return
-
-    wheelDelta += horizontalDelta
-    if (Math.abs(wheelDelta) < 12) return
-
-    wheelLocked = true
-    if (wheelDelta > 0) emblaApi.value?.scrollNext()
-    else emblaApi.value?.scrollPrev()
-}
-
-const handleCarouselKeydown = (event) => {
-    if (event.key === 'ArrowLeft') {
-        event.preventDefault()
-        emblaApi.value?.scrollPrev()
-    }
-    if (event.key === 'ArrowRight') {
-        event.preventDefault()
-        emblaApi.value?.scrollNext()
-    }
-}
-
-const handleMotionPreference = (event) => {
-    if (event.matches) autoplayPlugin.stop()
-    else autoplayPlugin.play()
-}
-
-onMounted(() => {
-    motionPreference.addEventListener('change', handleMotionPreference)
-})
-
-onUnmounted(() => {
-    clearTimeout(wheelUnlockTimer)
-    motionPreference.removeEventListener('change', handleMotionPreference)
-})
-</script>
-
 <template>
   <section>
     <div class="cover-bg">
@@ -138,28 +20,17 @@ onUnmounted(() => {
         >
       </div>
 
-      <div
-        class="embla"
-        ref="emblaRef"
-        role="region"
-        aria-label="Little Friends community photo slider"
-        tabindex="0"
-        @wheel="handleCarouselWheel"
-        @keydown="handleCarouselKeydown"
-      >
-        <div class="embla__container">
-          <div
-            v-for="(image, index) in logoImages"
-            :key="image"
-            class="embla__slide"
-          >
-            <img
-              :src="image"
-              :alt="slideDescriptions[index]"
-            >
-          </div>
-        </div>
-      </div>
+      <address class="business-address">
+        PO Box 437<br>
+        Lyons Falls, NY 13368
+      </address>
+
+      <!--
+        Carousel temporarily hidden until the new photo set is ready.
+        Restore with:
+        <LegacyHomeCarousel />
+        and import it from '@/components/archive/LegacyHomeCarousel.vue'.
+      -->
 
       <div class="cover-button">
         <a href="#foryou" aria-label="Continue to the next section">
@@ -216,6 +87,8 @@ section {
   margin-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
+  align-items: center;
+  gap: clamp(24px, 4vh, 46px);
 }
 
 .logo-image {
@@ -230,44 +103,14 @@ section {
   object-fit: contain;
 }
 
-.embla {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  overflow: hidden;
-  cursor: grab;
-  user-select: none;
-}
-
-.embla:active {
-  cursor: grabbing;
-}
-
-.embla:focus-visible {
-  outline: 4px solid var(--button-orange);
-  outline-offset: 5px;
-}
-
-.embla__container {
-  display: flex;
-  align-items: center;
-}
-
-.embla__slide {
-  flex: 0 0 clamp(180px, 15vw, 300px);
-  aspect-ratio: 3 / 4;
-  height: auto;
-  margin-right: clamp(16px, 2vw, 40px);
-}
-
-.embla__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  image-rendering: auto;
-  display: block;
-  pointer-events: none;
+.business-address {
+  color: white;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+  text-shadow: 0 2px 10px rgb(0 0 0 / 20%);
 }
 
 .cover-button {
@@ -312,22 +155,6 @@ section {
     max-height: 32vh;
   }
 
-  .embla {
-    max-width: none;
-    width: 100%;
-  }
-
-  .embla__slide {
-    flex: 0 0 30%;
-    height: 140px;
-    margin-right: 12px;
-  }
-
-  .embla__slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 }
 
 @media (min-width: 961px) and (max-height: 850px) {
@@ -339,9 +166,6 @@ section {
     max-height: 32vh;
   }
 
-  .embla__slide {
-    flex-basis: clamp(150px, 12vw, 240px);
-  }
 }
 
 @media (max-width: 640px) {
@@ -352,12 +176,6 @@ section {
 
   .logo-image img {
     max-height: 28vh;
-  }
-
-  .embla__slide {
-    flex: 0 0 30%;
-    height: 110px;
-    margin-right: 10px;
   }
 
   .cover-button {
@@ -400,10 +218,6 @@ section {
     max-height: 24vh;
   }
 
-  .embla__slide {
-    height: 90px;
-  }
-
   .mobile-actions a {
     min-height: 44px;
     font-size: 0.85rem;
@@ -411,11 +225,6 @@ section {
 }
 
 @media (max-width: 300px) {
-  .embla__slide {
-    flex: 0 0 70%;
-    height: 75px;
-  }
-
   .mobile-actions {
     grid-template-columns: 1fr;
   }

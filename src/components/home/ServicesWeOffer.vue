@@ -77,13 +77,6 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                     </div>
                 </div>
             </div>
-            <div class="right-section">
-                <div class="image-wrapper">
-                    <img src="@/assets/images/exam_area_LFVS-e02b910a.webp" alt="Little Friends veterinary surgical suite" loading="lazy" decoding="async">
-                    <img src="@/assets/images/IMG_7720.webp" alt="Veterinarian holding a black cat" loading="lazy" decoding="async">
-                    <img src="@/assets/images/Starburst_group_right_Orange-Teal.png" alt="" class="starburst2">
-                </div>
-            </div>
         </div>
     </section>
 </template>
@@ -213,32 +206,9 @@ section {
     gap: 20px;
 }
 
-.right-section {
-    width: 26%;
-    max-width: 360px;
-    flex-shrink: 0;
-
-}
-.right-section .image-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.right-section img {
-    width: 100%;
-    border-radius: 0.5rem;
-}
-.starburst2 {
-    height: 100px;
-    object-fit: contain;
-}
 @media screen and (max-width: 960px) {
     .content-container {
         flex-direction: column;
-    }
-    .right-section {
-        width: 100%;
-        max-width: none;
     }
     .new-client-buttons {
         grid-template-columns: 1fr;
