@@ -23,7 +23,7 @@
       <address class="business-address">
         <strong>Mailing Address</strong><br>
         PO Box 437<br>
-        Lyons Falls, NY 13368
+        <span class="address-line">Lyons Falls, NY 13368</span>
       </address>
 
       <!--
@@ -304,7 +304,7 @@ section {
 /* Stable header layout: logo, address, and actions occupy separate grid areas. */
 section {
   display: grid;
-  grid-template-columns: minmax(190px, 1fr) minmax(420px, 900px) minmax(190px, 1fr);
+  grid-template-columns: minmax(300px, 1fr) minmax(420px, 900px) minmax(300px, 1fr);
   grid-template-areas:
     ". logo address"
     ". actions .";
@@ -335,6 +335,13 @@ section {
   grid-area: address;
   width: 100%;
   transform: none;
+  padding: 0 12px;
+  font-size: clamp(1rem, 1.45vw, 1.3rem);
+  white-space: normal;
+}
+
+.address-line {
+  white-space: nowrap;
 }
 
 .quick-actions {
@@ -345,9 +352,9 @@ section {
   transform: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   section {
-    grid-template-columns: minmax(0, 1fr) 210px;
+    grid-template-columns: minmax(0, 1fr) 270px;
     grid-template-areas:
       "logo address"
       "actions actions";
