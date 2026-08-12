@@ -42,6 +42,8 @@ section {
 }
 .header-v2 h1 {
     border-bottom: 2px solid #e5e5e5;
+    font-size: clamp(1.75rem, 7.5vw, 4rem);
+    white-space: nowrap;
 }
 .row {
     gap: 40px;
