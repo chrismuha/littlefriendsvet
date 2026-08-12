@@ -32,11 +32,11 @@
         and import it from '@/components/archive/LegacyHomeCarousel.vue'.
       -->
 
-      <div class="cover-button">
+      <!-- <div class="cover-button">
         <a href="#foryou" aria-label="Continue to the next section">
           <i class="bi bi-chevron-down" aria-hidden="true"></i>
         </a>
-      </div>
+      </div> -->
     </div>
 
     <nav class="mobile-actions" aria-label="Quick contact actions">
@@ -71,7 +71,7 @@
 section {
   position: relative;
   background: var(--bright-teal);
-  min-height: clamp(220px, 30svh, 320px);
+  min-height: clamp(170px, 23svh, 240px);
   width: 100%;
   overflow: hidden;
 
@@ -89,12 +89,12 @@ section {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  gap: clamp(12px, 2vh, 24px);
+  gap: 4px;
 }
 
 .logo-image {
-  width: min(96vw, 1180px);
-  margin: 0 auto 12px;
+  width: min(98vw, 1380px);
+  margin: 0 auto;
 }
 
 .logo-image img {
@@ -106,7 +106,7 @@ section {
 
 .business-address {
   color: white;
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 1.45;
@@ -148,7 +148,7 @@ section {
 
   .logo-image {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin-bottom: 0;
   }
 
@@ -171,7 +171,7 @@ section {
 
 @media (max-width: 640px) {
   section {
-    min-height: 300px;
+    min-height: 260px;
   }
 
   .cover-items {

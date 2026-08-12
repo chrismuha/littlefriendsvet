@@ -52,9 +52,9 @@ section {
 }
 .actions-content h2 {
     margin-bottom: 24px;
-    color: white;
+    color: var(--content-teal);
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
 }
 .actions-content {
