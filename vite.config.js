@@ -9,7 +9,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   server: {
     host: '127.0.0.1',
-    port: 5194,
+    // Keep development isolated from service workers previously registered on 5194.
+    port: 5195,
     strictPort: true,
   },
   plugins: [

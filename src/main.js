@@ -14,6 +14,29 @@ app.use(router)
 
 app.mount('#app')
 
+if (import.meta.env.DEV && 'serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    const registrations = await navigator.serviceWorker.getRegistrations()
+    const hadRegistrations = registrations.length > 0
+
+    await Promise.all(registrations.map((registration) => registration.unregister()))
+
+    if ('caches' in window) {
+      const cacheNames = await caches.keys()
+      await Promise.all(
+        cacheNames
+          .filter((name) => name.startsWith('little-friends-vet-'))
+          .map((name) => caches.delete(name))
+      )
+    }
+
+    if (hadRegistrations && !sessionStorage.getItem('dev-service-worker-cleared')) {
+      sessionStorage.setItem('dev-service-worker-cleared', 'true')
+      window.location.reload()
+    }
+  })
+}
+
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     let refreshing = false
