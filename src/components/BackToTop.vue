@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
+import catImage from '@/assets/images/Cat02-70x102.png'
 
 const show = ref(false)
 const running = ref(false)
@@ -52,7 +52,7 @@ onUnmounted(() => {
     @click="scrollToTop"
   >
     <span>
-      <img :src="starImage" alt="" />
+      <img :src="catImage" alt="" />
     </span>
 
     <span class="gatop-label">
@@ -62,8 +62,8 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.gatop-top { width: 85px; position: fixed; bottom: -180px; right: 30px; z-index: 9999; opacity: 1; cursor: pointer; }
-.gatop-top img { display: block; width: 72px; height: 72px; margin: 0 auto; object-fit: contain; }
+.gatop-top { width: 82px; position: fixed; bottom: -180px; right: 30px; z-index: 9999; opacity: 1; cursor: pointer; text-align: center; }
+.gatop-top img { display: block; width: 46px; height: 67px; margin: 0 auto; object-fit: contain; }
 .gatop-top.show { bottom: 5% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .gatop-top.gatop-run { bottom: 100% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .gatop-top.gatop-down { -webkit-transition: 1.0s; -ms-transition: 1.0s; -o-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
@@ -77,13 +77,14 @@ onUnmounted(() => {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
-.gatop-top:before, .gatop-top.gatop-run:before { margin-left: 0 !important; top: -1px; left: 0px; width: 85px; height: 89px;}
+.gatop-top:before, .gatop-top.gatop-run:before { margin-left: 0 !important; top: -1px; left: 0px; width: 82px; height: 84px;}
 
 @media (max-width: 640px) {
-  .gatop-top { right: 15px; width: 68px; }
-  .gatop-top img { width: 58px; height: 58px; }
+  .gatop-top { right: 15px; width: 72px; }
+  .gatop-top img { width: 40px; height: 58px; }
   .gatop-label { font-size: 12px; }
 }
 </style>

@@ -72,14 +72,18 @@ section {
 .details {
     margin-left: 42px;
     padding: 6px 0 0;
+    color: #1f1f1f;
 }
 .row {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.18fr) repeat(2, minmax(0, 1fr));
     gap: 18px;
     padding: 22px 30px;
-    max-width: 1100px;
+    max-width: 1240px;
     margin: auto;
+}
+.details p {
+    white-space: nowrap;
 }
 .row-item {
     width: 100%;
@@ -102,6 +106,9 @@ section {
     }
     .details {
         margin: 0;
+    }
+    .details p {
+        white-space: normal;
     }
     .office-hours .details {
         margin-left: 0;
