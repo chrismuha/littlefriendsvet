@@ -95,38 +95,38 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 const services = [
     {
         icon: 'bi bi-heart-pulse',
-        title: 'Wellness services including examinations and immunizations',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        title: 'Wellness services',
+        description: 'Examinations, including puppies, kittens, new pets, and seniors; immunizations such as rabies, distemper, and others based on your pet\'s lifestyle; an ongoing comprehensive healthcare plan for the life of your pet; and preventative healthcare testing.',
     },
     {
         icon: 'bi bi-shield-check',
         title: 'Parasite prevention',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Safe and effective parasite prevention based on your pet\'s health and lifestyle.',
     },
     {
         icon: 'bi bi-clipboard-heart',
         title: 'Illness examinations',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'A full examination, including testing, if your pet is not feeling well.',
     },
     {
         icon: 'bi bi-hospital',
         title: 'Chronic health condition management',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Management of chronic health conditions, such as arthritis, skin conditions, allergies, diabetes, and any other conditions your pet may be experiencing.',
     },
     {
         icon: 'bi bi-globe',
         title: 'International travel health certificates',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'As a USDA-accredited veterinarian, Dr. Underwood can provide health certificates for international travel for your pets, including Canada.',
     },
     {
         icon: 'bi bi-chat-square-heart',
         title: 'Behavior concerns',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Behavior concerns, such as anxieties, litter box use, and other basic behavior concerns, can be addressed.',
     },
     {
         icon: 'ti ti-dog-bowl',
         title: 'Nutrition consultations',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Nutrition counseling for your pet based on science and evidence-based nutritional recommendations.',
     },
 ]
 
