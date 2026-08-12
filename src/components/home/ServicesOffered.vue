@@ -39,7 +39,7 @@
                                     v-for="(image, imageIndex) in service.images"
                                     :key="image"
                                     :src="image"
-                                    :alt="`Feline boarding accommodation ${imageIndex + 1}`"
+                                    :alt="service.imageAlt || `${service.title} photo ${imageIndex + 1}`"
                                 >
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                     v-for="(image, imageIndex) in activeService.images"
                                     :key="image"
                                     :src="image"
-                                    :alt="`Feline boarding accommodation ${imageIndex + 1}`"
+                                    :alt="activeService.imageAlt || `${activeService.title} photo ${imageIndex + 1}`"
                                 >
                             </div>
                         </div>
@@ -102,6 +102,7 @@ import boardingImage1 from '@/assets/images/Gallery_1.jpg'
 import boardingImage2 from '@/assets/images/Gallery_2.jpg'
 import boardingImage3 from '@/assets/images/Gallery_3.jpg'
 import boardingImage4 from '@/assets/images/Gallery_4.jpg'
+import felineBehaviorImage from '@/assets/images/Mousie_claws.jpg'
 
 const services = [
     {
@@ -132,7 +133,9 @@ const services = [
     {
         icon: 'bi bi-chat-square-heart',
         title: 'Behavior concerns',
-        description: 'Behavior concerns, such as anxieties, litter box use, and other basic behavior concerns, can be addressed.',
+        description: 'Behavior concerns such as anxiety, litter box use, aggression, and other common challenges can be addressed. Declawing cats is illegal in New York, and Dr. Underwood can provide feline-focused guidance on safe, effective alternatives and managing scratching behavior.',
+        images: [felineBehaviorImage],
+        imageAlt: 'Cat demonstrating healthy scratching behavior',
     },
     {
         icon: 'ti ti-dog-bowl',

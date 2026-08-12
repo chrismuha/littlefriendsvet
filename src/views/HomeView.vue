@@ -1,6 +1,6 @@
 <script setup>
 import Cover from '@/components/home/Cover.vue';
-import FelineServices from '@/components/home/FelineServices.vue';
+// import FelineServices from '@/components/home/FelineServices.vue';
 // import FelineBoarding from '@/components/home/FelineBoarding.vue';
 import ForYou from '@/components/home/ForYou.vue';
 import ForYouButtons from '@/components/home/ForYouButtons.vue';
@@ -34,7 +34,7 @@ import OnlineStore from '@/components/home/OnlineStore.vue';
     <Information />
     <WhoWeAre />
     <!-- <FelineBoarding /> -->
-    <FelineServices />
+    <!-- <FelineServices /> -->
     <!-- <AdvancedImaging /> -->
     <!-- <PhotoGrid1 /> -->
     <Parasite />
