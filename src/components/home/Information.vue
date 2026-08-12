@@ -103,6 +103,9 @@ section {
     .details {
         margin: 0;
     }
+    .office-hours .details {
+        margin-left: 0;
+    }
     .row {
         grid-template-columns: 1fr;
     }
