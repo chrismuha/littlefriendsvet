@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /intake
 
 Sitemap: https://littlefriendsvet.com/sitemap.xml

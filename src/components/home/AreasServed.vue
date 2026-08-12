@@ -331,6 +331,7 @@ const locations = [
     margin: -18px 0 0;
     color: var(--page-text);
     font-size: 0.95rem;
+    font-weight: 700;
 }
 
 .mailing-address i {
