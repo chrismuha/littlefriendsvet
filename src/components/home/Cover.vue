@@ -51,14 +51,6 @@
     </nav>
   </section>
 
-  <section class="flyer-section" aria-label="Little Friends on Wheels service flyer">
-    <img
-      src="@/assets/images/flyer.png"
-      alt="Little Friends on Wheels mobile veterinary services flyer with services, service areas, contact information, and appointment request QR code"
-      loading="eager"
-      decoding="async"
-    >
-  </section>
 </template>
 
 <style scoped>
@@ -110,21 +102,6 @@ section {
   width: 100%;
   max-height: 48vh;
   object-fit: contain;
-}
-
-.flyer-section {
-  min-height: 0;
-  padding: clamp(44px, 7vw, 88px) 24px;
-  background: var(--surface-background);
-}
-
-.flyer-section img {
-  display: block;
-  width: min(100%, 880px);
-  height: auto;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 18px 50px rgb(0 0 0 / 16%);
 }
 
 .business-address {
