@@ -8,8 +8,8 @@
                         <p>Contact Information</p>
                     </div>
                     <div class="details">
-                        <p>Give us a Call: <a href="tel:+13157960907">315-796-0907</a></p>
-                        <p>Send us a Text: <a href="sms:+18555534416">855-553-4416</a></p>
+                        <p>Call us: <a href="tel:+13157960907">315-796-0907</a></p>
+                        <p>Text us: <a href="sms:+18555534416">855-553-4416</a></p>
                     </div>
                 </div>
                 <div class="row-item">
