@@ -317,6 +317,7 @@ onBeforeUnmount(() => {
 
 .service-item span {
     font-size: 18px;
+    font-weight: 700;
 }
 
 .service-popover {

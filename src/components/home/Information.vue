@@ -65,6 +65,9 @@ section {
     display: flex;
     align-items: center;
 }
+.title p {
+    white-space: nowrap;
+}
 .title i {
     width: 42px;
     font-size: 28px;
