@@ -65,7 +65,10 @@
 
                 <p class="mailing-address">
                     <i class="bi bi-mailbox" aria-hidden="true"></i>
-                    <span><strong>Mailing address</strong> PO Box 437, Lyons Falls, NY 13368</span>
+                    <span class="mailing-address-copy">
+                        <strong>Mailing address</strong>
+                        <span>PO Box 437, Lyons Falls, NY 13368</span>
+                    </span>
                 </p>
             </div>
 
@@ -340,8 +343,13 @@ const locations = [
 }
 
 .mailing-address strong {
-    margin-right: 5px;
+    display: block;
     color: var(--heading-text);
+}
+
+.mailing-address-copy > span {
+    display: block;
+    white-space: nowrap;
 }
 
 .emergency-card {

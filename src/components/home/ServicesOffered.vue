@@ -1,11 +1,11 @@
 <template>
     <section class="services-section" aria-label="Our Services">
         <div class="services-content">
-            <!-- <header class="services-intro">
+            <header class="services-intro">
                 <p class="services-eyebrow">Compassionate care at every stage</p>
-                <h2 id="our-services-title">Our Services</h2>
+                <h2 id="our-services-title">Services Offered</h2>
                 <p>Select a service to learn more.</p>
-            </header> -->
+            </header>
 
             <div class="services">
                 <div
