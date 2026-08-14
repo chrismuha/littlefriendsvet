@@ -29,5 +29,10 @@
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
+  },
+  "overrides": {
+    "postcss": {
+      "nanoid": "3.3.18"
+    }
   }
 }
