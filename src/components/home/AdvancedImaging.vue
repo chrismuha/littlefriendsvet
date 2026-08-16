@@ -28,7 +28,7 @@ section {
 }
 h1 {
     font-size: 42px;
-    font-weight: 300;
+    font-weight: 500;
 }
 .content-container {
     display: flex;

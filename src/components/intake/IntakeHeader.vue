@@ -8,6 +8,6 @@
 <style>
 .orange-bg .header h1 {
     color: white;
-    font-weight: 200;
+    font-weight: 500;
 }
 </style>

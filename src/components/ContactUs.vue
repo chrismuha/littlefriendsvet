@@ -86,7 +86,7 @@ section {
 .right-section h1 {
     text-align: center;
     margin: auto;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--heading-text);
     font-size: 2rem;
 }

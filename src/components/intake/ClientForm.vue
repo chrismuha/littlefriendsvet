@@ -381,7 +381,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .input-field textarea {
@@ -440,7 +440,7 @@ h1 {
 
 .btn-red {
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 700;
     cursor: pointer;
 }
 

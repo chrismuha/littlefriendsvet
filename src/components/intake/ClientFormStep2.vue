@@ -293,7 +293,7 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .radio-group {
@@ -352,7 +352,7 @@ h1 {
 
 .btn {
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 700;
     cursor: pointer;
 }
 

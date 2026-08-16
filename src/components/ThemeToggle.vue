@@ -70,7 +70,7 @@ onUnmounted(() => {
   color: var(--heading-text);
   font-family: inherit;
   cursor: pointer;
-  transition: bottom 1s, transform .2s;
+  transition: transform .2s;
 }
 
 .theme-toggle.show {
