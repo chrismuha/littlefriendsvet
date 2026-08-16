@@ -7,7 +7,7 @@ import ForYouButtons from '@/components/home/ForYouButtons.vue';
 import Information from '@/components/home/Information.vue';
 import Notice from '@/components/home/Notice.vue';
 // import Slideshow from '@/components/home/Slideshow.vue';
-import WhoWeAre from '@/components/home/WhoWeAre.vue';
+import PrepareForVisit from '@/components/home/PrepareForVisit.vue';
 // import AdvancedImaging from '@/components/home/AdvancedImaging.vue';
 import ServicesWeOffer from '@/components/home/ServicesWeOffer.vue';
 // import PhotoGrid1 from '@/components/home/PhotoGrid1.vue';
@@ -32,7 +32,7 @@ import OnlineStore from '@/components/home/OnlineStore.vue';
     <OnlineStore />
     <!-- <Slideshow /> -->
     <Information />
-    <WhoWeAre />
+    <PrepareForVisit />
     <!-- <FelineBoarding /> -->
     <!-- <FelineServices /> -->
     <!-- <AdvancedImaging /> -->
