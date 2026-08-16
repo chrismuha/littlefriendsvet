@@ -54,6 +54,10 @@
     letter-spacing: 0.11em;
     text-transform: uppercase;
 }
+:global(html[data-theme="dark"] .store-eyebrow) {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
 
 .store-copy h2 {
     margin: 0;

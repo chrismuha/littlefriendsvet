@@ -78,6 +78,9 @@ section {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+:global(html[data-theme="dark"] .text-wrapper a) {
+    color: var(--link-text);
+}
 .wrapped-intro p + p {
     margin-top: 20px;
 }

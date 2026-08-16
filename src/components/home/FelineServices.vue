@@ -73,8 +73,14 @@ a b {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+:global(html[data-theme="dark"] .orange-container a) {
+    color: var(--link-text);
+}
 .orange-container a:hover {
     color: var(--secondary-orange);
+}
+:global(html[data-theme="dark"] .orange-container a:hover) {
+    color: white;
 }
 b, strong {
     font-weight: 900;

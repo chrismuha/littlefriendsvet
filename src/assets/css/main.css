@@ -26,6 +26,8 @@
     --bright-teal: #16a2a2;
     --button-teal: #16a2a2;
     --button-orange: #ff5000;
+    --accent-orange-text: #e64800;
+    --link-text: #c9bb8c;
     --primary-gold: #ffeaa5;
     --primary-white: #fff;
     --primary-red: #983049;
@@ -54,20 +56,22 @@
     --bright-teal: #075f5f;
     --button-teal: #087070;
     --button-orange: #c63e00;
-    --primary-gold: #173535;
+    --accent-orange-text: #ffc078;
+    --link-text: #fff0b3;
+    --primary-gold: #c9ad3d;
     --secondary-teal: #064f4f;
     --secondary-orange: #a93400;
     --secondary-white: #466b6b;
-    --golden-bg: rgba(27, 62, 62, 0.92);
-    --page-background: #102626;
+    --golden-bg: rgba(7, 95, 95, 0.92);
+    --page-background: #075f5f;
     --page-text: #eef6f6;
     --heading-text: #fff;
-    --surface-background: #1b3e3e;
-    --section-background: #173535;
+    --surface-background: #096b6b;
+    --section-background: #075f5f;
     --separator-color: #466b6b;
     --content-teal: #7bded7;
     --content-text: #eef6f6;
-    --navigation-background: #1b3e3e;
+    --navigation-background: #c9ad3d;
 }
 
 body, input, textarea {
@@ -100,8 +104,12 @@ html[data-theme="dark"] textarea::placeholder {
     color: #cadada;
 }
 
+html[data-theme="dark"] a:hover {
+    color: white;
+}
+
 a {
-    color: var(--secondary-gold);
+    color: var(--link-text);
     text-decoration: none;
 }
 

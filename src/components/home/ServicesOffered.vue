@@ -219,6 +219,10 @@ onBeforeUnmount(() => {
     padding: 0;
 }
 
+:global(html[data-theme="dark"] .services-section) {
+    background: var(--section-background);
+}
+
 .services-content {
     padding: clamp(52px, 7vw, 82px) 30px;
 }
@@ -239,6 +243,11 @@ onBeforeUnmount(() => {
 
 .services-eyebrow {
     color: var(--content-teal);
+}
+
+:global(html[data-theme="dark"] .services-eyebrow) {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .services-intro h2 {
@@ -289,6 +298,20 @@ onBeforeUnmount(() => {
 .service-item:hover {
     background-color: rgba(0, 128, 128, 0.1);
     transform: translateY(-2px);
+}
+
+:global(html[data-theme="dark"] .service-item) {
+    border: 1px solid rgba(123, 222, 215, 0.35);
+    background: var(--surface-background);
+}
+
+:global(html[data-theme="dark"] .service-item:hover) {
+    background: color-mix(in srgb, var(--surface-background) 88%, white);
+}
+
+:global(html[data-theme="dark"] .service-item > i) {
+    background: var(--primary-orange);
+    color: white;
 }
 
 .service-item:focus-visible {
@@ -366,6 +389,15 @@ onBeforeUnmount(() => {
     border-style: solid;
     border-color: transparent transparent var(--primary-teal);
     transform: translateX(-50%);
+}
+
+:global(html[data-theme="dark"] .service-popover) {
+    background: var(--primary-orange);
+    color: white;
+}
+
+:global(html[data-theme="dark"] .service-popover::before) {
+    border-color: transparent transparent var(--primary-orange);
 }
 
 .service-popover-enter-active,

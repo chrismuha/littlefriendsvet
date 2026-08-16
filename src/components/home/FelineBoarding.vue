@@ -28,6 +28,10 @@ section {
     width: fit-content;
     margin: auto;
 }
+:global(html[data-theme="dark"] .text-content h1) {
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
 .text-content h1::after {
     content: "";
     display: block;

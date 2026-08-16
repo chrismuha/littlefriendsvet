@@ -1,13 +1,10 @@
 <script setup>
-import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
 
 const STORAGE_KEY = 'little-friends-theme'
 const isDark = ref(false)
-const show = ref(true)
-const turning = ref(false)
-let scrollStopTimer = null
-let turnTimer = null
+const starElement = ref(null)
 
 const label = computed(() => isDark.value ? 'Use light mode' : 'Use dark mode')
 
@@ -20,34 +17,25 @@ const applyTheme = (theme, persist = false) => {
   if (persist) localStorage.setItem(STORAGE_KEY, theme)
 }
 
-const toggleTheme = async () => {
+const toggleTheme = () => {
   applyTheme(isDark.value ? 'light' : 'dark', true)
-  turning.value = false
-  clearTimeout(turnTimer)
-  await nextTick()
-  turning.value = true
-  turnTimer = setTimeout(() => {
-    turning.value = false
-  }, 650)
-}
-
-const handleScroll = () => {
-  show.value = false
-  clearTimeout(scrollStopTimer)
-  scrollStopTimer = setTimeout(() => {
-    show.value = true
-  }, 250)
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const star = starElement.value
+      star?.getAnimations().forEach(animation => animation.cancel())
+      star?.animate(
+        [
+          { transform: 'translateZ(0) rotate(0deg)' },
+          { transform: 'translateZ(0) rotate(360deg)' }
+        ],
+        { duration: 400, easing: 'ease-out' }
+      )
+    })
+  })
 }
 
 onMounted(() => {
   applyTheme(localStorage.getItem(STORAGE_KEY) || 'light')
-  window.addEventListener('scroll', handleScroll, { passive: true })
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  clearTimeout(scrollStopTimer)
-  clearTimeout(turnTimer)
 })
 </script>
 
@@ -55,12 +43,11 @@ onUnmounted(() => {
   <button
     type="button"
     class="theme-toggle"
-    :class="{ show, turning }"
     :aria-label="label"
     :title="label"
     @click="toggleTheme"
   >
-    <img :src="starImage" alt="">
+    <img ref="starElement" :src="starImage" alt="">
     <span>{{ isDark ? 'Light mode' : 'Dark mode' }}</span>
   </button>
 </template>
@@ -68,7 +55,7 @@ onUnmounted(() => {
 <style scoped>
 .theme-toggle {
   position: fixed;
-  bottom: -180px;
+  bottom: 5%;
   left: 30px;
   z-index: 9999;
   display: grid;
@@ -81,10 +68,6 @@ onUnmounted(() => {
   font-family: inherit;
   cursor: pointer;
   transition: transform .2s;
-}
-
-.theme-toggle.show {
-  bottom: 5%;
 }
 
 .theme-toggle:focus-visible {
@@ -103,16 +86,9 @@ onUnmounted(() => {
   width: 72px;
   height: 72px;
   object-fit: contain;
+  backface-visibility: hidden;
+  will-change: transform;
   transition: transform .35s ease;
-}
-
-.theme-toggle.turning img {
-  animation: theme-star-turn .65s ease-in-out;
-}
-
-@keyframes theme-star-turn {
-  50% { transform: rotate(180deg); }
-  100% { transform: rotate(0deg) scale(1); }
 }
 
 .theme-toggle span {
@@ -147,8 +123,5 @@ onUnmounted(() => {
     transition: none;
   }
 
-  .theme-toggle.turning img {
-    animation: none;
-  }
 }
 </style>

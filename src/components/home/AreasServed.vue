@@ -155,6 +155,11 @@ const locations = [
     text-transform: uppercase;
 }
 
+:global(html[data-theme="dark"] .eyebrow) {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
 .areas-intro h2 {
     margin: 0;
     color: var(--heading-text);
@@ -381,9 +386,13 @@ const locations = [
     font-size: 26px;
 }
 
-:global(html[data-theme="dark"]) .emergency-icon {
-    background: var(--primary-orange);
-    color: white;
+:global(html[data-theme="dark"] .emergency-card) {
+    border-color: var(--accent-orange-text);
+}
+
+:global(html[data-theme="dark"] .emergency-icon) {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-orange-text);
 }
 
 .emergency-copy p {
@@ -411,8 +420,28 @@ const locations = [
 }
 
 .emergency-actions a:hover {
-    background: color-mix(in srgb, var(--primary-teal) 10%, transparent);
-    color: var(--content-teal);
+    background: var(--content-teal);
+    color: white;
+}
+
+.emergency-actions a:focus-visible {
+    outline: 3px solid var(--content-teal);
+    outline-offset: 3px;
+}
+
+:global(html[data-theme="dark"] .emergency-actions a:hover) {
+    background: var(--accent-orange-text);
+    color: #102626;
+}
+
+:global(html[data-theme="dark"] .emergency-actions a) {
+    border-color: var(--accent-orange-text);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--accent-orange-text);
+}
+
+:global(html[data-theme="dark"] .emergency-actions a:focus-visible) {
+    outline-color: var(--accent-orange-text);
 }
 
 @media (max-width: 960px) {

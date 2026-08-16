@@ -109,6 +109,16 @@ section {
     color: var(--content-teal);
     font-weight: 400;
 }
+:global(html[data-theme="dark"] .section-item h1) {
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+:global(html[data-theme="dark"] .starburst) {
+    top: 14px;
+    left: 14px;
+    height: 96px;
+    opacity: 0.22;
+}
 .section-item p,
 .section-item li {
     line-height: 1.65;
@@ -191,14 +201,24 @@ section {
     color: white;
     text-decoration: none;
 }
+:global(html[data-theme="dark"] .new-client-button.primary:hover) {
+    background: var(--accent-orange-text);
+    color: #102626;
+}
 .emergency-services a {
     color: var(--content-teal);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+:global(html[data-theme="dark"] .emergency-services a) {
+    color: var(--link-text);
+}
 .emergency-services a:hover {
     color: var(--secondary-orange);
+}
+:global(html[data-theme="dark"] .emergency-services a:hover) {
+    color: white;
 }
 .section-item, .left-section, .text-wrapper {
     display: flex;

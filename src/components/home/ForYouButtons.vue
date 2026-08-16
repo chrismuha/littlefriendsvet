@@ -57,6 +57,9 @@ section {
     font-weight: 700;
     text-align: center;
 }
+:global(html[data-theme="dark"] .actions-content h2) {
+    color: #102626;
+}
 .actions-content {
     display: flex;
     flex-direction: column;

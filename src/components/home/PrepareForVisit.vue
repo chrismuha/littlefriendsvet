@@ -133,16 +133,18 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .visit-section { padding: 0; }
-:global(html[data-theme="dark"]) .visit-section { background: var(--section-background); }
+:global(html[data-theme="dark"] .visit-section) { background: var(--section-background); }
 .visit-content { padding: clamp(52px, 7vw, 82px) 30px; }
 .visit-intro { max-width: 720px; margin: 0 auto 44px; text-align: center; }
-.visit-eyebrow { margin: 0 0 9px; color: var(--primary-orange); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
+.visit-eyebrow { margin: 0 0 9px; color: var(--accent-orange-text); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
 .visit-intro h2 { margin: 0; color: var(--heading-text); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 500; line-height: 1.1; }
 .visit-intro > p:last-child { margin: 12px 0 0; font-size: 1.05rem; font-weight: 500; }
 .visit-options { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 260px); gap: 30px; justify-content: center; align-items: flex-start; }
 .visit-card { position: relative; width: 260px; }
 .visit-item { width: 100%; display: flex; flex-direction: column; align-items: center; border: 0; border-radius: 1rem; padding: 10px; background: transparent; color: inherit; cursor: pointer; font: inherit; text-align: center; transition: background-color 0.2s ease, transform 0.2s ease; }
 .visit-item:hover { background-color: color-mix(in srgb, var(--primary-orange) 10%, transparent); transform: translateY(-2px); }
+:global(html[data-theme="dark"] .visit-item) { border: 1px solid rgba(123, 222, 215, 0.35); background: var(--surface-background); }
+:global(html[data-theme="dark"] .visit-item:hover) { background: color-mix(in srgb, var(--surface-background) 88%, white); }
 .visit-item:focus-visible { outline: 3px solid var(--primary-teal); outline-offset: 4px; }
 .visit-item > i, .visit-dialog-heading > i { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 100px; height: 100px; padding: 20px; border-radius: 50%; background: var(--primary-orange); color: white; font-size: 50px; }
 .visit-item > i { margin: 10px 0; }
