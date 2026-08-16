@@ -57,7 +57,7 @@ section {
     gap: 20px;
     color: var(--page-text);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.65;
 }
 .image-item {

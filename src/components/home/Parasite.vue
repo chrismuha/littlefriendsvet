@@ -32,7 +32,7 @@ section {
 }
 .text-wrapper {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.55;
 }
 @media screen and (max-width:960px) {

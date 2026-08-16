@@ -293,7 +293,7 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .radio-group {

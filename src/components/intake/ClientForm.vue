@@ -381,7 +381,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .input-field textarea {

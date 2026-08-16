@@ -4,13 +4,14 @@
             <p>
                 © Little Friends Veterinary Services, PLLC
             </p>
-            <i
-                class="bi bi-chevron-up scroll-top"
+            <button
+                type="button"
+                class="scroll-top"
                 @click="scrollToTop"
                 aria-label="Back to top"
-                role="button"
-                tabindex="0"
-            ></i>
+            >
+                <i class="bi bi-chevron-up" aria-hidden="true"></i>
+            </button>
             <img src="@/assets/images/LittleFriendsOnWheelsLogo-approved.webp" alt="Little Friends on Wheels" loading="eager" decoding="async">
         </div>
     </footer>
@@ -41,15 +42,26 @@ footer {
     width: 250px;
     max-width: 100%;
 }
-.footer-container i {
+.scroll-top {
+    padding: 8px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+.scroll-top i {
     cursor: pointer;
     font-size: 24px;
+}
+.scroll-top:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
 }
 @media screen and (max-width: 750px) {
     .footer-container {
         flex-direction: column;
     }
-    .footer-container i {
+    .scroll-top {
         order: 1;
     }
     .footer-container img {

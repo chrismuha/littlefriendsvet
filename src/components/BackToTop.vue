@@ -42,7 +42,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
+  <button
+    type="button"
+    aria-label="Back to top"
     class="gatop-top"
     :class="{
       show,
@@ -58,11 +60,12 @@ onUnmounted(() => {
     <span class="gatop-label">
       Back to top
     </span>
-  </div>
+  </button>
 </template>
 
 <style scoped>
-.gatop-top { width: 82px; position: fixed; bottom: -180px; right: 30px; z-index: 9999; opacity: 1; cursor: pointer; text-align: center; }
+.gatop-top { width: 82px; padding: 0; border: 0; position: fixed; bottom: -180px; right: 30px; z-index: 9999; opacity: 1; background: transparent; font-family: inherit; cursor: pointer; text-align: center; }
+.gatop-top:focus-visible { outline: 3px solid var(--button-orange); outline-offset: 4px; }
 .gatop-top img { display: block; width: 46px; height: 67px; margin: 0 auto; object-fit: contain; }
 .gatop-top.show { bottom: 5% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .gatop-top.gatop-run { bottom: 100% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }

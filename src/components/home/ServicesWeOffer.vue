@@ -86,7 +86,7 @@ section {
     padding: clamp(70px, 8vw, 110px) 40px;
     color: var(--content-text);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .content-container {
     max-width: 1500px;
@@ -153,7 +153,7 @@ section {
 .new-client-section h1 {
     font-family: inherit;
     font-size: 42px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .new-client-section .text-wrapper {
     align-items: center;
