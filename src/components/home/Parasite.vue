@@ -37,7 +37,7 @@ section {
 }
 @media screen and (max-width:960px) {
     section {
-        padding: 50px 20px;
+        padding: 50px 16px;
     }
     .content-container {
         flex-direction: column;
@@ -50,6 +50,8 @@ section {
     }
     .text-wrapper {
         width: 100%;
+        font-size: 19px;
+        line-height: 1.6;
     }
 }
 </style>

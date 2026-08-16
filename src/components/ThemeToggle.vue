@@ -5,7 +5,9 @@ import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
 const STORAGE_KEY = 'little-friends-theme'
 const isDark = ref(false)
 const show = ref(true)
+const turning = ref(false)
 let scrollStopTimer = null
+let turnTimer = null
 
 const label = computed(() => isDark.value ? 'Use light mode' : 'Use dark mode')
 
@@ -20,6 +22,14 @@ const applyTheme = (theme, persist = false) => {
 
 const toggleTheme = () => {
   applyTheme(isDark.value ? 'light' : 'dark', true)
+  turning.value = false
+  clearTimeout(turnTimer)
+  requestAnimationFrame(() => {
+    turning.value = true
+    turnTimer = setTimeout(() => {
+      turning.value = false
+    }, 400)
+  })
 }
 
 const handleScroll = () => {
@@ -38,6 +48,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
   clearTimeout(scrollStopTimer)
+  clearTimeout(turnTimer)
 })
 </script>
 
@@ -45,7 +56,7 @@ onUnmounted(() => {
   <button
     type="button"
     class="theme-toggle"
-    :class="{ show, dark: isDark }"
+    :class="{ show, turning }"
     :aria-label="label"
     :title="label"
     @click="toggleTheme"
@@ -77,14 +88,15 @@ onUnmounted(() => {
   bottom: 5%;
 }
 
-.theme-toggle:hover,
-.theme-toggle:focus-visible {
-  transform: scale(1.08) rotate(4deg);
-}
-
 .theme-toggle:focus-visible {
   outline: 3px solid var(--button-orange);
   outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover {
+    transform: scale(1.08) rotate(4deg);
+  }
 }
 
 .theme-toggle img {
@@ -95,8 +107,13 @@ onUnmounted(() => {
   transition: transform .35s ease;
 }
 
-.theme-toggle.dark img {
-  transform: rotate(180deg);
+.theme-toggle.turning img {
+  animation: theme-star-turn .4s ease;
+}
+
+@keyframes theme-star-turn {
+  50% { transform: rotate(20deg) scale(1.06); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
 .theme-toggle span {
@@ -129,6 +146,10 @@ onUnmounted(() => {
   .theme-toggle,
   .theme-toggle img {
     transition: none;
+  }
+
+  .theme-toggle.turning img {
+    animation: none;
   }
 }
 </style>
