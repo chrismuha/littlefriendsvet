@@ -36,14 +36,20 @@ section {
     line-height: 1.55;
 }
 @media screen and (max-width:960px) {
+    section {
+        padding: 50px 20px;
+    }
     .content-container {
         flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        align-items: stretch;
     }
     .image-section {
         max-width: 500px;
-        width: unset;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .text-wrapper {
+        width: 100%;
     }
 }
 </style>

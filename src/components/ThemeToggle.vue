@@ -68,6 +68,7 @@ onUnmounted(() => {
   border: 0;
   background: transparent;
   color: var(--heading-text);
+  font-family: inherit;
   cursor: pointer;
   transition: bottom 1s, transform .2s;
 }
@@ -99,10 +100,13 @@ onUnmounted(() => {
 }
 
 .theme-toggle span {
+  display: block;
+  margin-top: 0;
+  color: var(--heading-text);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
-  text-shadow: 0 1px 2px var(--page-background);
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
