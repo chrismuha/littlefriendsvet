@@ -7,7 +7,7 @@ import InstallAppButton from '@/components/InstallAppButton.vue'
         <div class="actions-layout">
             <img
                 class="service-flyer"
-                src="@/assets/images/flyer1-final.webp"
+                src="@/assets/images/flyer.webp"
                 alt="Little Friends on Wheels mobile veterinary services flyer with services, service areas, contact information, and appointment request QR code"
                 loading="eager"
                 decoding="async"
