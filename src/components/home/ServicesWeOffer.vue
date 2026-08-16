@@ -97,10 +97,10 @@ section {
 }
 .starburst {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 150px;
-    opacity: 50%;
+    top: 14px;
+    left: 14px;
+    height: 96px;
+    opacity: 0.22;
     z-index: -1;
 }
 .section-item h1 {
@@ -112,12 +112,6 @@ section {
 :global(html[data-theme="dark"] .section-item h1) {
     color: white;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
-}
-:global(html[data-theme="dark"] .starburst) {
-    top: 14px;
-    left: 14px;
-    height: 96px;
-    opacity: 0.22;
 }
 .section-item p,
 .section-item li {
@@ -213,6 +207,13 @@ section {
 }
 :global(html[data-theme="dark"] .emergency-services a) {
     color: var(--link-text);
+}
+
+@media screen and (min-width: 961px) {
+    .section-item p a,
+    .section-item li a {
+        white-space: nowrap;
+    }
 }
 .emergency-services a:hover {
     color: var(--secondary-orange);

@@ -16,6 +16,7 @@
                         :aria-expanded="activeIndex === index"
                         :aria-controls="!isMobile ? `visit-details-${index}` : undefined"
                         @click="togglePet(index, $event)"
+                        @keydown="handlePetButtonKeydown($event, index)"
                     >
                         <i :class="pet.icon" aria-hidden="true"></i>
                         <span>{{ pet.title }}</span>
@@ -83,6 +84,23 @@ const activePet = computed(() => activeIndex.value === null ? null : pets[active
 
 function handleKeydown(event) {
     if (event.key === 'Escape') closePet()
+}
+
+function handlePetButtonKeydown(event, index) {
+    const direction = {
+        ArrowLeft: -1,
+        ArrowUp: -1,
+        ArrowRight: 1,
+        ArrowDown: 1,
+    }[event.key]
+
+    if (!direction) return
+    event.preventDefault()
+    const buttons = event.currentTarget
+        .closest('.visit-options')
+        ?.querySelectorAll('.visit-item')
+    if (!buttons?.length) return
+    buttons[(index + direction + buttons.length) % buttons.length].focus()
 }
 
 function handleOutsideClick(event) {

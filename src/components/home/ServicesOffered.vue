@@ -20,6 +20,7 @@
                         :aria-expanded="activeIndex === index"
                         :aria-controls="!isMobile ? `service-details-${index}` : undefined"
                         @click="toggleService(index, $event)"
+                        @keydown="handleServiceButtonKeydown($event, index)"
                     >
                         <i :class="service.icon" aria-hidden="true"></i>
                         <span>{{ service.title }}</span>
@@ -162,6 +163,23 @@ const activeService = computed(() => (
 
 function handleKeydown(event) {
     if (event.key === 'Escape') closeService()
+}
+
+function handleServiceButtonKeydown(event, index) {
+    const direction = {
+        ArrowLeft: -1,
+        ArrowUp: -1,
+        ArrowRight: 1,
+        ArrowDown: 1,
+    }[event.key]
+
+    if (!direction) return
+    event.preventDefault()
+    const buttons = event.currentTarget
+        .closest('.services')
+        ?.querySelectorAll('.service-item')
+    if (!buttons?.length) return
+    buttons[(index + direction + buttons.length) % buttons.length].focus()
 }
 
 function handleOutsideClick(event) {
@@ -310,7 +328,8 @@ onBeforeUnmount(() => {
 }
 
 :global(html[data-theme="dark"] .service-item > i) {
-    background: var(--primary-orange);
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    background: var(--button-teal);
     color: white;
 }
 

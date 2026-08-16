@@ -81,6 +81,16 @@ section {
 :global(html[data-theme="dark"] .text-wrapper a) {
     color: var(--link-text);
 }
+@media screen and (min-width: 961px) {
+    .wrapped-intro a {
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 960px) {
+    .text-wrapper {
+        font-size: 17px;
+    }
+}
 .wrapped-intro p + p {
     margin-top: 20px;
 }
