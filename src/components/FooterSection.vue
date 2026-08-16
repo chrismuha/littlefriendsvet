@@ -39,7 +39,7 @@ footer {
     gap: 30px;
 }
 .footer-container img {
-    width: 250px;
+    width: 310px;
     max-width: 100%;
 }
 .scroll-top {
@@ -66,7 +66,7 @@ footer {
     }
     .footer-container img {
         order: 3;
-        width: 220px;
+        width: 260px;
     }
     .footer-container p {
         order: 2;

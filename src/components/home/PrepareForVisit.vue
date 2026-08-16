@@ -133,6 +133,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .visit-section { padding: 0; }
+:global(html[data-theme="dark"]) .visit-section { background: var(--section-background); }
 .visit-content { padding: clamp(52px, 7vw, 82px) 30px; }
 .visit-intro { max-width: 720px; margin: 0 auto 44px; text-align: center; }
 .visit-eyebrow { margin: 0 0 9px; color: var(--primary-orange); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }

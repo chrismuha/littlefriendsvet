@@ -28,7 +28,7 @@ const toggleTheme = () => {
     turning.value = true
     turnTimer = setTimeout(() => {
       turning.value = false
-    }, 400)
+    }, 650)
   })
 }
 
@@ -108,11 +108,11 @@ onUnmounted(() => {
 }
 
 .theme-toggle.turning img {
-  animation: theme-star-turn .4s ease;
+  animation: theme-star-turn .65s ease-in-out;
 }
 
 @keyframes theme-star-turn {
-  50% { transform: rotate(20deg) scale(1.06); }
+  50% { transform: rotate(180deg); }
   100% { transform: rotate(0deg) scale(1); }
 }
 

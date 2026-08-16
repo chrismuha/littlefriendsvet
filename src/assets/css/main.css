@@ -51,8 +51,14 @@
     color-scheme: dark;
     --primary-teal: #075f5f;
     --primary-orange: #c63e00;
+    --bright-teal: #075f5f;
+    --button-teal: #087070;
+    --button-orange: #c63e00;
+    --primary-gold: #3b3928;
     --secondary-teal: #064f4f;
     --secondary-orange: #a93400;
+    --secondary-white: #466b6b;
+    --golden-bg: rgba(27, 62, 62, 0.92);
     --page-background: #102626;
     --page-text: #eef6f6;
     --heading-text: #fff;

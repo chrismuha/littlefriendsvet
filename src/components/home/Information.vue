@@ -94,6 +94,17 @@ section {
     border-radius: 0.8rem;
     background: rgba(255, 255, 255, 0.42);
 }
+:global(html[data-theme="dark"]) .contact-location,
+:global(html[data-theme="dark"]) .details {
+    color: var(--page-text);
+}
+:global(html[data-theme="dark"]) .contact-location .title,
+:global(html[data-theme="dark"]) .contact-location a {
+    color: var(--content-teal);
+}
+:global(html[data-theme="dark"]) .row-item {
+    background: rgba(255, 255, 255, 0.06);
+}
 .office-hours .details {
     margin-left: 42px;
 }
