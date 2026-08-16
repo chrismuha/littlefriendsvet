@@ -381,6 +381,11 @@ const locations = [
     font-size: 26px;
 }
 
+:global(html[data-theme="dark"]) .emergency-icon {
+    background: var(--primary-orange);
+    color: white;
+}
+
 .emergency-copy p {
     margin: 6px 0 0;
     line-height: 1.5;

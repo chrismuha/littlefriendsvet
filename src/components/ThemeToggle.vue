@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
 import starImage from '@/assets/images/Starburst_group_left_Orange-Teal.png'
 
 const STORAGE_KEY = 'little-friends-theme'
@@ -20,16 +20,15 @@ const applyTheme = (theme, persist = false) => {
   if (persist) localStorage.setItem(STORAGE_KEY, theme)
 }
 
-const toggleTheme = () => {
+const toggleTheme = async () => {
   applyTheme(isDark.value ? 'light' : 'dark', true)
   turning.value = false
   clearTimeout(turnTimer)
-  requestAnimationFrame(() => {
-    turning.value = true
-    turnTimer = setTimeout(() => {
-      turning.value = false
-    }, 650)
-  })
+  await nextTick()
+  turning.value = true
+  turnTimer = setTimeout(() => {
+    turning.value = false
+  }, 650)
 }
 
 const handleScroll = () => {
