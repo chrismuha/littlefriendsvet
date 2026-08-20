@@ -200,7 +200,7 @@ section {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
-.vet-triage-link {
+.emergency-services .vet-triage-link {
     display: flex;
     width: min(100%, 500px);
     margin: 0 auto;
@@ -224,12 +224,18 @@ section {
 .vet-triage-link span {
     color: #3c557a;
     font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: color 160ms ease;
 }
-.vet-triage-link:hover {
+.emergency-services .vet-triage-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 38px rgb(0 0 0 / 16%);
+    color: var(--secondary-orange);
+    text-decoration: none;
 }
-.vet-triage-link:focus-visible {
+.emergency-services .vet-triage-link:hover span {
+    color: var(--secondary-orange);
+}
+.emergency-services .vet-triage-link:focus-visible {
     outline: 4px solid var(--primary-orange);
     outline-offset: 4px;
 }

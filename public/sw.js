@@ -1,4 +1,4 @@
-const CACHE_NAME = 'little-friends-vet-v3'
+const CACHE_NAME = 'little-friends-vet-v4'
 const APP_HOME = new URL('./', self.registration.scope).href
 
 self.addEventListener('install', (event) => {

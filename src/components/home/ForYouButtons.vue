@@ -5,13 +5,19 @@ import InstallAppButton from '@/components/InstallAppButton.vue'
 <template>
     <section>
         <div class="actions-layout">
-            <img
-                class="service-flyer"
-                src="@/assets/images/flyer.webp"
-                alt="Little Friends on Wheels mobile veterinary services flyer with services, service areas, contact information, and appointment request QR code"
-                loading="eager"
-                decoding="async"
+            <a
+                class="service-flyer-link"
+                href="#contact-info"
+                aria-label="View Little Friends services and continue to contact information"
             >
+                <img
+                    class="service-flyer"
+                    src="@/assets/images/flyer.webp"
+                    alt="Little Friends on Wheels mobile veterinary services flyer with services, service areas, contact information, and appointment request QR code"
+                    loading="eager"
+                    decoding="async"
+                >
+            </a>
 
             <div class="actions-content">
                 <h2>How can we help?</h2>
@@ -41,6 +47,20 @@ section {
     gap: clamp(36px, 6vw, 82px);
     max-width: 1200px;
     margin: auto;
+}
+.service-flyer-link {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.service-flyer-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgb(0 0 0 / 24%);
+}
+.service-flyer-link:focus-visible {
+    outline: 4px solid var(--button-orange);
+    outline-offset: 5px;
 }
 .service-flyer {
     display: block;
@@ -86,10 +106,12 @@ section {
         grid-template-columns: 1fr;
         gap: 36px;
     }
-    .service-flyer {
+    .service-flyer-link {
         width: min(100%, 420px);
-        max-height: none;
         margin: auto;
+    }
+    .service-flyer {
+        max-height: none;
     }
 }
 </style>
