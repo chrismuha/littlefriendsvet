@@ -40,7 +40,7 @@
       </div> -->
     </div>
 
-    <nav class="quick-actions" aria-label="Quick contact actions">
+    <nav class="quick-actions" aria-label="Quick contact and emergency actions">
       <a href="tel:+13157960907">
         <i class="bi bi-telephone" aria-hidden="true"></i>
         Call
@@ -52,6 +52,16 @@
       <a href="mailto:info@littlefriendsvet.com">
         <i class="bi bi-envelope" aria-hidden="true"></i>
         Email
+      </a>
+      <a
+        class="emergency-advice-action"
+        href="https://vettriage.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+        Emergency Advice
+        <span class="sr-only"> (opens in a new tab)</span>
       </a>
     </nav>
   </section>
@@ -166,7 +176,7 @@ section {
   z-index: 3;
   display: grid;
   width: min(560px, calc(100% - 40px));
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 9px;
   transform: translateX(-50%);
 }
@@ -185,6 +195,10 @@ section {
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
+}
+
+.quick-actions .emergency-advice-action {
+  background: #d91b5c;
 }
 
 @media (max-width: 960px) {
@@ -260,7 +274,7 @@ section {
     z-index: 2;
     display: grid;
     width: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     transform: none;
   }
@@ -347,7 +361,7 @@ section {
 .quick-actions {
   position: static;
   grid-area: actions;
-  width: min(560px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
   transform: none;
 }

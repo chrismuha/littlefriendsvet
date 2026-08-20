@@ -9,39 +9,21 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
         <div class="content-container">
             <div class="left-section">
                 <div class="section-item emergency-services">
-                    <h1>Emergency Services</h1>
-                    <div class="text-wrapper">
-                        <p>
-                            For after hours emergencies, the following facilities are available:
-                        </p>
-                        <ul>
-                            <li>
-                                Veterinary Medical Center of Central New York –
-                                <a href="https://www.vmccny.com" target="_blank" rel="noopener noreferrer">
-                                    www.vmccny.com
-                                </a>
-                                <a href="tel:+13154467933">(315) 446-7933</a> – available 24 hours a day, 7 days a week
-                            </li>
-
-                            <li>
-                                Waterville Veterinary Clinic – for clients to the south –
-                                <a href="tel:+13158414021">(315) 841-4021</a> – nights and weekends
-                            </li>
-
-                            <li>
-                                Northcountry Animal Hospital – for clients to the north –
-                                <a href="tel:+13157859505">(315) 785-9505</a> – nights and weekends
-                            </li>
-
-                            <li>
-                                Urgent Veterinary Care in Auburn –
-                                <a href="https://www.urgentcare.vet" target="_blank" rel="noopener noreferrer">
-                                    www.urgentcare.vet
-                                </a>;
-                                <a href="tel:+13155153047">315-515-3047</a>. Services and hours limited, please check their website or call them.
-                            </li>
-                        </ul>
-                    </div>
+                    <h1>Emergency Advice</h1>
+                    <a
+                        class="vet-triage-link"
+                        href="https://vettriage.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Get emergency veterinary advice from VetTriage (opens in a new tab)"
+                    >
+                        <img
+                            src="@/assets/images/vet-triage-logo.svg"
+                            alt="VetTriage"
+                            loading="lazy"
+                        >
+                        <span>Talk with a veterinarian online, 24/7</span>
+                    </a>
                 </div>
                 <div id="new-client" class="section-item new-client-section">
                     <h1>New Client?</h1>
@@ -204,6 +186,39 @@ section {
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+.vet-triage-link {
+    display: flex;
+    width: min(100%, 680px);
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 34px);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid color-mix(in srgb, var(--primary-teal) 55%, transparent);
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 10%);
+    text-align: center;
+    text-decoration: none;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.vet-triage-link img {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+}
+.vet-triage-link span {
+    color: #3c557a;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.vet-triage-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 38px rgb(0 0 0 / 16%);
+}
+.vet-triage-link:focus-visible {
+    outline: 4px solid var(--primary-orange);
+    outline-offset: 4px;
 }
 :global(html[data-theme="dark"] .emergency-services a) {
     color: var(--link-text);

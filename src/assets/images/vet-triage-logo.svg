@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="title desc">
+  <title id="title">VetTriage</title>
+  <desc id="desc">VetTriage logo with a paw inside a computer screen</desc>
+  <g fill="none" fill-rule="evenodd">
+    <text x="12" y="140" fill="#d91b5c" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="132" font-weight="700" letter-spacing="-8">Vet</text>
+    <text x="276" y="140" fill="#3c557a" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="132" font-weight="700" letter-spacing="-8">Triage</text>
+    <circle cx="454" cy="28" r="16" fill="#7dc9cb"/>
+    <rect x="103" y="198" width="592" height="289" rx="47" stroke="#7dc9cb" stroke-width="32"/>
+    <g fill="#3c557a" transform="translate(276 259)">
+      <ellipse cx="87" cy="33" rx="29" ry="32"/>
+      <ellipse cx="159" cy="33" rx="29" ry="32"/>
+      <ellipse cx="30" cy="74" rx="29" ry="31" transform="rotate(-35 30 74)"/>
+      <ellipse cx="216" cy="74" rx="29" ry="31" transform="rotate(35 216 74)"/>
+      <path d="M123 68c-38 0-73 27-73 73 0 31 18 57 38 57 12 0 18-10 35-10s23 10 35 10c20 0 38-26 38-57 0-46-35-73-73-73Z"/>
+    </g>
+    <path fill="#3c557a" d="m371 503 28 48 28-48z"/>
+    <ellipse cx="399" cy="560" rx="157" ry="36" fill="#d91b5c"/>
+    <path fill="#fff" d="m357 521 27 42c7 12 23 12 30 0l27-42-14-18-28 48-28-48z"/>
+  </g>
+</svg>
