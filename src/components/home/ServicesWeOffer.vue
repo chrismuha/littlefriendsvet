@@ -1,6 +1,7 @@
 <script setup>
 import newClientForm from '@/assets/forms/LFVS-NewClient-Form.pdf'
 import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
+import vetTriageInstructions from '@/assets/forms/VetTriageServices.pdf'
 </script>
 
 <template>
@@ -23,6 +24,16 @@ import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
                             loading="lazy"
                         >
                         <span>Talk with a veterinarian online, 24/7</span>
+                    </a>
+                    <a
+                        class="vet-triage-instructions"
+                        :href="vetTriageInstructions"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        View instructions for connecting with a VetTriage veterinarian
+                        <span class="sr-only"> (opens PDF in a new tab)</span>
                     </a>
                 </div>
                 <div id="new-client" class="section-item new-client-section">
@@ -71,6 +82,8 @@ section {
     font-weight: 500;
 }
 .content-container {
+    position: relative;
+    z-index: 1;
     max-width: 1500px;
     margin: auto;
     line-height: 1.6;
@@ -79,11 +92,11 @@ section {
 }
 .starburst {
     position: absolute;
-    top: 14px;
-    left: 14px;
-    height: 96px;
-    opacity: 0.22;
-    z-index: -1;
+    top: 22px;
+    left: 24px;
+    height: clamp(125px, 9vw, 165px);
+    opacity: 0.48;
+    z-index: 0;
 }
 .section-item h1 {
     font-family: 'Galada';
@@ -189,9 +202,9 @@ section {
 }
 .vet-triage-link {
     display: flex;
-    width: min(100%, 680px);
+    width: min(100%, 500px);
     margin: 0 auto;
-    padding: clamp(20px, 4vw, 34px);
+    padding: clamp(18px, 2.5vw, 26px);
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -205,7 +218,7 @@ section {
 }
 .vet-triage-link img {
     display: block;
-    width: min(100%, 500px);
+    width: min(100%, 350px);
     height: auto;
 }
 .vet-triage-link span {
@@ -218,6 +231,31 @@ section {
 }
 .vet-triage-link:focus-visible {
     outline: 4px solid var(--primary-orange);
+    outline-offset: 4px;
+}
+.emergency-services .vet-triage-instructions {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    margin: 4px auto 0;
+    padding: 12px 18px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 0.3rem;
+    background: var(--button-orange);
+    color: white;
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+}
+.emergency-services .vet-triage-instructions:hover {
+    background: var(--secondary-orange);
+    color: white;
+}
+.emergency-services .vet-triage-instructions:focus-visible {
+    outline: 4px solid var(--primary-teal);
     outline-offset: 4px;
 }
 :global(html[data-theme="dark"] .emergency-services a) {
