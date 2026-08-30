@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     host: '127.0.0.1',
     // Keep development isolated from service workers previously registered on 5194.
-    port: 5195,
+    port: 5101,
     strictPort: true,
   },
   plugins: [
