@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-The local website is available at `http://127.0.0.1:5101/littlefriendsvet/`.
+The local website is available at `http://127.0.0.1:5204/littlefriendsvet/`.
 In VS Code, run the **Little Friends: Start local website** task instead of using
 the Live Server extension's **Go Live** command.
 
