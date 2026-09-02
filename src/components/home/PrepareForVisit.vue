@@ -30,7 +30,10 @@
                             role="region"
                             :aria-label="`${pet.title} visit preparation details`"
                         >
-                            <p>{{ pet.description }}</p>
+                            <h3>{{ pet.heading }}</h3>
+                            <ul>
+                                <li v-for="item in pet.tips" :key="item">{{ item }}</li>
+                            </ul>
                         </div>
                     </Transition>
                 </div>
@@ -49,7 +52,10 @@
                             <h2 :id="`visit-title-${activeIndex}`">{{ activePet.title }}</h2>
                         </div>
                         <div class="visit-description">
-                            <p>{{ activePet.description }}</p>
+                            <h3>{{ activePet.heading }}</h3>
+                            <ul>
+                                <li v-for="item in activePet.tips" :key="item">{{ item }}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -65,12 +71,27 @@ const pets = [
     {
         icon: 'ti ti-dog',
         title: 'Dogs',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        heading: 'Preparing for your dog’s visit:',
+        tips: [
+            'Keep your daily routine. This helps your dog feel calm and comfortable.',
+            'Feed your pup half of his usual breakfast. If he is a little hungry, he’ll be more likely to accept treats!',
+            'Speaking of treats, have his favorite treats and toys available.',
+            'Keep other pets in a separate area and keep humans to a minimum to limit distractions.',
+            'Dr. Underwood will examine your dog in his comfortable space. It’s best to have your dog on a leash.',
+            'If your dog is frightened or stressed by the visit, we may wish to reschedule for another time.',
+        ],
     },
     {
         icon: 'ti ti-cat',
         title: 'Cats',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        heading: 'Preparing for your kitty’s visit:',
+        tips: [
+            'Keep your daily routine. This helps your kitty feel calm and comfortable.',
+            'Have her favorite treats or foods available for the visit.',
+            'Keep other pets in a separate area and keep humans to a minimum to limit distractions.',
+            'Dr. Underwood will examine your kitty in her comfortable space.',
+            'If your kitty is frightened or stressed by the visit, we may wish to reschedule for another time.',
+        ],
     },
 ]
 
@@ -167,15 +188,18 @@ onBeforeUnmount(() => {
 .visit-item > i, .visit-dialog-heading > i { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 100px; height: 100px; padding: 20px; border-radius: 50%; background: var(--primary-orange); color: white; font-size: 50px; }
 .visit-item > i { margin: 10px 0; }
 .visit-item span { font-size: 18px; font-weight: 700; }
-.visit-popover { position: absolute; top: calc(100% + 16px); left: 50%; z-index: 20; width: 300px; padding: 20px 22px; border-radius: 0.8rem; background: var(--primary-orange); color: white; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24); font-size: 0.98rem; font-weight: 500; line-height: 1.55; text-align: center; transform: translateX(-50%); }
+.visit-popover { position: absolute; top: calc(100% + 16px); left: 50%; z-index: 20; width: min(430px, calc(100vw - 40px)); padding: 22px 26px; border-radius: 0.8rem; background: var(--primary-orange); color: white; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24); font-size: 0.98rem; font-weight: 500; line-height: 1.55; text-align: left; transform: translateX(-50%); }
 .visit-popover::before { content: ''; position: absolute; bottom: 100%; left: 50%; border-width: 0 11px 13px; border-style: solid; border-color: transparent transparent var(--primary-orange); transform: translateX(-50%); }
+.visit-popover h3, .visit-description h3 { margin: 0 0 12px; color: inherit; font-size: 1.08rem; font-weight: 800; line-height: 1.35; }
+.visit-popover ul, .visit-description ul { margin: 0; padding-left: 1.25rem; }
+.visit-popover li + li, .visit-description li + li { margin-top: 8px; }
 .visit-popover-enter-active, .visit-popover-leave-active { transition: opacity 0.18s ease, transform 0.18s ease; }
 .visit-popover-enter-from, .visit-popover-leave-to { opacity: 0; transform: translate(-50%, -6px); }
 .visit-backdrop { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; overflow-y: auto; padding: 28px; background: rgba(47, 17, 3, 0.64); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .visit-dialog { position: relative; width: min(620px, 100%); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 1.25rem; background: var(--surface-background); color: var(--page-text); box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38); }
 .visit-dialog-heading { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 48px 64px 34px; text-align: center; }
 .visit-dialog-heading h2 { margin: 0; color: var(--heading-text); font-size: clamp(1.65rem, 4vw, 2.25rem); font-weight: 500; line-height: 1.2; }
-.visit-description { padding: 28px 44px 34px; background: var(--primary-orange); color: white; font-size: clamp(1rem, 2.4vw, 1.2rem); line-height: 1.55; text-align: center; }
+.visit-description { padding: 28px 44px 34px; background: var(--primary-orange); color: white; font-size: clamp(1rem, 2.4vw, 1.2rem); line-height: 1.55; text-align: left; }
 .visit-close { position: absolute; top: 14px; right: 14px; z-index: 1; display: inline-grid; width: 44px; height: 44px; place-items: center; border: 0; border-radius: 50%; background: rgba(0, 0, 0, 0.08); color: var(--heading-text); cursor: pointer; font-size: 22px; transition: background-color 0.2s ease, transform 0.2s ease; }
 .visit-close:hover { background: rgba(0, 0, 0, 0.16); transform: scale(1.06); }
 .visit-close:focus-visible { outline: 3px solid var(--primary-teal); outline-offset: 2px; }
