@@ -8,6 +8,13 @@ updates:
     commit-message:
       prefix: "deps"
     rebase-strategy: "auto"
+    ignore:
+      - dependency-name: "vue"
+        versions: ["3.5.42"]
+      - dependency-name: "vue-router"
+        versions: ["5.3.0"]
+      - dependency-name: "vite"
+        versions: ["8.2.2"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
