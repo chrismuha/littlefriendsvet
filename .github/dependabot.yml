@@ -22,6 +22,9 @@ updates:
   - dependency-name: "*"
     update-types:
     - version-update:semver-major
+  - dependency-name: "@vitejs/plugin-vue"
+    versions:
+    - 5.2.4
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
