@@ -95,10 +95,6 @@
     --overlay-teal-17: rgba(22, 162, 162, 0.17);
     --overlay-teal-20: rgba(22, 162, 162, 0.2);
     --overlay-bright-teal-35: rgba(123, 222, 215, 0.35);
-    --not-found-white: #fff;
-    --not-found-black: #000;
-    --not-found-green: #48a740;
-    --not-found-red: #ed2024;
 }
 
 :root[data-theme="dark"] {

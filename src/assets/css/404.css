@@ -5,6 +5,11 @@
 }
 
 .pnf-wrapper {
+    --white: #ffffff;
+    --black: #000000;
+    --brand-green: #48a740;
+    --error-red-bright: #ed2024;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,8 +20,8 @@
 
 /* HEADER CLASSES */
 .header1-h1 {
-    color: var(--not-found-white);
-    background-color: var(--not-found-black);
+    color: var(--white);
+    background-color: var(--black);
     max-width: 684px;
     padding: 16px 16px 16px;
     border-radius: 3px;
@@ -27,8 +32,8 @@
 }
 
 .header1-p {
-    color: var(--not-found-black);
-    background-color: var(--not-found-red);
+    color: var(--black);
+    background-color: var(--error-red-bright);
     max-width: 684px;
     padding: 16px 16px 16px;
     border-radius: 3px;
@@ -44,8 +49,8 @@
 }
 
 .header2-h2 {
-    color: var(--not-found-white);
-    background-color: var(--not-found-red);
+    color: var(--white);
+    background-color: var(--error-red-bright);
     max-width: 684px;
     padding: 16px 16px 16px;
     border-radius: 34.6px;
@@ -63,7 +68,7 @@
 }
 
 .header3-h3 {
-    color: var(--not-found-green);
+    color: var(--brand-green);
     font-size: 16pt;
     font-weight: normal;
     padding: 16px 16px 0px;
@@ -71,8 +76,8 @@
 }
 
 .header3-p {
-    color: var(--not-found-red);
-    background-color: var(--not-found-black);
+    color: var(--error-red-bright);
+    background-color: var(--black);
     max-width: 684px;
     padding: 16px 16px 16px;
     font-size: 14pt;
@@ -84,8 +89,8 @@
 }
 
 .contact-box {
-    color: var(--not-found-black);
-    background-color: var(--not-found-red);
+    color: var(--black);
+    background-color: var(--error-red-bright);
     max-width: 684px;
     padding: 16px;
     border-radius: 3px;
@@ -125,14 +130,14 @@
 
 /* PAGE HEADER DESIGN SHAPE ID */
 #rectangle1 {
-    background: var(--not-found-red);
+    background: var(--error-red-bright);
     margin: auto;
     width: 100%;
     height: 60px;
 }
 
 #rectangle2 {
-    background-color: var(--not-found-black);
+    background-color: var(--black);
 }
 
 .logo-container {
@@ -143,14 +148,14 @@
 }
 
 #rectangle3 {
-    background: var(--not-found-black);
+    background: var(--black);
     width: 100%;
     height: 20px;
     margin-top: 16px;
 }
 
 #rectangle4 {
-    background-color: var(--not-found-red);
+    background-color: var(--error-red-bright);
     width: 100%;
     height: 59.5px;
 }
