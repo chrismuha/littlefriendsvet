@@ -132,14 +132,14 @@ section {
   left: auto;
   width: clamp(215px, 20vw, 285px);
   transform: translateY(-50%);
-  color: white;
+  color: var(--color-white);
   font-size: clamp(1.05rem, 2vw, 1.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 1.45;
   text-align: center;
   white-space: nowrap;
-  text-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+  text-shadow: 0 2px 10px var(--overlay-dark-20);
 }
 
 .business-address strong {
@@ -157,7 +157,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 8px 16px 14px;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -191,14 +191,14 @@ section {
   border: 2px solid white;
   border-radius: 0.3rem;
   background: var(--button-orange);
-  color: white;
+  color: var(--color-white);
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
 }
 
 .quick-actions .emergency-advice-action {
-  background: #d91b5c;
+  background: var(--color-magenta);
 }
 
 @media (max-width: 960px) {
@@ -291,7 +291,7 @@ section {
     border-radius: 0.25rem;
 
     background: var(--button-orange);
-    color: white;
+    color: var(--color-white);
 
     font-weight: 700;
     text-decoration: none;

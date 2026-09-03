@@ -39,7 +39,7 @@
     align-items: center;
     gap: clamp(20px, 3vw, 34px);
     padding: clamp(22px, 3vw, 34px) max(24px, calc((100vw - 960px) / 2));
-    color: white;
+    color: var(--color-white);
 }
 
 .store-copy {
@@ -48,20 +48,20 @@
 
 .store-eyebrow {
     margin: 0 0 5px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--overlay-light-90);
     font-size: 0.82rem;
     font-weight: 800;
     letter-spacing: 0.11em;
     text-transform: uppercase;
 }
 :global(html[data-theme="dark"] .store-eyebrow) {
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    text-shadow: 0 1px 3px var(--overlay-dark-40);
 }
 
 .store-copy h2 {
     margin: 0;
-    color: white;
+    color: var(--color-white);
     font-size: clamp(1.5rem, 2.6vw, 2.1rem);
     font-weight: 500;
     line-height: 1.12;
@@ -88,14 +88,14 @@
     padding: 8px 16px;
     border: 2px solid white;
     border-radius: 0.45rem;
-    color: white;
+    color: var(--color-white);
     font-weight: 800;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .store-link:hover {
-    background: white;
+    background: var(--color-white);
     color: var(--secondary-orange);
     transform: translateY(-2px);
 }
@@ -107,9 +107,9 @@
 
 .store-image {
     overflow: hidden;
-    border: 5px solid rgba(255, 255, 255, 0.34);
+    border: 5px solid var(--overlay-light-34);
     border-radius: 1rem;
-    box-shadow: 0 20px 50px rgba(72, 18, 0, 0.24);
+    box-shadow: 0 20px 50px var(--overlay-warm-shadow-24);
 }
 
 .store-image img {

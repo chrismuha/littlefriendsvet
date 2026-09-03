@@ -80,7 +80,7 @@ a b {
     color: var(--secondary-orange);
 }
 :global(html[data-theme="dark"] .orange-container a:hover) {
-    color: white;
+    color: var(--color-white);
 }
 b, strong {
     font-weight: 900;
@@ -104,7 +104,7 @@ section {
     font-family: 'Galada';
     font-weight: 400;
     line-height: 1.2;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, .85);
+    text-shadow: 0 2px 5px var(--overlay-dark-85);
 }
 .fbc-container h1::after {
     content: "";
@@ -119,12 +119,12 @@ section {
     background-image: url("@/assets/images/catphoto_right.webp");
 }
 .panks-container h1 {
-    color: #075f5f;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, .7);
+    color: var(--content-teal);
+    text-shadow: 0 1px 2px var(--overlay-light-70);
 }
 
 .fixed-bg {
-    color: white;
+    color: var(--color-white);
 }
 
 .content-container {
@@ -204,31 +204,31 @@ section {
     list-style: none;
 }
 .fbc-container li {
-    color: white;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: 600;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+    text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .fixed-bg .text-wrapper h1 {
     font-size: 64px;
 }
 .fixed-bg .text-wrapper p.notice {
-    color: white;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: 700;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+    text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .panks-container .program-intro {
-    color: white;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: 600;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, .9);
+    text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .panks-container .appointment-call {
-    color: #075f5f;
+    color: var(--content-teal);
     font-size: 22px;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, .8);
+    text-shadow: 0 1px 2px var(--overlay-light-80);
 }
 .panks-container .appointment-call a {
     color: inherit;

@@ -94,7 +94,7 @@ section {
 
 .btn-orange {
     background: var(--button-orange);
-    color: white;
+    color: var(--color-white);
     margin-top: 50px;
     cursor: pointer;
     font-size: 16px;

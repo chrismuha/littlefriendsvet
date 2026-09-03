@@ -395,10 +395,10 @@ h1 {
     height: 80px;
     display: inline-flex;
     align-items: center;
-    outline: 1px solid #606060a0;
+    outline: 1px solid var(--color-field-outline);
     padding: 0 14px;
     gap: 14px;
-    color: #606060a0;
+    color: var(--color-field-outline);
     font-weight: 900;
     font-size: 13px;
 }
@@ -415,7 +415,7 @@ h1 {
 
 .checkbox-field .square i {
     font-size: 25px;
-    color: white;
+    color: var(--color-white);
     display: none;
 }
 
@@ -445,12 +445,12 @@ h1 {
 }
 
 .btn-red:hover {
-    background: #111;
+    background: var(--color-ink);
 }
 
 .error-text {
     margin-top: 6px;
-    color: #d32f2f;
+    color: var(--color-error);
     font-size: 12px;
     font-weight: 500;
 }

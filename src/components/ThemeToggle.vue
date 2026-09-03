@@ -11,8 +11,11 @@ const label = computed(() => isDark.value ? 'Use light mode' : 'Use dark mode')
 const applyTheme = (theme, persist = false) => {
   isDark.value = theme === 'dark'
   document.documentElement.dataset.theme = theme
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--primary-teal')
+    .trim()
   document.querySelector('meta[name="theme-color"]')
-    ?.setAttribute('content', isDark.value ? '#075f5f' : '#16a2a2')
+    ?.setAttribute('content', themeColor)
 
   if (persist) localStorage.setItem(STORAGE_KEY, theme)
 }

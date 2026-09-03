@@ -264,8 +264,8 @@ onBeforeUnmount(() => {
 }
 
 :global(html[data-theme="dark"] .services-eyebrow) {
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    text-shadow: 0 1px 3px var(--overlay-dark-40);
 }
 
 .services-intro h2 {
@@ -314,12 +314,12 @@ onBeforeUnmount(() => {
 }
 
 .service-item:hover {
-    background-color: rgba(0, 128, 128, 0.1);
+    background-color: var(--overlay-teal-10);
     transform: translateY(-2px);
 }
 
 :global(html[data-theme="dark"] .service-item) {
-    border: 1px solid rgba(123, 222, 215, 0.35);
+    border: 1px solid var(--overlay-bright-teal-35);
     background: var(--surface-background);
 }
 
@@ -328,9 +328,9 @@ onBeforeUnmount(() => {
 }
 
 :global(html[data-theme="dark"] .service-item > i) {
-    border: 2px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid var(--overlay-light-45);
     background: var(--button-teal);
-    color: white;
+    color: var(--color-white);
 }
 
 .service-item:focus-visible {
@@ -349,7 +349,7 @@ onBeforeUnmount(() => {
     padding: 20px;
     border-radius: 50%;
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
     font-size: 50px;
 }
 
@@ -371,8 +371,8 @@ onBeforeUnmount(() => {
     padding: 20px 22px;
     border-radius: 0.8rem;
     background: var(--primary-teal);
-    color: white;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
+    color: var(--color-white);
+    box-shadow: 0 14px 36px var(--overlay-dark-24);
     font-size: 0.98rem;
     font-weight: 500;
     line-height: 1.55;
@@ -412,7 +412,7 @@ onBeforeUnmount(() => {
 
 :global(html[data-theme="dark"] .service-popover) {
     background: var(--primary-orange);
-    color: white;
+    color: var(--color-white);
 }
 
 :global(html[data-theme="dark"] .service-popover::before) {
@@ -438,7 +438,7 @@ onBeforeUnmount(() => {
     place-items: center;
     overflow-y: auto;
     padding: 28px;
-    background: rgba(3, 31, 31, 0.64);
+    background: var(--overlay-deep-teal-64);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
@@ -447,11 +447,11 @@ onBeforeUnmount(() => {
     position: relative;
     width: min(620px, 100%);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--overlay-light-12);
     border-radius: 1.25rem;
     background: var(--surface-background);
     color: var(--page-text);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 24px 80px var(--overlay-dark-38);
 }
 
 .service-dialog-heading {
@@ -474,7 +474,7 @@ onBeforeUnmount(() => {
 .service-description {
     padding: 28px 44px 34px;
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
     font-size: clamp(1rem, 2.4vw, 1.2rem);
     line-height: 1.55;
     text-align: center;
@@ -491,7 +491,7 @@ onBeforeUnmount(() => {
     place-items: center;
     border: 0;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.08);
+    background: var(--overlay-dark-08);
     color: var(--heading-text);
     cursor: pointer;
     font-size: 22px;
@@ -499,7 +499,7 @@ onBeforeUnmount(() => {
 }
 
 .service-close:hover {
-    background: rgba(0, 0, 0, 0.16);
+    background: var(--overlay-dark-16);
     transform: scale(1.06);
 }
 

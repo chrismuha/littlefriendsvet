@@ -105,8 +105,8 @@ section {
     font-weight: 400;
 }
 :global(html[data-theme="dark"] .section-item h1) {
-    color: white;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+    color: var(--color-white);
+    text-shadow: 0 2px 5px var(--overlay-dark-45);
 }
 .section-item p,
 .section-item li {
@@ -171,8 +171,8 @@ section {
     justify-content: center;
     gap: 8px;
     border-radius: .2rem;
-    background: #5a5a5a;
-    color: white;
+    background: var(--color-gray);
+    color: var(--color-white);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.25;
@@ -186,13 +186,13 @@ section {
     font-size: 19px;
 }
 .new-client-buttons a:hover {
-    background: #444;
-    color: white;
+    background: var(--color-gray-strong);
+    color: var(--color-white);
     text-decoration: none;
 }
 :global(html[data-theme="dark"] .new-client-button.primary:hover) {
     background: var(--accent-orange-text);
-    color: #102626;
+    color: var(--color-deep-teal-ink);
 }
 .emergency-services a {
     color: var(--content-teal);
@@ -210,8 +210,8 @@ section {
     gap: 10px;
     border: 2px solid color-mix(in srgb, var(--primary-teal) 55%, transparent);
     border-radius: 18px;
-    background: white;
-    box-shadow: 0 12px 32px rgb(0 0 0 / 10%);
+    background: var(--color-white);
+    box-shadow: 0 12px 32px var(--overlay-dark-10);
     text-align: center;
     text-decoration: none;
     transition: transform 160ms ease, box-shadow 160ms ease;
@@ -222,13 +222,13 @@ section {
     height: auto;
 }
 .vet-triage-link span {
-    color: #3c557a;
+    color: var(--color-slate-blue);
     font-size: clamp(1rem, 2vw, 1.2rem);
     transition: color 160ms ease;
 }
 .emergency-services .vet-triage-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 16px 38px rgb(0 0 0 / 16%);
+    box-shadow: 0 16px 38px var(--overlay-dark-16);
     color: var(--secondary-orange);
     text-decoration: none;
 }
@@ -250,7 +250,7 @@ section {
     gap: 9px;
     border-radius: 0.3rem;
     background: var(--button-orange);
-    color: white;
+    color: var(--color-white);
     font-size: 1rem;
     line-height: 1.35;
     text-align: center;
@@ -258,7 +258,7 @@ section {
 }
 .emergency-services .vet-triage-instructions:hover {
     background: var(--secondary-orange);
-    color: white;
+    color: var(--color-white);
 }
 .emergency-services .vet-triage-instructions:focus-visible {
     outline: 4px solid var(--primary-teal);
@@ -278,7 +278,7 @@ section {
     color: var(--secondary-orange);
 }
 :global(html[data-theme="dark"] .emergency-services a:hover) {
-    color: white;
+    color: var(--color-white);
 }
 .section-item, .left-section, .text-wrapper {
     display: flex;

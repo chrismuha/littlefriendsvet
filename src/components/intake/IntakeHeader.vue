@@ -7,7 +7,7 @@
 </template>
 <style>
 .orange-bg .header h1 {
-    color: white;
+    color: var(--color-white);
     font-weight: 500;
 }
 </style>

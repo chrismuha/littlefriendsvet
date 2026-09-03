@@ -27,7 +27,7 @@ const scrollToTop = () => {
 <style scoped>
 footer {
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
 }
 .footer-container {
     display: flex;
@@ -45,7 +45,7 @@ footer {
 .scroll-top {
     padding: 8px;
     background: transparent;
-    color: white;
+    color: var(--color-white);
     cursor: pointer;
     font-family: inherit;
 }

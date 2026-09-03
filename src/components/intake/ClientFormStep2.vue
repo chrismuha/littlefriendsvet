@@ -305,7 +305,7 @@ h1 {
 .radio-label {
     font-size: 13px;
     font-weight: 700;
-    color: #606060;
+    color: var(--color-field-text);
 }
 
 .radio-options {
@@ -357,12 +357,12 @@ h1 {
 }
 
 .btn:hover {
-    background: #111;
+    background: var(--color-ink);
 }
 
 .error-text {
     margin-top: 6px;
-    color: #d32f2f;
+    color: var(--color-error);
     font-size: 12px;
     font-weight: 500;
 }

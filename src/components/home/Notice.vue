@@ -56,7 +56,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    color: white;
+    color: var(--color-white);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.7;
@@ -67,7 +67,7 @@ section {
     font-weight: inherit;
 }
 .text-wrapper a {
-    color: white;
+    color: var(--color-white);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;

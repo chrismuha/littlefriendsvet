@@ -38,21 +38,21 @@
 <style scoped>
 section {
     font-size: 16px;
-    color: black;
+    color: var(--color-black);
 }
 .contact-location {
     background: var(--primary-gold);
-    color: #2f2f2f;
+    color: var(--content-text);
 }
 .contact-location .title {
-    color: #075f5f;
+    color: var(--content-teal);
     font-weight: 700;
 }
 .contact-location .title i {
     color: var(--primary-orange);
 }
 .contact-location a {
-    color: #075f5f;
+    color: var(--content-teal);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -75,7 +75,7 @@ section {
 .details {
     margin-left: 42px;
     padding: 6px 0 0;
-    color: #1f1f1f;
+    color: var(--color-charcoal);
 }
 .row {
     display: grid;
@@ -92,7 +92,7 @@ section {
     width: 100%;
     padding: 18px;
     border-radius: 0.8rem;
-    background: rgba(255, 255, 255, 0.42);
+    background: var(--overlay-light-42);
 }
 .office-hours .details {
     margin-left: 42px;

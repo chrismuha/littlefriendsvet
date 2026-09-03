@@ -115,7 +115,7 @@ onUnmounted(() => {
   display: grid;
   place-items: center;
   padding: 20px;
-  background: rgba(0, 0, 0, .58);
+  background: var(--overlay-dark-58);
 }
 
 .install-dialog {
@@ -126,7 +126,7 @@ onUnmounted(() => {
   background: var(--surface-background);
   color: var(--page-text);
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+  box-shadow: 0 20px 60px var(--overlay-dark-30);
 }
 
 .install-dialog img {
@@ -162,7 +162,7 @@ onUnmounted(() => {
   padding: 10px 28px;
   border-radius: .25rem;
   background: var(--button-orange);
-  color: white;
+  color: var(--color-white);
   cursor: pointer;
   font: inherit;
   font-weight: 700;

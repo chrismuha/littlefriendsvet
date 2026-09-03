@@ -116,7 +116,7 @@ const locations = [
     overflow: hidden;
     padding: clamp(70px, 9vw, 120px) 30px;
     background:
-        radial-gradient(circle at 92% 8%, rgba(22, 162, 162, 0.17), transparent 30rem),
+        radial-gradient(circle at 92% 8%, var(--overlay-teal-17), transparent 30rem),
         var(--section-background);
 }
 
@@ -127,7 +127,7 @@ const locations = [
     right: -110px;
     width: 340px;
     height: 340px;
-    border: 54px solid rgba(22, 162, 162, 0.08);
+    border: 54px solid var(--overlay-teal-08);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -156,8 +156,8 @@ const locations = [
 }
 
 :global(html[data-theme="dark"] .eyebrow) {
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+    text-shadow: 0 1px 3px var(--overlay-dark-40);
 }
 
 .areas-intro h2 {
@@ -179,10 +179,10 @@ const locations = [
 .coverage-card,
 .contact-card,
 .emergency-card {
-    border: 1px solid rgba(22, 162, 162, 0.2);
+    border: 1px solid var(--overlay-teal-20);
     border-radius: 1.5rem;
     background: var(--surface-background);
-    box-shadow: 0 18px 50px rgba(3, 48, 48, 0.1);
+    box-shadow: 0 18px 50px var(--overlay-deep-teal-10);
 }
 
 .coverage-card {
@@ -203,7 +203,7 @@ const locations = [
     place-items: center;
     border-radius: 50%;
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
     font-size: 28px;
 }
 
@@ -288,7 +288,7 @@ const locations = [
     border: 2px solid transparent;
     border-radius: 0.85rem;
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
     font-size: clamp(0.88rem, 1.8vw, 1.05rem);
     font-weight: 800;
     line-height: 1.25;
@@ -298,7 +298,7 @@ const locations = [
 
 .contact-action:hover {
     background: var(--button-orange);
-    color: white;
+    color: var(--color-white);
     transform: translateY(-2px);
 }
 
@@ -321,7 +321,7 @@ const locations = [
 .contact-action small {
     display: block;
     margin-bottom: 3px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--overlay-light-90);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -391,7 +391,7 @@ const locations = [
 }
 
 :global(html[data-theme="dark"] .emergency-icon) {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--overlay-light-10);
     color: var(--accent-orange-text);
 }
 
@@ -421,7 +421,7 @@ const locations = [
 
 .emergency-actions a:hover {
     background: var(--content-teal);
-    color: white;
+    color: var(--color-white);
 }
 
 .emergency-actions a:focus-visible {
@@ -431,12 +431,12 @@ const locations = [
 
 :global(html[data-theme="dark"] .emergency-actions a:hover) {
     background: var(--accent-orange-text);
-    color: #102626;
+    color: var(--color-deep-teal-ink);
 }
 
 :global(html[data-theme="dark"] .emergency-actions a) {
     border-color: var(--accent-orange-text);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--overlay-light-08);
     color: var(--accent-orange-text);
 }
 

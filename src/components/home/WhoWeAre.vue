@@ -41,7 +41,7 @@ section {
     padding: 70px 30px;
 }
 .header-v2 h1 {
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid var(--separator-color);
     font-size: clamp(1.75rem, 7.5vw, 4rem);
     white-space: nowrap;
 }

@@ -24,6 +24,6 @@
 </template>
 <style scoped>
 .header h1 {
-    color: white;
+    color: var(--color-white);
 }
 </style>

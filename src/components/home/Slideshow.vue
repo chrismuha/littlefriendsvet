@@ -271,7 +271,7 @@ section {
 .text {
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: var(--color-white);
     padding-bottom: 40px;
 }
 
@@ -347,10 +347,10 @@ section {
     height: 52px;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, .9);
+    border: 2px solid var(--overlay-light-90);
     border-radius: 50%;
-    background: rgba(0, 0, 0, .58);
-    color: white;
+    background: var(--overlay-dark-58);
+    color: var(--color-white);
     cursor: pointer;
     pointer-events: auto;
     transition: background .15s ease, transform .15s ease;

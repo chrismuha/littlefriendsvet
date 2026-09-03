@@ -45,8 +45,60 @@
     --section-background: #f8f8f8;
     --separator-color: #e5e5e5;
     --content-teal: #075f5f;
+    --visit-bullet-color: #7bded7;
     --content-text: #2f2f2f;
     --navigation-background: #ffeaa5;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-ink: #111;
+    --color-charcoal: #1f1f1f;
+    --color-deep-teal-ink: #102626;
+    --color-slate-blue: #3c557a;
+    --color-gray-strong: #444;
+    --color-gray: #5a5a5a;
+    --color-field-text: #606060;
+    --color-field-outline: #606060a0;
+    --color-muted-outline: #999999a0;
+    --color-error: #d32f2f;
+    --color-magenta: #d91b5c;
+    --color-input-border-dark: #769696;
+    --color-placeholder-dark: #cadada;
+    --overlay-light-08: rgba(255, 255, 255, 0.08);
+    --overlay-light-10: rgba(255, 255, 255, 0.1);
+    --overlay-light-12: rgba(255, 255, 255, 0.12);
+    --overlay-light-34: rgba(255, 255, 255, 0.34);
+    --overlay-light-42: rgba(255, 255, 255, 0.42);
+    --overlay-light-45: rgba(255, 255, 255, 0.45);
+    --overlay-light-70: rgba(255, 255, 255, 0.7);
+    --overlay-light-80: rgba(255, 255, 255, 0.8);
+    --overlay-light-90: rgba(255, 255, 255, 0.9);
+    --overlay-dark-08: rgba(0, 0, 0, 0.08);
+    --overlay-dark-10: rgba(0, 0, 0, 0.1);
+    --overlay-dark-16: rgba(0, 0, 0, 0.16);
+    --overlay-dark-18: rgba(0, 0, 0, 0.18);
+    --overlay-dark-20: rgba(0, 0, 0, 0.2);
+    --overlay-dark-24: rgba(0, 0, 0, 0.24);
+    --overlay-dark-30: rgba(0, 0, 0, 0.3);
+    --overlay-dark-38: rgba(0, 0, 0, 0.38);
+    --overlay-dark-40: rgba(0, 0, 0, 0.4);
+    --overlay-dark-45: rgba(0, 0, 0, 0.45);
+    --overlay-dark-58: rgba(0, 0, 0, 0.58);
+    --overlay-dark-85: rgba(0, 0, 0, 0.85);
+    --overlay-dark-90: rgba(0, 0, 0, 0.9);
+    --overlay-dark-95: rgba(0, 0, 0, 0.95);
+    --overlay-deep-teal-10: rgba(3, 48, 48, 0.1);
+    --overlay-deep-teal-64: rgba(3, 31, 31, 0.64);
+    --overlay-warm-dark-64: rgba(47, 17, 3, 0.64);
+    --overlay-warm-shadow-24: rgba(72, 18, 0, 0.24);
+    --overlay-teal-08: rgba(22, 162, 162, 0.08);
+    --overlay-teal-10: rgba(0, 128, 128, 0.1);
+    --overlay-teal-17: rgba(22, 162, 162, 0.17);
+    --overlay-teal-20: rgba(22, 162, 162, 0.2);
+    --overlay-bright-teal-35: rgba(123, 222, 215, 0.35);
+    --not-found-white: #fff;
+    --not-found-black: #000;
+    --not-found-green: #48a740;
+    --not-found-red: #ed2024;
 }
 
 :root[data-theme="dark"] {
@@ -65,11 +117,12 @@
     --golden-bg: rgba(7, 95, 95, 0.92);
     --page-background: #075f5f;
     --page-text: #eef6f6;
-    --heading-text: #fff;
+    --heading-text: var(--color-white);
     --surface-background: #096b6b;
     --section-background: #075f5f;
     --separator-color: #466b6b;
     --content-teal: #7bded7;
+    --visit-bullet-color: #075f5f;
     --content-text: #eef6f6;
     --navigation-background: #c9ad3d;
 }
@@ -94,18 +147,18 @@ html[data-theme="dark"] h6 {
 
 html[data-theme="dark"] input,
 html[data-theme="dark"] textarea {
-    border-color: #769696;
+    border-color: var(--color-input-border-dark);
     background: var(--surface-background);
     color: var(--page-text);
 }
 
 html[data-theme="dark"] input::placeholder,
 html[data-theme="dark"] textarea::placeholder {
-    color: #cadada;
+    color: var(--color-placeholder-dark);
 }
 
 html[data-theme="dark"] a:hover {
-    color: white;
+    color: var(--color-white);
 }
 
 a {
@@ -140,12 +193,12 @@ a:hover {
 
 .orange-bg {
     background: var(--primary-orange);
-    color: white;
+    color: var(--color-white);
 }
 
 .teal-bg {
     background: var(--primary-teal);
-    color: white;
+    color: var(--color-white);
 }
 
 .fixed-bg {
@@ -175,7 +228,7 @@ a:hover {
     line-height: 53px;
     font-size: 1.375rem;
 
-    color: #fff;
+    color: var(--color-white);
     border: 1px solid transparent;
 }
 
@@ -303,11 +356,11 @@ a:hover {
 
 input, textarea {
     font-weight: 900;
-    color: #606060;
-    outline: 1px solid #999999a0;
+    color: var(--color-field-text);
+    outline: 1px solid var(--color-muted-outline);
 }
 input::placeholder, textarea::placeholder {
-    color: #999999a0;
+    color: var(--color-muted-outline);
 }
 input:focus, textarea:focus {
     outline: 2px solid var(--primary-red);
@@ -322,7 +375,7 @@ input:focus, textarea:focus {
     left: 14px;
     transform: translateY(-50%);
     pointer-events: none;
-    color: #999999a0;
+    color: var(--color-muted-outline);
 }
 .message-box {
     flex-grow: 1;

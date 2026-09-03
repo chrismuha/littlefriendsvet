@@ -56,7 +56,7 @@ section {
 }
 .service-flyer-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 50px rgb(0 0 0 / 24%);
+    box-shadow: 0 20px 50px var(--overlay-dark-24);
 }
 .service-flyer-link:focus-visible {
     outline: 4px solid var(--button-orange);
@@ -68,7 +68,7 @@ section {
     max-height: 740px;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 16px 45px rgb(0 0 0 / 18%);
+    box-shadow: 0 16px 45px var(--overlay-dark-18);
 }
 .actions-content h2 {
     margin-bottom: 24px;
@@ -78,7 +78,7 @@ section {
     text-align: center;
 }
 :global(html[data-theme="dark"] .actions-content h2) {
-    color: #102626;
+    color: var(--color-deep-teal-ink);
 }
 .actions-content {
     display: flex;
