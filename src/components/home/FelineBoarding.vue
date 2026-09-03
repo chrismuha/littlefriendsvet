@@ -21,7 +21,7 @@ section {
 .text-content h1 {
     color: var(--content-teal);
     font-family: 'Galada';
-    font-size: 52px;
+    font-size: 39pt;
     font-weight: 400;
     line-height: 1.2;
     text-align: center;
@@ -42,7 +42,7 @@ section {
     background: var(--primary-orange);
 }
 .text-content p {
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 500;
     line-height: 1.55;
     margin-top: 20px;
@@ -102,7 +102,7 @@ section {
         padding: 70px 30px;
     }
     .text-content h1 {
-        font-size: 35.7px;
+        font-size: 26.775pt;
     }
 }
 @media screen and (max-width: 450px) {

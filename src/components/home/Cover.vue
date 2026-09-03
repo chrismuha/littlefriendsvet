@@ -133,7 +133,7 @@ section {
   width: clamp(215px, 20vw, 285px);
   transform: translateY(-50%);
   color: var(--color-white);
-  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  font-size: clamp(12.6pt, 2vw, 18pt);
   font-style: normal;
   font-weight: 700;
   line-height: 1.45;
@@ -163,7 +163,7 @@ section {
 
 .cover-button i {
   display: block;
-  font-size: 56px;
+  font-size: 42pt;
   line-height: 1.2;
 }
 
@@ -193,7 +193,7 @@ section {
   background: var(--button-orange);
   color: var(--color-white);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 10.8pt;
   text-decoration: none;
 }
 
@@ -305,7 +305,7 @@ section {
 
   .quick-actions a {
     min-height: 38px;
-    font-size: 0.8rem;
+    font-size: 9.6pt;
   }
 }
 
@@ -350,7 +350,7 @@ section {
   width: 100%;
   transform: none;
   padding: 0 12px;
-  font-size: clamp(1rem, 1.45vw, 1.3rem);
+  font-size: clamp(12pt, 1.45vw, 15.6pt);
   white-space: normal;
 }
 

@@ -57,7 +57,7 @@ section {
     flex-direction: column;
     gap: 14px;
     color: var(--color-white);
-    font-size: 18px;
+    font-size: 13.5pt;
     font-weight: 500;
     line-height: 1.7;
     text-align: left;
@@ -80,7 +80,7 @@ section {
     font-style: italic;
 }
 .signature {
-    font-size: 22px;
+    font-size: 16.5pt;
     letter-spacing: .01em;
 }
 

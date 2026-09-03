@@ -98,7 +98,7 @@ onMounted(() => {
   display: block;
   margin-top: 0;
   color: var(--heading-text);
-  font-size: 14px;
+  font-size: 10.5pt;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -116,7 +116,7 @@ onMounted(() => {
   }
 
   .theme-toggle span {
-    font-size: 12px;
+    font-size: 9pt;
   }
 }
 

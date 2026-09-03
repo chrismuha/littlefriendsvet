@@ -149,7 +149,7 @@ const locations = [
 .eyebrow {
     margin: 0 0 10px;
     color: var(--content-teal);
-    font-size: 0.85rem;
+    font-size: 10.2pt;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -163,7 +163,7 @@ const locations = [
 .areas-intro h2 {
     margin: 0;
     color: var(--heading-text);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(36pt, 7vw, 66pt);
     font-weight: 500;
     line-height: 0.98;
 }
@@ -172,7 +172,7 @@ const locations = [
     max-width: 560px;
     margin: 24px 0 0;
     color: var(--page-text);
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: clamp(12.6pt, 2vw, 15pt);
     line-height: 1.65;
 }
 
@@ -204,7 +204,7 @@ const locations = [
     border-radius: 50%;
     background: var(--primary-teal);
     color: var(--color-white);
-    font-size: 28px;
+    font-size: 21pt;
 }
 
 .coverage-heading h3,
@@ -212,7 +212,7 @@ const locations = [
 .emergency-card h3 {
     margin: 0;
     color: var(--heading-text);
-    font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+    font-size: clamp(16.8pt, 2.6vw, 22.2pt);
     line-height: 1.2;
 }
 
@@ -248,7 +248,7 @@ const locations = [
 
 .location-list i {
     color: var(--content-teal);
-    font-size: 1.25rem;
+    font-size: 15pt;
 }
 
 .contact-card {
@@ -289,7 +289,7 @@ const locations = [
     border-radius: 0.85rem;
     background: var(--primary-teal);
     color: var(--color-white);
-    font-size: clamp(0.88rem, 1.8vw, 1.05rem);
+    font-size: clamp(10.56pt, 1.8vw, 12.6pt);
     font-weight: 800;
     line-height: 1.25;
     text-decoration: none;
@@ -310,7 +310,7 @@ const locations = [
 
 .contact-action > i {
     flex: 0 0 auto;
-    font-size: 1.35rem;
+    font-size: 16.2pt;
 }
 
 .contact-action span {
@@ -322,7 +322,7 @@ const locations = [
     display: block;
     margin-bottom: 3px;
     color: var(--overlay-light-90);
-    font-size: 0.72rem;
+    font-size: 8.64pt;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -339,14 +339,14 @@ const locations = [
     gap: 11px;
     margin: -18px 0 0;
     color: var(--page-text);
-    font-size: 0.95rem;
+    font-size: 11.4pt;
     font-weight: 700;
 }
 
 .mailing-address i {
     margin-top: 2px;
     color: var(--content-teal);
-    font-size: 1.2rem;
+    font-size: 14.4pt;
 }
 
 .mailing-address-copy {
@@ -383,7 +383,7 @@ const locations = [
     border-radius: 0.8rem;
     background: color-mix(in srgb, var(--primary-orange) 16%, transparent);
     color: var(--secondary-orange);
-    font-size: 26px;
+    font-size: 19.5pt;
 }
 
 :global(html[data-theme="dark"] .emergency-card) {
@@ -495,7 +495,7 @@ const locations = [
     .coverage-icon {
         width: 52px;
         height: 52px;
-        font-size: 23px;
+        font-size: 17.25pt;
     }
 
     .location-list,

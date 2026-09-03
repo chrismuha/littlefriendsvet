@@ -73,7 +73,7 @@ section {
 .actions-content h2 {
     margin-bottom: 24px;
     color: var(--content-teal);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(24pt, 4vw, 36pt);
     font-weight: 700;
     text-align: center;
 }

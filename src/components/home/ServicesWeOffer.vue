@@ -78,7 +78,7 @@ section {
     position: relative;
     padding: clamp(70px, 8vw, 110px) 40px;
     color: var(--content-text);
-    font-size: 18px;
+    font-size: 13.5pt;
     font-weight: 500;
 }
 .content-container {
@@ -100,7 +100,7 @@ section {
 }
 .section-item h1 {
     font-family: 'Galada';
-    font-size: 2rem;
+    font-size: 24pt;
     color: var(--content-teal);
     font-weight: 400;
 }
@@ -131,7 +131,7 @@ section {
 }
 .text-wrapper > ul > li::marker {
     color: var(--primary-orange);
-    font-size: 1.15em;
+    font-size: 13.8pt;
 }
 .text-wrapper li > ul {
     display: grid;
@@ -151,7 +151,7 @@ section {
 }
 .new-client-section h1 {
     font-family: inherit;
-    font-size: 42px;
+    font-size: 31.5pt;
     font-weight: 600;
 }
 .new-client-section .text-wrapper {
@@ -173,7 +173,7 @@ section {
     border-radius: .2rem;
     background: var(--color-gray);
     color: var(--color-white);
-    font-size: 16px;
+    font-size: 12pt;
     font-weight: 700;
     line-height: 1.25;
     text-decoration: none;
@@ -183,7 +183,7 @@ section {
 }
 .new-client-button i {
     flex-shrink: 0;
-    font-size: 19px;
+    font-size: 14.25pt;
 }
 .new-client-buttons a:hover {
     background: var(--color-gray-strong);
@@ -223,7 +223,7 @@ section {
 }
 .vet-triage-link span {
     color: var(--color-slate-blue);
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(12pt, 2vw, 14.4pt);
     transition: color 160ms ease;
 }
 .emergency-services .vet-triage-link:hover {
@@ -251,7 +251,7 @@ section {
     border-radius: 0.3rem;
     background: var(--button-orange);
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 12pt;
     line-height: 1.35;
     text-align: center;
     text-decoration: none;

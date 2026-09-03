@@ -51,7 +51,7 @@ footer {
 }
 .scroll-top i {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18pt;
 }
 .scroll-top:focus-visible {
     outline: 3px solid white;

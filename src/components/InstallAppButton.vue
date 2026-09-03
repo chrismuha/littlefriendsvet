@@ -142,7 +142,7 @@ onUnmounted(() => {
 
 .install-dialog p {
   margin-bottom: 22px;
-  font-size: 17px;
+  font-size: 12.75pt;
   line-height: 1.55;
 }
 
@@ -153,7 +153,7 @@ onUnmounted(() => {
   background: transparent;
   color: var(--heading-text);
   cursor: pointer;
-  font-size: 30px;
+  font-size: 22.5pt;
   line-height: 1;
 }
 

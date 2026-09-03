@@ -292,7 +292,7 @@ h1 {
     height: 100px;
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 500;
 }
 
@@ -303,7 +303,7 @@ h1 {
 }
 
 .radio-label {
-    font-size: 13px;
+    font-size: 9.75pt;
     font-weight: 700;
     color: var(--color-field-text);
 }
@@ -322,7 +322,7 @@ h1 {
 }
 
 .radio-option span {
-    font-size: 13px;
+    font-size: 9.75pt;
 }
 
 .radio-circle {
@@ -351,7 +351,7 @@ h1 {
 
 
 .btn {
-    font-size: 12px;
+    font-size: 9pt;
     font-weight: 700;
     cursor: pointer;
 }
@@ -363,7 +363,7 @@ h1 {
 .error-text {
     margin-top: 6px;
     color: var(--color-error);
-    font-size: 12px;
+    font-size: 9pt;
     font-weight: 500;
 }
 

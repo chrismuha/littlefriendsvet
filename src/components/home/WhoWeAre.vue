@@ -42,7 +42,7 @@ section {
 }
 .header-v2 h1 {
     border-bottom: 2px solid var(--separator-color);
-    font-size: clamp(1.75rem, 7.5vw, 4rem);
+    font-size: clamp(21pt, 7.5vw, 48pt);
     white-space: nowrap;
 }
 .row {
@@ -56,7 +56,7 @@ section {
     flex-direction: column;
     gap: 20px;
     color: var(--page-text);
-    font-size: 18px;
+    font-size: 13.5pt;
     font-weight: 500;
     line-height: 1.65;
 }
@@ -68,7 +68,7 @@ section {
     font-family: 'Galada';
     margin-bottom: 20px;
     color: var(--heading-text);
-    font-size: 32px;
+    font-size: 24pt;
 }
 .image-wrapper {
     display: flex;

@@ -86,7 +86,7 @@ b, strong {
     font-weight: 900;
 }
 section {
-    font-size: 24px;
+    font-size: 18pt;
 }
 
 .starburst {
@@ -141,7 +141,7 @@ section {
     background: var(--surface-background);
 }
 .orange-container h1 {
-    font-size: 52px;
+    font-size: 39pt;
 }
 .orange-container .content-wrapper {
     background: var(--surface-background);
@@ -205,28 +205,28 @@ section {
 }
 .fbc-container li {
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 15pt;
     font-weight: 600;
     text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .fixed-bg .text-wrapper h1 {
-    font-size: 64px;
+    font-size: 48pt;
 }
 .fixed-bg .text-wrapper p.notice {
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 15pt;
     font-weight: 700;
     text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .panks-container .program-intro {
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 15pt;
     font-weight: 600;
     text-shadow: 0 2px 5px var(--overlay-dark-90);
 }
 .panks-container .appointment-call {
     color: var(--content-teal);
-    font-size: 22px;
+    font-size: 16.5pt;
     font-weight: 700;
     text-shadow: 0 1px 2px var(--overlay-light-80);
 }
@@ -244,12 +244,12 @@ section {
 }
 @media screen and (max-width:1200px) {
     .fixed-bg .text-wrapper h1 {
-        font-size: 56px;
+        font-size: 42pt;
     }
 }
 @media screen and (max-width:960px) {
     .fixed-bg .text-wrapper h1 {
-        font-size: 46.2px;
+        font-size: 34.65pt;
     }
     .content-wrapper {
         position: static; /* or relative */
@@ -271,7 +271,7 @@ section {
         align-self: flex-start;
     }
     .orange-container h1 {
-        font-size: 41.6px;
+        font-size: 31.2pt;
     }
 }
 </style>

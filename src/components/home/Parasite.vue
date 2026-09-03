@@ -31,7 +31,7 @@ section {
     border-radius: 50%;
 }
 .text-wrapper {
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 500;
     line-height: 1.55;
 }
@@ -50,7 +50,7 @@ section {
     }
     .text-wrapper {
         width: 100%;
-        font-size: 19px;
+        font-size: 14.25pt;
         line-height: 1.6;
     }
 }

@@ -68,7 +68,7 @@ section {
 .text-wrapper {
     flex: 1;
     color: var(--page-text);
-    font-size: 18px;
+    font-size: 13.5pt;
     font-weight: 500;
     line-height: 1.65;
 }
@@ -88,7 +88,7 @@ section {
 }
 @media screen and (max-width: 960px) {
     .text-wrapper {
-        font-size: 17px;
+        font-size: 12.75pt;
     }
 }
 .wrapped-intro p + p {

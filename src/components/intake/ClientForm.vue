@@ -380,7 +380,7 @@ h1 {
     height: 100px;
     display: inline-flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 18pt;
     font-weight: 500;
 }
 
@@ -400,7 +400,7 @@ h1 {
     gap: 14px;
     color: var(--color-field-outline);
     font-weight: 900;
-    font-size: 13px;
+    font-size: 9.75pt;
 }
 
 .checkbox-field .square {
@@ -414,7 +414,7 @@ h1 {
 }
 
 .checkbox-field .square i {
-    font-size: 25px;
+    font-size: 18.75pt;
     color: var(--color-white);
     display: none;
 }
@@ -439,7 +439,7 @@ h1 {
 }
 
 .btn-red {
-    font-size: 12px;
+    font-size: 9pt;
     font-weight: 700;
     cursor: pointer;
 }
@@ -451,7 +451,7 @@ h1 {
 .error-text {
     margin-top: 6px;
     color: var(--color-error);
-    font-size: 12px;
+    font-size: 9pt;
     font-weight: 500;
 }
 

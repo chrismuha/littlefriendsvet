@@ -37,7 +37,7 @@
 </template>
 <style scoped>
 section {
-    font-size: 16px;
+    font-size: 12pt;
     color: var(--color-black);
 }
 .contact-location {
@@ -61,7 +61,7 @@ section {
     color: var(--secondary-orange);
 }
 .title {
-    font-size: 19px;
+    font-size: 14.25pt;
     display: flex;
     align-items: center;
 }
@@ -70,7 +70,7 @@ section {
 }
 .title i {
     width: 42px;
-    font-size: 28px;
+    font-size: 21pt;
 }
 .details {
     margin-left: 42px;
@@ -99,7 +99,7 @@ section {
 }
 .office-hours .details .time {
     margin: 0;
-    font-size: 17px;
+    font-size: 12.75pt;
     font-weight: 700;
 }
 @media screen and (max-width: 800px) {

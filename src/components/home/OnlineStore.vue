@@ -49,7 +49,7 @@
 .store-eyebrow {
     margin: 0 0 5px;
     color: var(--overlay-light-90);
-    font-size: 0.82rem;
+    font-size: 9.84pt;
     font-weight: 800;
     letter-spacing: 0.11em;
     text-transform: uppercase;
@@ -62,7 +62,7 @@
 .store-copy h2 {
     margin: 0;
     color: var(--color-white);
-    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-size: clamp(18pt, 2.6vw, 25.2pt);
     font-weight: 500;
     line-height: 1.12;
 }

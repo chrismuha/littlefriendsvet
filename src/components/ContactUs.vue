@@ -48,7 +48,7 @@ section {
     gap: 30px;
     min-height: 500px;
     padding: 70px 30px;
-    font-size: 13px;
+    font-size: 9.75pt;
     align-items: stretch;
 }
 .header {
@@ -88,7 +88,7 @@ section {
     margin: auto;
     font-weight: 500;
     color: var(--heading-text);
-    font-size: 2rem;
+    font-size: 24pt;
 }
 
 
@@ -97,7 +97,7 @@ section {
     color: var(--color-white);
     margin-top: 50px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12pt;
 }
 .row > div {
     flex: 1;

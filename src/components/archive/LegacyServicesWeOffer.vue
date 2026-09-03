@@ -83,7 +83,7 @@
 
 .legacy-services-we-offer > ul > li::marker {
     color: var(--primary-orange);
-    font-size: 1.15em;
+    font-size: 13.8pt;
 }
 
 .legacy-services-we-offer li > ul {

@@ -27,7 +27,7 @@ section {
     color: var(--page-text);
 }
 h1 {
-    font-size: 42px;
+    font-size: 31.5pt;
     font-weight: 500;
 }
 .content-container {
@@ -42,7 +42,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     flex-shrink: 2;
-    font-size: 24px;
+    font-size: 18pt;
 }
 .left-image {
     max-width: 30%;

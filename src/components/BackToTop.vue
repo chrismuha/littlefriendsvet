@@ -77,7 +77,7 @@ onUnmounted(() => {
   display: block;
   margin-top: 0;
   color: var(--heading-text);
-  font-size: 14px;
+  font-size: 10.5pt;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -88,6 +88,6 @@ onUnmounted(() => {
 @media (max-width: 640px) {
   .gatop-top { right: 15px; width: 72px; }
   .gatop-top img { width: 40px; height: 58px; }
-  .gatop-label { font-size: 12px; }
+  .gatop-label { font-size: 9pt; }
 }
 </style>

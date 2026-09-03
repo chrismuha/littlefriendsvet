@@ -253,7 +253,7 @@ onBeforeUnmount(() => {
 
 .services-eyebrow {
     margin: 0 0 9px;
-    font-size: 0.82rem;
+    font-size: 9.84pt;
     font-weight: 800;
     letter-spacing: 0.11em;
     text-transform: uppercase;
@@ -271,14 +271,14 @@ onBeforeUnmount(() => {
 .services-intro h2 {
     margin: 0;
     color: var(--heading-text);
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(26.4pt, 5vw, 42pt);
     font-weight: 500;
     line-height: 1.1;
 }
 
 .services-intro > p:last-child {
     margin: 12px 0 0;
-    font-size: 1.05rem;
+    font-size: 12.6pt;
     font-weight: 500;
 }
 
@@ -350,7 +350,7 @@ onBeforeUnmount(() => {
     border-radius: 50%;
     background: var(--primary-teal);
     color: var(--color-white);
-    font-size: 50px;
+    font-size: 37.5pt;
 }
 
 .service-item > i {
@@ -358,7 +358,7 @@ onBeforeUnmount(() => {
 }
 
 .service-item span {
-    font-size: 18px;
+    font-size: 13.5pt;
     font-weight: 700;
 }
 
@@ -373,7 +373,7 @@ onBeforeUnmount(() => {
     background: var(--primary-teal);
     color: var(--color-white);
     box-shadow: 0 14px 36px var(--overlay-dark-24);
-    font-size: 0.98rem;
+    font-size: 11.76pt;
     font-weight: 500;
     line-height: 1.55;
     text-align: center;
@@ -466,7 +466,7 @@ onBeforeUnmount(() => {
 .service-dialog-heading h2 {
     margin: 0;
     color: var(--heading-text);
-    font-size: clamp(1.65rem, 4vw, 2.25rem);
+    font-size: clamp(19.8pt, 4vw, 27pt);
     font-weight: 500;
     line-height: 1.2;
 }
@@ -475,7 +475,7 @@ onBeforeUnmount(() => {
     padding: 28px 44px 34px;
     background: var(--primary-teal);
     color: var(--color-white);
-    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    font-size: clamp(12pt, 2.4vw, 14.4pt);
     line-height: 1.55;
     text-align: center;
 }
@@ -494,7 +494,7 @@ onBeforeUnmount(() => {
     background: var(--overlay-dark-08);
     color: var(--heading-text);
     cursor: pointer;
-    font-size: 22px;
+    font-size: 16.5pt;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -547,7 +547,7 @@ onBeforeUnmount(() => {
     .service-dialog-heading > i {
         width: 88px;
         height: 88px;
-        font-size: 42px;
+        font-size: 31.5pt;
     }
 
     .service-description {

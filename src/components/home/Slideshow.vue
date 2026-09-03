@@ -270,7 +270,7 @@ section {
 
 .text {
     text-align: center;
-    font-size: 20px;
+    font-size: 15pt;
     color: var(--color-white);
     padding-bottom: 40px;
 }
@@ -368,7 +368,7 @@ section {
 }
 
 .controls i {
-    font-size: 2rem;
+    font-size: 24pt;
     line-height: 1;
 }
 
