@@ -4,7 +4,7 @@
             <div class="header-starburst">
                 <img src="@/assets/images/Starburst_group_left_Orange-Teal.png" alt="">
             </div>
-            <h1 class="heading-line">Little Friends Vet is here for you!</h1>
+            <h1 class="heading-line">House-Call Veterinary Care in Lyons Falls, NY</h1>
         </div>
         <div class="body-content">
             <div class="text-wrapper wrapped-intro">

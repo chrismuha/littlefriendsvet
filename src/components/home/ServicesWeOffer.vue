@@ -10,7 +10,7 @@ import vetTriageInstructions from '@/assets/forms/VetTriageServices.pdf'
         <div class="content-container">
             <div class="left-section">
                 <div class="section-item emergency-services">
-                    <h1>Emergency Advice</h1>
+                    <h2>Emergency Advice</h2>
                     <a
                         class="vet-triage-link"
                         href="https://vettriage.com/"
@@ -37,7 +37,7 @@ import vetTriageInstructions from '@/assets/forms/VetTriageServices.pdf'
                     </a>
                 </div>
                 <div id="new-client" class="section-item new-client-section">
-                    <h1>New Client?</h1>
+                    <h2>New Client?</h2>
                     <div class="text-wrapper">
                         <p>
                             Complete our online form,<br>
@@ -98,13 +98,13 @@ section {
     opacity: 0.48;
     z-index: 0;
 }
-.section-item h1 {
+.section-item h2 {
     font-family: 'Galada';
     font-size: 24pt;
     color: var(--content-teal);
     font-weight: 400;
 }
-:global(html[data-theme="dark"] .section-item h1) {
+:global(html[data-theme="dark"] .section-item h2) {
     color: var(--color-white);
     text-shadow: 0 2px 5px var(--overlay-dark-45);
 }

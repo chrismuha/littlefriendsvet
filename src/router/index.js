@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import businessSchema from '../data/business.json'
 import NotFoundView from '../views/404View.vue'
 import IntakeView from '@/views/IntakeView.vue'
 
@@ -11,8 +12,8 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        title: 'Little Friends Veterinary Services | Lyons Falls, NY',
-        description: 'Little Friends Veterinary Services in Lyons Falls, New York provides personal veterinary care for cats, dogs, and exotic pets.',
+        title: 'Little Friends on Wheels | Mobile Vet in Lyons Falls, NY',
+        description: 'House-call veterinary care for cats, dogs and exotic pets around Lyons Falls, Boonville, Lowville, Brantingham and Old Forge. Visits by appointment.',
         robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
       },
     },
@@ -40,11 +41,18 @@ const router = createRouter({
 })
 
 function setMetaContent(selector, attribute, content) {
-  const element = document.head.querySelector(selector)
-  if (element) element.setAttribute(attribute, content)
+  let element = document.head.querySelector(selector)
+  if (!element) {
+    const [, key, value] = selector.match(/meta\[(name|property)="([^"]+)"\]/)
+    element = document.createElement('meta')
+    element.setAttribute(key, value)
+    document.head.append(element)
+  }
+  element.setAttribute(attribute, content)
 }
 
-router.afterEach((to) => {
+router.afterEach((to, _from, failure) => {
+  if (failure) return
   const { title, description, robots } = to.meta
   const canonicalUrl = new URL(to.path, 'https://littlefriendsvet.com').href
 
@@ -58,8 +66,27 @@ router.afterEach((to) => {
   setMetaContent('meta[name="twitter:title"]', 'content', title)
   setMetaContent('meta[name="twitter:description"]', 'content', description)
 
-  const canonical = document.head.querySelector('link[rel="canonical"]')
-  if (canonical) canonical.setAttribute('href', canonicalUrl)
+  let canonical = document.head.querySelector('link[rel="canonical"]')
+  if (to.name === 'not-found') {
+    canonical?.remove()
+    document.head.querySelector('meta[property="og:url"]')?.remove()
+  } else {
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.append(canonical)
+    }
+    canonical.href = canonicalUrl
+  }
+
+  document.getElementById('business-schema')?.remove()
+  if (to.name === 'home') {
+    const schema = document.createElement('script')
+    schema.id = 'business-schema'
+    schema.type = 'application/ld+json'
+    schema.textContent = JSON.stringify(businessSchema)
+    document.head.append(schema)
+  }
 })
 
 export default router

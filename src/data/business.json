@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "@id": "https://littlefriendsvet.com/#veterinary-care",
+  "url": "https://littlefriendsvet.com/",
+  "image": "https://littlefriendsvet.com/social-preview.png",
+  "name": "Little Friends on Wheels",
+  "description": "House-call veterinary care for cats, dogs and exotic pets around Lyons Falls, Boonville, Lowville, Brantingham and Old Forge. Visits by appointment.",
+  "telephone": "+1-315-796-0907",
+  "email": "info@littlefriendsvet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lyons Falls",
+    "addressRegion": "NY",
+    "postalCode": "13368",
+    "addressCountry": "US",
+    "postOfficeBoxNumber": "437"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Lyons Falls, New York"
+    },
+    {
+      "@type": "Place",
+      "name": "Boonville, New York"
+    },
+    {
+      "@type": "Place",
+      "name": "Lowville, New York"
+    },
+    {
+      "@type": "Place",
+      "name": "Brantingham, New York"
+    },
+    {
+      "@type": "Place",
+      "name": "Old Forge, New York"
+    }
+  ],
+  "alternateName": "Little Friends Veterinary Services"
+}

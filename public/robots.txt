@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /intake
 
+# Intake is excluded with noindex in its HTML; allow crawlers to read it.
 Sitemap: https://littlefriendsvet.com/sitemap.xml
