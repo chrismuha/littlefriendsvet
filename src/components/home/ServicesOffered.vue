@@ -143,6 +143,11 @@ const services = [
         title: 'Nutrition consultations',
         description: 'Nutrition counseling for your pet based on science and evidence-based nutritional recommendations.',
     },
+    {
+        icon: 'bi bi-house-heart',
+        title: 'End of life care',
+        description: 'Dr. Underwood can help provide guidance at this difficult time, including palliative care and in-home euthanasia services. Her gentle, experienced hands will allow you to say goodbye in peace and comfort. We partner with Forever Meadows Pet Memorialization and Cremation Services to provide compassionate, respectful options.',
+    },
     // {
     //     icon: 'bi bi-house-heart',
     //     title: 'Feline boarding',

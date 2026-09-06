@@ -54,7 +54,7 @@
                             855-553-4416
                         </span>
                     </a>
-                    <a class="contact-action contact-action-wide" href="mailto:info@littlefriendsvet.com">
+                    <a class="contact-action" href="mailto:info@littlefriendsvet.com">
                         <i class="bi bi-envelope-fill" aria-hidden="true"></i>
                         <span>
                             <small>Email</small>
@@ -242,10 +242,6 @@ const locations = [
     font-weight: 700;
 }
 
-.location-list li:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-}
-
 .location-list i {
     color: var(--content-teal);
     font-size: 15pt;
@@ -326,10 +322,6 @@ const locations = [
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-}
-
-.contact-action-wide {
-    grid-column: 1 / -1;
 }
 
 .mailing-address {
@@ -501,11 +493,6 @@ const locations = [
     .location-list,
     .contact-actions {
         grid-template-columns: 1fr;
-    }
-
-    .location-list li:last-child:nth-child(odd),
-    .contact-action-wide {
-        grid-column: auto;
     }
 
     .emergency-card {
