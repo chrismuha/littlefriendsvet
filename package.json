@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 127.0.0.1 --port 5204 --strictPort",
     "dev:full": "npm run dev",
-    "dev:vite": "vite",
+    "dev:vite": "vite --host 127.0.0.1 --port 5204 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --host",
+    "preview": "vite preview --host 127.0.0.1 --port 5204 --strictPort",
     "prepare": "husky"
   },
   "dependencies": {
