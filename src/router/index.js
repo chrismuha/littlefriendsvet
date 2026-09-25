@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import businessSchema from '../data/business.json'
 import NotFoundView from '../views/404View.vue'
-import IntakeView from '@/views/IntakeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,16 +14,6 @@ const router = createRouter({
         title: 'Little Friends on Wheels | Mobile Vet in Lyons Falls, NY',
         description: 'House-call veterinary care for cats, dogs and exotic pets around Lyons Falls, Boonville, Lowville, Brantingham and Old Forge. Visits by appointment.',
         robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-      },
-    },
-    {
-      path: '/intake',
-      name: 'intake',
-      component: IntakeView,
-      meta: {
-        title: 'New Client Intake | Little Friends Veterinary Services',
-        description: 'Secure new-client intake form for Little Friends Veterinary Services.',
-        robots: 'noindex, nofollow',
       },
     },
     {

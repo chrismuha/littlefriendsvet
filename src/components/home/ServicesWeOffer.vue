@@ -1,6 +1,4 @@
 <script setup>
-import newClientForm from '@/assets/forms/LFVS-NewClient-Form.pdf'
-import newPetInformationForm from '@/assets/forms/LFVS-NewPet-Information.pdf'
 import vetTriageInstructions from '@/assets/forms/VetTriageServices.pdf'
 </script>
 
@@ -35,39 +33,6 @@ import vetTriageInstructions from '@/assets/forms/VetTriageServices.pdf'
                         View instructions for connecting with a VetTriage veterinarian
                         <span class="sr-only"> (opens PDF in a new tab)</span>
                     </a>
-                </div>
-                <div id="new-client" class="section-item new-client-section">
-                    <h2>New Client?</h2>
-                    <div class="text-wrapper">
-                        <p>
-                            Complete our online form,<br>
-                            or download and fill out both PDFs below.
-                        </p>
-                        <div class="new-client-buttons">
-                            <RouterLink to="/intake" class="new-client-button primary">
-                                <i class="bi bi-laptop" aria-hidden="true"></i>
-                                Complete the Online Form
-                            </RouterLink>
-                            <a
-                                :href="newClientForm"
-                                class="new-client-button"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-                                Download Client Info
-                            </a>
-                            <a
-                                :href="newPetInformationForm"
-                                class="new-client-button"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-                                Download Pet Info
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -144,55 +109,6 @@ section {
 }
 .text-wrapper li > ul li::marker {
     color: var(--content-teal);
-}
-.new-client-section {
-    margin-top: 45px;
-    text-align: center;
-}
-.new-client-section h1 {
-    font-family: inherit;
-    font-size: 31.5pt;
-    font-weight: 600;
-}
-.new-client-section .text-wrapper {
-    align-items: center;
-}
-.new-client-buttons {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-.new-client-button {
-    display: flex;
-    min-height: 56px;
-    padding: 11px 16px;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: .2rem;
-    background: var(--color-gray);
-    color: var(--color-white);
-    font-size: 12pt;
-    font-weight: 700;
-    line-height: 1.25;
-    text-decoration: none;
-}
-.new-client-button.primary {
-    background: var(--button-orange);
-}
-.new-client-button i {
-    flex-shrink: 0;
-    font-size: 14.25pt;
-}
-.new-client-buttons a:hover {
-    background: var(--color-gray-strong);
-    color: var(--color-white);
-    text-decoration: none;
-}
-:global(html[data-theme="dark"] .new-client-button.primary:hover) {
-    background: var(--accent-orange-text);
-    color: var(--color-deep-teal-ink);
 }
 .emergency-services a {
     color: var(--content-teal);
@@ -289,9 +205,6 @@ section {
 @media screen and (max-width: 960px) {
     .content-container {
         flex-direction: column;
-    }
-    .new-client-buttons {
-        grid-template-columns: 1fr;
     }
 }
 </style>

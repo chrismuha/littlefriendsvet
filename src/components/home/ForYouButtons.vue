@@ -23,7 +23,15 @@ import InstallAppButton from '@/components/InstallAppButton.vue'
                 <h2>How can we help?</h2>
                 <div class="buttons-wrapper">
                     <!-- <a href="#meet-dr-liane" class="btn btn-orange">Meet Dr. Liane</a> -->
-                    <a href="#new-client" class="btn btn-orange">New Client?</a>
+                    <a
+                        href="https://www.carecredit.com/"
+                        class="btn btn-orange"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Need help paying for your pet's medical care?
+                        <span class="sr-only"> Visit CareCredit (opens in a new tab)</span>
+                    </a>
                     <a href="https://littlefriendsvetservices.securevetsource.com/index.pml" class="btn btn-orange">Shop!</a>
                     <!-- <a href="#gallery" class="btn btn-orange">Gallery</a> -->
                     <a href="#contact-info" class="btn btn-orange">Contact Us</a>

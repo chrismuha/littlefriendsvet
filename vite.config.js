@@ -27,7 +27,6 @@ export default defineConfig({
       closeBundle() {
         const html = readFileSync(path.join(outputDir, 'index.html'), 'utf8')
         for (const [file, title, description, canonical] of [
-          ['intake/index.html', 'New Client Intake | Little Friends Veterinary Services', 'New-client intake form for Little Friends Veterinary Services.', 'https://littlefriendsvet.com/intake'],
           ['404.html', 'Page Not Found | Little Friends Veterinary Services', 'The requested page could not be found.', null],
         ]) {
           const page = html
