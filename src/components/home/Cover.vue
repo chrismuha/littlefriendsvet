@@ -183,8 +183,8 @@ section {
 
 .quick-actions a {
   display: flex;
-  min-height: 38px;
-  padding: 6px 10px;
+  min-height: 48px;
+  padding: 8px 10px;
   align-items: center;
   justify-content: center;
   gap: 7px;
@@ -194,6 +194,8 @@ section {
   color: var(--color-white);
   font-weight: 700;
   font-size: 10.8pt;
+  line-height: 1.2;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -281,7 +283,7 @@ section {
 
   .quick-actions a {
     display: flex;
-    min-height: 42px;
+    min-height: 48px;
 
     align-items: center;
     justify-content: center;
@@ -304,7 +306,7 @@ section {
   }
 
   .quick-actions a {
-    min-height: 38px;
+    min-height: 48px;
     font-size: 9.6pt;
   }
 }
@@ -364,6 +366,18 @@ section {
   width: min(760px, 100%);
   margin: 0 auto;
   transform: none;
+}
+
+@media (min-width: 961px) {
+  .quick-actions {
+    width: fit-content;
+    max-width: 100%;
+    grid-template-columns: repeat(3, max-content) minmax(280px, max-content);
+  }
+
+  .quick-actions .emergency-advice-action {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 1100px) {

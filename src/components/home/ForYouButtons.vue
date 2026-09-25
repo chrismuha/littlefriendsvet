@@ -49,11 +49,11 @@ section {
 }
 .actions-layout {
     display: grid;
-    grid-template-columns: minmax(320px, 470px) minmax(300px, 520px);
+    grid-template-columns: minmax(320px, 470px) minmax(300px, 620px);
     align-items: center;
     justify-content: center;
     gap: clamp(36px, 6vw, 82px);
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 .service-flyer-link {
@@ -101,8 +101,10 @@ section {
 .buttons-wrapper :deep(.btn) {
     display: flex;
     min-height: 54px;
+    padding: 12px 24px;
     align-items: center;
     justify-content: center;
+    line-height: 1.25;
     text-align: center;
 }
 @media screen and (max-width: 760px) {
