@@ -33,6 +33,8 @@
   "overrides": {
     "postcss": {
       "nanoid": "3.3.18"
-    }
+    },
+    "http-cache-semantics": "4.3.0",
+    "source-map-js": "1.2.2"
   }
 }
