@@ -1,41 +1,79 @@
-# Logs
-logs
+# Dependencies
+node_modules/
+
+# Logs and runtime files
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
+pids/
+*.pid
+*.pid.lock
+*.seed
 
-node_modules
-.husky/_/
-.DS_Store
-dist
-dist-ssr
-coverage
+# Local environment files
+.env
+.env.*
+!.env.example
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-!.vscode/tasks.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Test output
+coverage/
+.nyc_output/
+*.lcov
 
-*.tsbuildinfo
-
+# Tool caches
+.cache/
+.vite/
 .eslintcache
+*.tsbuildinfo
+.capacitor-sync-state.json
 
-# Cypress
-/cypress/videos/
-/cypress/screenshots/
+# Temporary workspaces and generated previews
+tmp/
+temp/
 
-# Vitest
-__screenshots__/
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
 
-# Vite
-*.timestamp-*-*.mjs
+# Compiled and packaged output
+dist/
+dist-electron/
+dist_electron/
+out/
+.webpack/
+build/Release/
+release/*
+!release/.gitkeep
+
+# Native mobile build output
+/android/
+/ios/
+android/.gradle/
+android/**/build/
+ios/build/
+ios/DerivedData/
+
+# Generated packaging metadata
+*.tgz
+*.source.sha256
+Electron.app/
+Electron Framework.framework/
+
+# Operating system and editor files
+.DS_Store
+**/.DS_Store
+**/._*
+.idea/
+*.swp
+*.swo
+
+# Dropbox numbered dependency and conflict copies
+node_modules */
+*conflicted copy*
