@@ -61,7 +61,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     height: clamp(125px, 9vw, 165px);
-    opacity: 0.48;
+    opacity: 0.6;
     z-index: 0;
 }
 .section-item h2 {
@@ -71,6 +71,7 @@ section {
     font-weight: 400;
 }
 .emergency-services > h2 {
+    margin-bottom: clamp(48px, 6vw, 72px);
     text-align: center;
 }
 :global(html[data-theme="dark"] .section-item h2) {
