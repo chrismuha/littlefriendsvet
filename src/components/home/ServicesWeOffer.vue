@@ -69,6 +69,9 @@ section {
     color: var(--content-teal);
     font-weight: 400;
 }
+.emergency-services > h2 {
+    text-align: center;
+}
 :global(html[data-theme="dark"] .section-item h2) {
     color: var(--color-white);
     text-shadow: 0 2px 5px var(--overlay-dark-45);
