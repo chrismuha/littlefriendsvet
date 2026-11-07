@@ -9,7 +9,8 @@
     "dev:vite": "vite --host 127.0.0.1 --port 5204 --strictPort",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5204 --strictPort",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prebuild": "node ./scripts/prepare-build-output.cjs"
   },
   "dependencies": {
     "@phosphor-icons/vue": "^2.2.1",
@@ -36,5 +37,8 @@
     },
     "http-cache-semantics": "4.3.0",
     "source-map-js": "1.2.2"
-  }
+  },
+  "mcrBuildOutputs": [
+    "dist"
+  ]
 }
