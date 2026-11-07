@@ -58,7 +58,8 @@ section {
 .starburst {
     position: absolute;
     top: 22px;
-    left: 24px;
+    left: 50%;
+    transform: translateX(-50%);
     height: clamp(125px, 9vw, 165px);
     opacity: 0.48;
     z-index: 0;
